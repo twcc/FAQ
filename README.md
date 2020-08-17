@@ -1,14 +1,16 @@
 # FAQ
 
-[![hackmd-github-sync-badge](https://hackmd.io/L0kFzuWSQfOtp7YV-as9TQ/badge)](https://hackmd.io/L0kFzuWSQfOtp7YV-as9TQ)
-
 
 [TOC]
 
 ## 帳號相關
 
-- [example1](https://man.twcc.ai/@iservice/H1ocdJ_lD)
-- [example2](https://man.twcc.ai/@iservice/Sk42O1Ogw)
+:::spoiler 帳 Q1. 如何註冊帳號？
+:::info
+至 iService...點選右上角註冊按鈕...
+:::
+
+
 
 
 ## 運算相關

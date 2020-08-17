@@ -1,5 +1,8 @@
 # FAQ
 
+[![hackmd-github-sync-badge](https://hackmd.io/L0kFzuWSQfOtp7YV-as9TQ/badge)](https://hackmd.io/L0kFzuWSQfOtp7YV-as9TQ)
+
+
 [TOC]
 
 ## 帳號相關

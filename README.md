@@ -1,24 +1,31 @@
-# FAQ
+# TWCC FAQ
+
 
 [TOC]
 
 ## 帳號相關
 
-- [example1](https://man.twcc.ai/@iservice/H1ocdJ_lD)
-- [example2](https://man.twcc.ai/@iservice/Sk42O1Ogw)
+:::spoiler 帳 Q1. 如何註冊帳號？
+:::info
+
+
+至 iService...點選右上角註冊按鈕...
+
+
+:::
+
+
 
 
 ## 運算相關
 
-## 虛擬運算服務 
+## 虛擬運算 
 
 ### 資料備份
 
 1. [Q: 如何進行快照備份]()
 1. [Q: 如何進行檔案備份]()
 
-## 開發型容器
+## 容器
 
-### 網路相關
-
-1. [Q: IP及Port範圍]()
+1. [Q: 容器的浮動IP及Port範圍](容器的IP及Port範圍.md)

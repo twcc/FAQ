@@ -14,7 +14,6 @@
 
 :::
 
-![](https://i.imgur.com/kZiNIGa.png)
 
 
 

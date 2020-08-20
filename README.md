@@ -58,3 +58,12 @@
 50000-60000
 :::
 
+:::spoiler Q2. 如何從容器轉移至HPC進行訓練運算？
+:::info
+
+* 可參考網路上Horovod和Singularity的使用說明文件
+* 參考網址中的tutorial進行  
+https://www.twcc.ai/doc?page=howto_hpc3
+https://www.twcc.ai/doc?page=howto_hpc4
+
+:::

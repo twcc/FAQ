@@ -68,6 +68,74 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::
 
+:::spoiler Q3. 如何使用超過一個容器8張卡以上的資源？
+:::info
+
+* 請改為使用HPC，使用方法可參考網路上Horovod和Singularity的使用說明文件
+* 或參考網址中的tutorial進行  
+https://www.twcc.ai/doc?page=howto_hpc3  
+https://www.twcc.ai/doc?page=howto_hpc4
+
+:::
+
+:::spoiler Q4. 開發型容器ssh連線時顯示Permission denied？
+:::info
+
+* 可能是主機密碼輸入錯誤，請重新輸入或到下列網址重設主機密碼  
+https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=nchc_unix_account_edit
+
+:::
+
+:::spoiler Q5. 執行程式時發現I/O緩慢？
+:::info
+
+* 如果dataset是許多小檔案，且dataset佔很大空間，應將小檔案集合成大檔案減少I/O壓力
+* 製作複本，再以複本開一個新的容器，看系統能否安排到較不忙的節點
+
+:::
+
+:::spoiler Q6. 程式執行時效能不如預期？
+:::info
+
+* 如在Pytorch環境下，可用NUMA control來鎖定CPU core
+* 檢查套件相容性，使用以下文件進行套件管理  
+https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+
+:::
+
+:::spoiler Q7. 程式執行時顯示insufficient shared memory？
+:::info
+
+* 在PyTorch環境下，將Dataloader的num workers設置為0
+* 重新建立一個容器，選擇有share memory的設定
+
+:::
+
+:::spoiler Q8. 程式執行時顯示bus error？
+:::info
+
+* 檢查套件相容性，使用以下文件進行套件管理  
+https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+* 重新建立一個容器，選擇舊一點的映像檔版本
+
+:::
+
+:::spoiler Q9. 容器只能建立一次複本？
+:::info
+
+* 是的
+
+:::
+
+:::spoiler Q10. 如何建立第二次複本？
+:::info
+
+* 用複本建立一個新容器，進行修改後再建立複本
+
+:::
+
+
+
 ## 儲存服務
 ### HFS儲存服務
 :::spoiler Q1. HFS空間已滿，將部分資料刪除，發現容量還是一樣沒變化

@@ -81,3 +81,15 @@ https://www.twcc.ai/doc?page=howto_hpc4
     
     /home/主機帳號/.local/
 :::
+
+## 其它服務
+
+### TWCC-CLI
+
+
+:::spoiler Q1. 請問 TWCC-CLI 怎麼安裝，謝謝!
+:::info
+
+* 請參考 [TWCC-CLI v0.5](https://github.com/TW-NCHC/TWCC-CLI/tree/v0.5) 操作文件進行安裝及使用，謝謝!
+:::
+

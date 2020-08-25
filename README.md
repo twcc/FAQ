@@ -77,7 +77,12 @@ https://www.twcc.ai/doc?page=virtual_network
 * 建議上傳映像檔內的資料盡量不要太大，避免資料上傳與建置花費比較久的時間，其他的資料如訓練資料等等，可以另存在另一顆區塊儲存碟，之後再進行掛載
 
 :::
+:::spoiler Q10. 我在建虛擬運算服務的時候要選填虛擬網路才能建立，但是我無法去建立虛擬網路?
+:::info
+* 建立虛擬網路必須為租戶管理者身分，而成為租戶管理者身分需找計畫建立者或是已是管理者身分的人來提高自身權限。
 
+
+:::
 
 
 ### 容器
@@ -174,7 +179,6 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 * 台灣杉二號有安裝最新版的Rclone，可以使用  "module  load  rclone" 來獲取  rclone  使用環境。而  rclone  是使用  go  語言撰寫，解壓縮在家目錄即可直接使用。
 :::
 
-
 ## 儲存服務
 ### HFS儲存服務
 :::spoiler Q1. HFS空間已滿，將部分資料刪除，發現容量還是一樣沒變化
@@ -194,7 +198,7 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 ### TWCC-CLI
 
 
-:::spoiler Q1. 請問 TWCC-CLI 怎麼安裝，謝謝!
+:::spoiler Q1. 請問 TWCC-CLI 怎麼安裝?
 :::info
 
 * 請參考 [TWCC-CLI v0.5](https://github.com/TW-NCHC/TWCC-CLI/tree/v0.5) 操作文件進行安裝及使用，謝謝!

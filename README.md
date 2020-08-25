@@ -51,10 +51,10 @@ https://www.twcc.ai/doc?page=virtual_network
 
 :::
 
-:::spoiler Q6. 虛擬運算服務個體是否可直接掛S3?
+:::spoiler Q6. 虛擬運算服務個體是否可直接掛COS?
 :::info
 
-可以直接掛S3，您在VM擁有管理者權限，可以對VM進行任意操作，掛載S3建議使用s3fs之類的套件，可參考https://github.com/s3fs-fuse/s3fs-fuse
+可以直接掛COS，您在VM擁有管理者權限，可以對VM進行任意操作，掛載COS建議使用s3fs之類的套件，可參考https://github.com/s3fs-fuse/s3fs-fuse
 
 :::
 
@@ -70,6 +70,18 @@ https://www.twcc.ai/doc?page=virtual_network
 * 如果有啟用虛擬網路防火牆，規則不知道怎麼設定的話建議請先把防火牆關閉
 
 :::
+
+:::spoiler Q9. 如果把超過100GB的映像檔輸入虛擬運算服務個體，會有什麼影響?
+:::info
+* 系統碟的大小為100GB，使用超過100GB會使整台虛擬運算個體無法開啟，不會額外收費
+
+:::
+
+
+
+
+
+
 
 ### 容器
 
@@ -164,14 +176,21 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::info
 * 台灣杉二號有安裝最新版的Rclone，可以使用  "module  load  rclone" 來獲取  rclone  使用環境。而  rclone  是使用  go  語言撰寫，解壓縮在家目錄即可直接使用。
 :::
+## 網路與安全
+### 虛擬網路
+:::spoiler Q1. 我在建虛擬運算服務的時候要選填虛擬網路才能建立，但是我無法去建立虛擬網路?
+:::info
 
+* 建立虛擬網路必須為租戶管理者身分，而成為租戶管理者身分需找計畫建立者或是已是管理者身分的人來提高自身權限。
+
+:::
 
 ## 儲存服務
 ### HFS儲存服務
 :::spoiler Q1. HFS空間已滿，將部分資料刪除，發現容量還是一樣沒變化
 :::info
 
-* 如需詳細了解資料夾中資訊，可以在CLI中下指令”du –sh 資料夾”，方可了解是那些檔案佔據了空間
+* 如需詳細了解資料夾中資訊，可以在命令列中下指令”du –sh 資料夾”，方可了解是那些檔案佔據了空間
 
 * 計算過程產生的暫存檔會存放在下列兩個隱藏目錄，可以下指令”ls -la”查看，也有可能是造成您空間滿的原因
 
@@ -180,12 +199,11 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
     /home/主機帳號/.local/
 :::
 
-## 其它服務
+## TWCC-CLI
 
-### TWCC-CLI
+### 部屬環境
 
-
-:::spoiler Q1. 請問 TWCC-CLI 怎麼安裝，謝謝!
+:::spoiler Q1. 請問 TWCC-CLI 怎麼安裝?
 :::info
 
 * 請參考 [TWCC-CLI v0.5](https://github.com/TW-NCHC/TWCC-CLI/tree/v0.5) 操作文件進行安裝及使用，謝謝!

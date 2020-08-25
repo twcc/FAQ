@@ -71,7 +71,7 @@ https://www.twcc.ai/doc?page=virtual_network
 
 :::
 
-:::spoiler Q9. 請問如果把超過100GB的映像檔輸入虛擬運算服務個體?
+:::spoiler Q9. 如果把超過100GB的映像檔輸入虛擬運算服務個體，會有什麼影響?
 :::info
 * 系統碟的大小為100GB，使用超過100GB會使整台虛擬運算個體無法開啟，不會額外收費
 

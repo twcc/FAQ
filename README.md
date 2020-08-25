@@ -51,10 +51,10 @@ https://www.twcc.ai/doc?page=virtual_network
 
 :::
 
-:::spoiler Q6. 虛擬運算服務個體是否可直接掛S3?
+:::spoiler Q6. 虛擬運算服務個體是否可直接掛COS?
 :::info
 
-可以直接掛S3，您在VM擁有管理者權限，可以對VM進行任意操作，掛載S3建議使用s3fs之類的套件，可參考https://github.com/s3fs-fuse/s3fs-fuse
+可以直接掛COS，您在VM擁有管理者權限，可以對VM進行任意操作，掛載COS建議使用s3fs之類的套件，可參考https://github.com/s3fs-fuse/s3fs-fuse
 
 :::
 

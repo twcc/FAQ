@@ -81,8 +81,6 @@ https://www.twcc.ai/doc?page=virtual_network
 
 
 
-
-
 ### 容器
 
 :::spoiler Q1. 容器的浮動IP及Port範圍？
@@ -197,6 +195,14 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
     /home/主機帳號/.cache/
     
     /home/主機帳號/.local/
+:::
+
+### 區塊儲存
+:::spoiler Q1. 為什麼我之前保留的 SSD 無法成功掛載到新的虛擬運算服務個體上?
+:::info
+
+掛載 SSD 至虛擬運算服務個體，建議先確認其狀態為 `AVAILABLE`，才可以對新的虛擬運算服務個體進行掛載，如非此狀態請先將 SSD 與原本的個體分離，或是將原先的個體刪除，確認狀態為 `AVAILABLE`後，再進行掛載。若上述情況確認後，仍無法掛載，請洽技術支援服務。
+
 :::
 
 ## TWCC-CLI

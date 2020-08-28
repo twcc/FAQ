@@ -42,10 +42,10 @@
 
 :::
 
-:::spoiler Q5. 虛擬運算服務個體是否可直接掛COS?
+:::spoiler Q5. 虛擬運算服務個體是否可直接掛載COS?
 :::info
 
-可以直接掛COS，您在VM擁有管理者權限，可以對VM進行任意操作，掛載COS建議使用s3fs之類的套件，可參考https://github.com/s3fs-fuse/s3fs-fuse
+可以直接掛載 COS，您擁有虛擬運算個體的管理者權限，可以對個體進行任意操作，掛載 COS 建議使用 s3fs 之類的套件，可參考：https://github.com/s3fs-fuse/s3fs-fuse
 
 :::
 
@@ -200,15 +200,15 @@ https://www.twcc.ai/doc?page=virtual_network
     /home/主機帳號/.local/
 :::
 
-:::spoiler Q2. 我使用SFTP的方式連入xdata1.twcc.ai節點，為什麼無法登入?
+:::spoiler Q2. 我使用 SFTP 的方式連入 xdata1.twcc.ai 資料傳輸節點，為何無法登入?
 :::info
 
-* 使用SFTP登入節點需要代入你的KEY，不是使用密碼登入。
+* 請先確認您登入憑證使用的是 SSH 私密金鑰，而非您的主機密碼。若確認登入憑證無誤但登入仍有問題，請洽詢客服人員。
 :::
 
 
 ### 區塊儲存
-:::spoiler Q1. 為什麼我之前保留的 SSD 無法成功掛載到新的虛擬運算服務個體上?
+:::spoiler Q1. 為何之前保留的 SSD 無法成功掛載到新的虛擬運算服務個體上？
 :::info
 
 掛載 SSD 至虛擬運算服務個體，建議先確認其狀態為 `AVAILABLE`，才可以對新的虛擬運算服務個體進行掛載，如非此狀態請先將 SSD 與原本的個體分離，或是將原先的個體刪除，確認狀態為 `AVAILABLE`後，再進行掛載。若上述情況確認後，仍無法掛載，請洽技術支援服務。

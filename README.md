@@ -35,43 +35,34 @@
 
 :::
 
-:::spoiler Q4. 請問要如何開啟虛擬網路?？
-:::info
-
-目前建立虛擬網路的權限，只給管理員與計畫建立者才擁有的，如需建立虛擬網路，請計劃管理員幫忙建立，或是提升您的權限為計劃管理員
-建立虛擬網路的文件如下:
-https://www.twcc.ai/doc?page=virtual_network
-
-:::
-
-:::spoiler Q5. 虛擬運算服務是否支援SMTP？
+:::spoiler Q4. 虛擬運算服務是否支援SMTP？
 :::info
 
 如果您是想要使用TWCC提供的虛擬運算服務作為SMTP的伺服器，是可以允許SMTP發送信件
 
 :::
 
-:::spoiler Q6. 虛擬運算服務個體是否可直接掛COS?
+:::spoiler Q5. 虛擬運算服務個體是否可直接掛COS?
 :::info
 
 可以直接掛COS，您在VM擁有管理者權限，可以對VM進行任意操作，掛載COS建議使用s3fs之類的套件，可參考https://github.com/s3fs-fuse/s3fs-fuse
 
 :::
 
-:::spoiler Q7. 請問我要如何知道我們開的虛擬運算服務個體網路流量狀態?
+:::spoiler Q6. 請問我要如何知道我們開的虛擬運算服務個體網路流量狀態?
 :::info
 
 使用者介面上有簡易呈現監控CPU、硬碟、記憶體、網路的狀態及流量，若需要更詳細的資訊可以自行安裝程式監控
 
 :::
-:::spoiler Q8. 請問我虛擬運算建立後為何無法連線網路?
+:::spoiler Q7. 請問我虛擬運算建立後為何無法連線網路?
 :::info
 * 請檢查虛擬網路設定是否有誤
 * 如果有啟用虛擬網路防火牆，規則不知道怎麼設定的話建議請先把防火牆關閉
 
 :::
 
-:::spoiler Q9. 如果把超過100GB的映像檔輸入虛擬運算服務個體，會有什麼影響?
+:::spoiler Q8. 如果把超過100GB的映像檔輸入虛擬運算服務個體，會有什麼影響?
 :::info
 * 系統碟的大小為100GB，使用超過100GB會使整台虛擬運算個體無法開啟，不會額外收費
 
@@ -190,6 +181,8 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::info
 
 * 建立虛擬網路必須為租戶管理者身分，而成為租戶管理者身分需找計畫建立者或是已是管理者身分的人來提高自身權限。
+* 建立虛擬網路的文件如下:
+https://www.twcc.ai/doc?page=virtual_network
 
 :::
 
@@ -206,6 +199,13 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
     
     /home/主機帳號/.local/
 :::
+
+:::spoiler Q2. 我使用SFTP的方式連入xdata1.twcc.ai節點，為什麼無法登入?
+:::info
+
+* 使用SFTP登入節點需要代入你的KEY，不是使用密碼登入。
+:::
+
 
 ### 區塊儲存
 :::spoiler Q1. 為什麼我之前保留的 SSD 無法成功掛載到新的虛擬運算服務個體上?

@@ -8,7 +8,7 @@
 
 ### 虛擬運算 
 
-:::spoiler Q1. 虛擬運算的浮動IP範圍？
+:::spoiler Q1. 虛擬運算的浮動IP範圍為何？
 :::info
 
 - 203.145.217.0/24
@@ -35,43 +35,34 @@
 
 :::
 
-:::spoiler Q4. 請問要如何開啟虛擬網路?？
-:::info
-
-目前建立虛擬網路的權限，只給管理員與計畫建立者才擁有的，如需建立虛擬網路，請計劃管理員幫忙建立，或是提升您的權限為計劃管理員
-建立虛擬網路的文件如下:
-https://www.twcc.ai/doc?page=virtual_network
-
-:::
-
-:::spoiler Q5. 虛擬運算服務是否支援SMTP？
+:::spoiler Q4. 虛擬運算服務是否支援SMTP？
 :::info
 
 如果您是想要使用TWCC提供的虛擬運算服務作為SMTP的伺服器，是可以允許SMTP發送信件
 
 :::
 
-:::spoiler Q6. 虛擬運算服務個體是否可直接掛COS?
+:::spoiler Q5. 虛擬運算服務個體是否可直接掛載COS?
 :::info
 
-可以直接掛COS，您在VM擁有管理者權限，可以對VM進行任意操作，掛載COS建議使用s3fs之類的套件，可參考https://github.com/s3fs-fuse/s3fs-fuse
+可以直接掛載 COS，您擁有虛擬運算個體的管理者權限，可以對個體進行任意操作，掛載 COS 建議使用 s3fs 之類的套件，可參考：https://github.com/s3fs-fuse/s3fs-fuse
 
 :::
 
-:::spoiler Q7. 請問我要如何知道我們開的虛擬運算服務個體網路流量狀態?
+:::spoiler Q6. 請問我要如何知道我們開的虛擬運算服務個體網路流量狀態?
 :::info
 
 使用者介面上有簡易呈現監控CPU、硬碟、記憶體、網路的狀態及流量，若需要更詳細的資訊可以自行安裝程式監控
 
 :::
-:::spoiler Q8. 請問我虛擬運算建立後為何無法連線網路?
+:::spoiler Q7. 請問我虛擬運算建立後為何無法連線網路?
 :::info
 * 請檢查虛擬網路設定是否有誤
 * 如果有啟用虛擬網路防火牆，規則不知道怎麼設定的話建議請先把防火牆關閉
 
 :::
 
-:::spoiler Q9. 如果把超過100GB的映像檔輸入虛擬運算服務個體，會有什麼影響?
+:::spoiler Q8. 如果把超過100GB的映像檔輸入虛擬運算服務個體，會有什麼影響?
 :::info
 * 系統碟的大小為100GB，使用超過100GB會使整台虛擬運算個體無法開啟，不會額外收費
 
@@ -83,7 +74,7 @@ https://www.twcc.ai/doc?page=virtual_network
 
 ### 容器
 
-:::spoiler Q1. 容器的浮動IP及Port範圍？
+:::spoiler Q1. 容器的浮動IP及Port範圍為何？
 :::info
 
 * IP:
@@ -113,7 +104,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::
 
-:::spoiler Q4. 開發型容器ssh連線時顯示Permission denied？
+:::spoiler Q4. ssh連線容器時顯示Permission denied如何處理？
 :::info
 
 * 可能是主機密碼輸入錯誤，請重新輸入或到下列網址重設主機密碼  
@@ -121,24 +112,26 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 :::
 
-:::spoiler Q5. 執行程式時發現I/O緩慢？
+:::spoiler Q5. 執行程式時發現I/O緩慢如何處理？
 :::info
 
 * 如果dataset是許多小檔案，且dataset佔很大空間，應將小檔案集合成大檔案減少I/O壓力
 * 製作複本，再以複本開一個新的容器，看系統能否安排到較不忙的節點
+* 將dataset放到/tmp
 
 :::
 
-:::spoiler Q6. 程式執行時效能不如預期？
+:::spoiler Q6. 執行程式時，效能不如預期如何處理？
 :::info
 
 * 如在Pytorch環境下，可用NUMA control來鎖定CPU core
 * 檢查套件相容性，使用以下文件進行套件管理  
 https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+* 將dataset放到/tmp
 
 :::
 
-:::spoiler Q7. 程式執行時顯示insufficient shared memory？
+:::spoiler Q7. 程式執行時顯示insufficient shared memory如何處理？
 :::info
 
 * 在PyTorch環境下，將Dataloader的num workers設置為0
@@ -146,7 +139,7 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 
 :::
 
-:::spoiler Q8. 程式執行時顯示bus error？
+:::spoiler Q8. 程式執行時顯示bus error如何處理？
 :::info
 
 * 檢查套件相容性，使用以下文件進行套件管理  
@@ -155,10 +148,10 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 
 :::
 
-:::spoiler Q9. 容器只能建立一次複本？
+:::spoiler Q9. 容器能建立幾次複本？
 :::info
 
-* 是的
+* 目前系統只容許一個容器建立一次複本
 
 :::
 
@@ -168,6 +161,14 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 * 用複本建立一個新容器，進行修改後再建立複本
 
 :::
+
+:::spoiler Q11. 如何暫停容器？
+:::info
+
+* 目前系統不支援容器暫停的功能
+
+:::
+
 
 ### 台灣杉二號 (命令列介面)
 :::spoiler Q1. 是否可以在台灣衫2號上面安裝Rclone軟體同步工具?
@@ -180,6 +181,8 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::info
 
 * 建立虛擬網路必須為租戶管理者身分，而成為租戶管理者身分需找計畫建立者或是已是管理者身分的人來提高自身權限。
+* 建立虛擬網路的文件如下:
+https://www.twcc.ai/doc?page=virtual_network
 
 :::
 
@@ -197,8 +200,15 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
     /home/主機帳號/.local/
 :::
 
+:::spoiler Q2. 我使用 SFTP 的方式連入 xdata1.twcc.ai 資料傳輸節點，為何無法登入?
+:::info
+
+* 請先確認您登入憑證使用的是 SSH 私密金鑰，而非您的主機密碼。若確認登入憑證無誤但登入仍有問題，請洽詢客服人員。
+:::
+
+
 ### 區塊儲存
-:::spoiler Q1. 為什麼我之前保留的 SSD 無法成功掛載到新的虛擬運算服務個體上?
+:::spoiler Q1. 為何之前保留的 SSD 無法成功掛載到新的虛擬運算服務個體上？
 :::info
 
 掛載 SSD 至虛擬運算服務個體，建議先確認其狀態為 `AVAILABLE`，才可以對新的虛擬運算服務個體進行掛載，如非此狀態請先將 SSD 與原本的個體分離，或是將原先的個體刪除，確認狀態為 `AVAILABLE`後，再進行掛載。若上述情況確認後，仍無法掛載，請洽技術支援服務。

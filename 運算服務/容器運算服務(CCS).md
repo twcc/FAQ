@@ -96,7 +96,7 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 
 :::
 
-:::spoiler Q12. 執行程式時顯示GPU error或無法獲取GPU如何處理？
+:::spoiler Q12. 執行程式時顯示GPU error如何處理？
 :::info
 
 * 檢查程式呼叫函式庫版本是否符合環境，例如libcudart.so，下指令搜尋並確認是否符合程式呼叫版本  
@@ -110,6 +110,20 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 * 製作複本，再以複本開一個新的容器，看系統能否安排到較不忙的節點
 * 將dataset放到/tmp
 * 如在Pytorch環境下，可用NUMA control來鎖定CPU core
+* 檢查套件相容性，使用以下文件進行套件管理
+https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+:::
+
+:::spoiler Q14. Jupyter無法使用如何處理？
+:::info
+
+* 檢查套件相容性，使用以下文件進行套件管理
+https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+:::
+
+:::spoiler Q15. 執行程式時無法獲取GPU如何處理？
+:::info
+
 * 檢查套件相容性，使用以下文件進行套件管理
 https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::

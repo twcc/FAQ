@@ -11,6 +11,7 @@
     /home/主機帳號/.cache/
     
     /home/主機帳號/.local/
+    
 :::
 
 :::spoiler Q2. 我使用SFTP的方式連入xdata1.twcc.ai節點，為什麼無法登入?
@@ -18,4 +19,5 @@
 :::info
 
 * 使用SFTP登入節點需要代入你的KEY，不是使用密碼登入。
+
 :::

@@ -15,6 +15,7 @@
 :::
 
 :::spoiler Q2. 我使用 SFTP 的方式連入 xdata1.twcc.ai 資料傳輸節點，為何無法登入？
+
 :::info
 
 請先確認您登入憑證使用的是 SSH 私密金鑰，而非您的主機密碼。若確認登入憑證無誤但登入仍有問題，請洽詢客服人員。 
@@ -22,8 +23,10 @@
 :::
 
 :::spoiler Q3. 如何將檔案上傳到 HFS?
+
 :::info
 
 * 請先利用容器環境取得金鑰，再利用 SFTP 軟體(例：Filezilla)連線到資料傳輸節點(xdata1.twcc.ai)
 * 請參考 https://www.twcc.ai/doc?page=hfs。
+
 :::

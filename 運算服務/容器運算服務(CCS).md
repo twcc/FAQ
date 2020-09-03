@@ -114,14 +114,14 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::
 
-:::spoiler Q14. Jupyter無法使用如何處理？
+:::spoiler Q14. Jupyter Notebook 無法使用如何處理？
 :::info
 
 * 檢查套件相容性，使用以下文件進行套件管理
 https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::
 
-:::spoiler Q15. 執行程式時無法獲取GPU如何處理？
+:::spoiler Q15. 執行程式時無法獲取 GPU 如何處理？
 :::info
 
 * 檢查套件相容性，使用以下文件進行套件管理

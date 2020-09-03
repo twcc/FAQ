@@ -1,10 +1,8 @@
 # TWCC FAQs | 容器運算服務 (CCS)
 
-
 :::spoiler Q1. 容器的浮動 IP及 Port 範圍？
 
 :::info
-
 * IP:
 203.145.219.128/25 (包含203.145.219.128)
 * Port:
@@ -15,7 +13,6 @@
 :::spoiler Q2. 如何從容器轉移至 HPC 進行訓練運算？ 
 
 :::info
-
 - 可參考網路上 Horovod 和 Singularity 的使用說明文件
 - 參考網址中的 tutorial 進行
 https://www.twcc.ai/doc?page=howto_hpc3
@@ -40,7 +37,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 :::
 
-:::spoiler Q5. 執行程式時發現 I/O 緩慢？
+:::spoiler Q5. 執行程式時發現 I/O 緩慢？ 
 
 :::info
 
@@ -66,7 +63,6 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 
 - 在 PyTorch 環境下，將 Dataloader 的 num workers 設置為 0
 - 重新建立一個容器，選擇有 share memory 的設定。
-
 :::
 
 :::spoiler Q8. 程式執行時顯示 bus error？ 
@@ -76,7 +72,6 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 - 檢查套件相容性，使用以下文件進行套件管理。
 https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 - 重新建立一個容器，選擇較舊的映像檔版本。
-
 :::
 
 :::spoiler Q9. 容器只能建立一次複本？ 
@@ -98,7 +93,6 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::spoiler Q11. 如何暫停容器？ 
 
 :::info
-
 目前系統不支援容器暫停的功能。
 
 :::

@@ -18,9 +18,9 @@
 * 使用SFTP登入節點需要代入你的KEY，不是使用密碼登入。
 :::
 
-:::spoiler Q3. 如何將檔案上傳到HFS?
+:::spoiler Q3. 如何將檔案上傳到 HFS?
 :::info
 
-* 利用容器環境取得金鑰，再利用SFTP軟體(例如Filezilla)連線到xdata1.twcc.ai
-* 詳情參考 https://www.twcc.ai/doc?page=hfs。
+* 請先利用容器環境取得金鑰，再利用 SFTP 軟體(例：Filezilla)連線到資料傳輸節點(xdata1.twcc.ai)
+* 請參考 https://www.twcc.ai/doc?page=hfs。
 :::

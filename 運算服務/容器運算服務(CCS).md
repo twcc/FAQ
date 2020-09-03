@@ -2,7 +2,9 @@
 
 
 :::spoiler Q1. 容器的浮動 IP及 Port 範圍？
+
 :::info
+
 * IP:
 203.145.219.128/25 (包含203.145.219.128)
 * Port:
@@ -11,7 +13,9 @@
 :::
 
 :::spoiler Q2. 如何從容器轉移至 HPC 進行訓練運算？ 
+
 :::info
+
 - 可參考網路上 Horovod 和 Singularity 的使用說明文件
 - 參考網址中的 tutorial 進行
 https://www.twcc.ai/doc?page=howto_hpc3

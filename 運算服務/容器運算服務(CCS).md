@@ -96,3 +96,21 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 目前系統不支援容器暫停的功能。
 
 :::
+
+:::spoiler Q12. 程式執行時發現比 local 端還慢？ 
+
+:::info
+- 檢查套件相容性，使用以下文件進行套件管理：https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core。
+- 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
+- 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以安排到較不繁忙的節點。
+
+:::
+
+:::spoiler Q13. 程式執行時發生有些 library 無法載入 (Could not load dynamic library...)？ 
+
+:::info
+- 可能是程式中呼叫的 library 版本與容器中的版本不符。請執行以下指令，取得環境中的 library 版本後，再修改程所呼叫的 library 版本：  
+  `$sudo find / -name "library名稱"`
+
+:::

@@ -97,7 +97,11 @@ TWCC 有提供 Linux 的映像檔，若您有此需求，我們建議您選用�
 
 :::info
 
-請檢查安全性群組與防火牆的設定規則。
+請檢查安全性群組與防火牆的設定規則，相關文件請參考以下文件。
+
+安全性群組文件: https://www.twcc.ai/doc?page=security_group
+
+防火牆設定文件: https://www.twcc.ai/doc?page=firewall_fwaas
 
 :::
 

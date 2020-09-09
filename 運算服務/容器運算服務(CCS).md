@@ -115,9 +115,9 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 
 :::
 
-:::spoiler Q14. 無法連線Jupyter notebook時如何處理？ 
+:::spoiler Q14. 無法連線 Jupyter notebook 時如何處理？ 
 
 :::info
-- 檢查套件相容性，使用以下文件進行套件管理： https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+- 請您檢查套件相容性，並使用以下文件進行套件管理：https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 
 :::

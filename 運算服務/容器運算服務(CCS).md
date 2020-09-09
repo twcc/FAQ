@@ -118,6 +118,31 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::spoiler Q14. 無法連線 Jupyter notebook 時如何處理？ 
 
 :::info
-- 請您檢查套件相容性，並使用以下文件進行套件管理：https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+- 請您檢查套件相容性，並使用以下文件進行套件管理： https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 
 :::
+
+:::spoiler Q15. 為何切換成root無法存取自己的/home與/work？ 
+
+:::info
+- 每位使用者的/home與/work都只有自己能存取，root及其他使用者皆無法存取您的/home與/work
+
+:::
+
+:::spoiler Q16. 要如何分享/home與/work的資料給其他同計畫使用者？ 
+
+:::info
+- 請使用TWCC雲端物件儲存(COS)為媒介，以TWCC CLI為工具，相關文件如下
+https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage
+
+:::
+
+
+:::spoiler Q17. 為何sudo  apt  update產生Unable  to  change  to  /home/wistron1/ -chdir  (13:  Permission  denied)？ 
+
+:::info
+- 可切換成root再執行  
+  `$ apt update`
+
+:::
+

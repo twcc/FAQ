@@ -120,10 +120,10 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 :::
 
-:::spoiler Q15. 為何切換成root無法存取自己的/home與/work？ 
+:::spoiler Q15. 為何切換成 root 無法存取自己的 /home 與 /work？ 
 
 :::info
-- 每位使用者的/home與/work都只有自己能存取，root及其他使用者皆無法存取您的/home與/work
+- 為保障資料安全，/home 與 /work 僅限使用者本身的帳號能存取，root 身分及其他使用者皆無法存取您的 /home 與 /work。
 
 :::
 

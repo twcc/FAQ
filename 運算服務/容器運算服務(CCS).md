@@ -52,8 +52,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 :::info
 
 - 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core。
-- 檢查套件相容性，使用以下文件進行套件管理：
-https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+- 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 
 :::
 
@@ -69,8 +68,7 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 
 :::info
 
-- 檢查套件相容性，使用以下文件進行套件管理。
-https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+- 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 - 重新建立一個容器，選擇較舊的映像檔版本。
 :::
 
@@ -100,7 +98,7 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::spoiler Q12. 程式執行時發現比 local 端還慢？ 
 
 :::info
-- 檢查套件相容性，使用以下文件進行套件管理：https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+- 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 - 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core。
 - 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
 - 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以安排到較不繁忙的節點。
@@ -118,7 +116,7 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::spoiler Q14. 無法連線 Jupyter notebook 時如何處理？ 
 
 :::info
-- 請您檢查套件相容性，並使用以下文件進行套件管理： https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
+- 請您檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 
 :::
 
@@ -132,16 +130,15 @@ https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh
 :::spoiler Q16. 要如何分享/home與/work的資料給其他同計畫使用者？ 
 
 :::info
-- 請使用TWCC雲端物件儲存(COS)為媒介，以TWCC CLI為工具，相關文件如下
-https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage
+- 請使用 TWCC 雲端物件儲存 (COS) 為媒介，以 TWCC CLI 為工具，操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)。
 
 :::
 
 
-:::spoiler Q17. 為何sudo  apt  update產生Unable  to  change  to  /home/wistron1/ -chdir  (13:  Permission  denied)？ 
+:::spoiler Q17. 為何 sudo  apt  update 產生 Unable  to  change  to  /home/wistron1/ -chdir  (13:  Permission  denied)？ 
 
 :::info
-- 可切換成root再執行  
+- 請切換成 root 身分後再執行：  
   `$ apt update`
 
 :::

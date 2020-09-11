@@ -26,3 +26,11 @@
 * 請先利用容器環境取得金鑰，再利用 SFTP 軟體(例：Filezilla)連線到資料傳輸節點(xdata1.twcc.ai)
 * 請參考 https://www.twcc.ai/doc?page=hfs。
 :::
+
+:::spoiler Q4. 如何增購HFS空間?
+
+:::info
+
+* 請參考以下文件中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格及如何增購  
+https://www.twcc.ai/doc?page=hfs
+:::

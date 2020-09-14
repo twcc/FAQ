@@ -1,6 +1,6 @@
 # TWCC FAQs | 容器運算服務 (CCS)
 
-:::spoiler Q1. 容器的Port 範圍是什麼？
+:::spoiler Q1. 容器的 Port 範圍是什麼？
 
 :::info
 * Port:

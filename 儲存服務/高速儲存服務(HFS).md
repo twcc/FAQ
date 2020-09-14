@@ -27,10 +27,10 @@
 * 請參考 https://www.twcc.ai/doc?page=hfs。
 :::
 
-:::spoiler Q4. 如何增購HFS空間?
+:::spoiler Q4. 如何增購 HFS 空間？
 
 :::info
 
-* 請參考以下文件中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格及如何增購  
-https://www.twcc.ai/doc?page=hfs
+* 請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
+
 :::

@@ -34,10 +34,9 @@
 * 請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
 
 :::
-:::spoiler Q5. 請問TWCC的HFS的IP位置是多少?
+:::spoiler Q5. 請問 HFS 的 IP 位置為何？
 
 :::info
-
-- 203.145.219.101
+203.145.219.101
 
 :::

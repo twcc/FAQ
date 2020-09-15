@@ -6,3 +6,10 @@
 
 台灣杉二號有安裝最新版的 Rclone，可以使用 `module load rclone` 指令來取得 Rclone 的使用環境。而 Rclone 是使用 Go 語言撰寫，解壓縮在家目錄即可直接使用。 
 :::
+:::spoiler Q2. 請問台灣杉二號的IP位置為何? 
+
+:::info
+
+- 203.145.219.98
+
+:::

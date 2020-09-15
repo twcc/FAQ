@@ -21,7 +21,7 @@ output = []
 for cate1 in toc_buf:
     output.append("## [%s](%s)"%(cate1, cate1.replace(" ", "%20")))
     for cate2 in toc_buf[cate1]:
-        output.append("### [%s](%s/%s)"%(cate2, cate1.replace(" ", "%20"), cate2.replace(".md", "")))
+        output.append("### [%s](%s/%s)"%(cate2.replace(".md", ""), cate1.replace(" ", "%20"), cate2))
         for faq in toc_buf[cate1][cate2]:
             output.append("- %s"%faq)
             

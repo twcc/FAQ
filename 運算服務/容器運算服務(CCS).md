@@ -141,3 +141,31 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 :::
 
+
+:::spoiler Q18. 要如何將容器內資料回傳local端？ 
+
+:::info
+- 容器服務的網路設定，有開port 22, 53, 80, 443，因此請利用這4個port進行資料傳送。  
+
+:::
+
+:::spoiler Q19. 以Matlab映像檔建立的容器為何無法存取/home及/work？ 
+
+:::info
+- 因為目前的Matlab映像檔尚未整合HFS高速檔案系統，因此請在terminal下下列指令來存取/home及/work。  
+```
+$ sudo su -
+$ su 主機帳號
+$ /opt/matlab/R2019b/bin/matlab
+```
+
+:::
+
+:::spoiler Q20. 在程式執行時如何知道用了幾顆GPU？ 
+
+:::info
+- 進terminal下指令。  
+`$ nvidia-smi`
+:::
+
+

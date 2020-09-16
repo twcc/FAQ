@@ -18,9 +18,9 @@ for fn in os.listdir(bdir):
                     toc_buf[cate1][cate2].append(buf)
 
 output = []
-for cate1 in toc_buf:
+for cate1 in sorted(toc_buf.keys()):
     output.append("## [%s](%s)"%(cate1, cate1.replace(" ", "%20")))
-    for cate2 in toc_buf[cate1]:
+    for cate2 in sorted(toc_buf[cate1].keys()):
         output.append("### [%s](%s/%s) (%s) "%(cate2.replace(".md", ""), cate1.replace(" ", "%20"), cate2, len(toc_buf[cate1][cate2])))
         for faq in toc_buf[cate1][cate2]:
             output.append("- %s"%faq)

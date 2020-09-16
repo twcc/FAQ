@@ -3,7 +3,7 @@ import os
 from collections import defaultdict
 
 bdir = "../"
-not_bdir = [".", "..", ".git", "tools"]
+not_bdir = [".", "..", ".git", ".circleci", "venv", "tools"]
 toc_buf = defaultdict(lambda: defaultdict(list)) # https://stackoverflow.com/a/27809959
 for fn in os.listdir(bdir):
     wdir = bdir+os.path.sep+fn
@@ -24,5 +24,5 @@ for cate1 in toc_buf:
         output.append("### [%s](%s/%s) (%s) "%(cate2.replace(".md", ""), cate1.replace(" ", "%20"), cate2, len(toc_buf[cate1][cate2])))
         for faq in toc_buf[cate1][cate2]:
             output.append("- %s"%faq)
-            
+
 open("../README.md", "w").write( open("README.md", "r").read().replace("{{TOC_HERE}}", "\n".join(output)))

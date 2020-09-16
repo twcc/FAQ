@@ -23,14 +23,19 @@
 
 :::info
 
-* 請先利用容器環境取得金鑰，再利用 SFTP 軟體(例：Filezilla)連線到資料傳輸節點(xdata1.twcc.ai)
-* 請參考 https://www.twcc.ai/doc?page=hfs。
+請先利用容器環境取得金鑰，再利用 SFTP 軟體 (例：Filezilla) 連線到資料傳輸節點(xdata1.twcc.ai)，請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)。
 :::
 
 :::spoiler Q4. 如何增購 HFS 空間？
 
 :::info
 
-* 請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
+請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
+
+:::
+:::spoiler Q5. 請問 HFS 的 IP 位置為何？
+
+:::info
+203.145.219.101
 
 :::

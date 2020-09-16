@@ -106,29 +106,29 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 :::spoiler Q13. 程式執行時發生有些 library 無法載入 (Could not load dynamic library...)？ 
 
 :::info
-- 可能是程式中呼叫的 library 版本與容器中的版本不符。請執行以下指令，取得環境中的 library 版本後，再修改程所呼叫的 library 版本：  
-  `$sudo find / -name "library名稱"`
+可能是程式中呼叫的 library 版本與容器中的版本不符。請執行以下指令，取得環境中的 library 版本後，再修改程所呼叫的 library 版本：  
+`$sudo find / -name "library名稱"`
 
 :::
 
 :::spoiler Q14. 無法連線 Jupyter notebook 時如何處理？ 
 
 :::info
-- 請您檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
+請您檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 
 :::
 
 :::spoiler Q15. 為何切換成 root 無法存取自己的 /home 與 /work？ 
 
 :::info
-- 為保障資料安全，/home 與 /work 僅限使用者本身的帳號能存取，root 身分及其他使用者皆無法存取您的 /home 與 /work。
+為保障資料安全，/home 與 /work 僅限使用者本身的帳號能存取，root 身分及其他使用者皆無法存取您的 /home 與 /work。
 
 :::
 
 :::spoiler Q16. 要如何分享/home與/work的資料給其他同計畫使用者？ 
 
 :::info
-- 請使用 TWCC 雲端物件儲存 (COS) 為媒介，以 TWCC CLI 為工具，操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)。
+請使用 TWCC 雲端物件儲存 (COS) 為媒介，以 TWCC CLI 為工具，操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)。
 
 :::
 
@@ -136,8 +136,36 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 :::spoiler Q17. 為何 sudo  apt  update 產生 Unable  to  change  to  /home/wistron1/ -chdir  (13:  Permission  denied)？ 
 
 :::info
-- 請切換成 root 身分後再執行：  
-  `$ apt update`
+請切換成 root 身分後再執行：  
+`$ apt update`
 
 :::
+
+
+:::spoiler Q18. 要如何將容器內資料回傳 local 端？ 
+
+:::info
+容器服務的網路設定，有開啟 port：22、53、80、443，請利用這 4 個 port 進行資料傳送。  
+
+:::
+
+:::spoiler Q19. 以 Matlab 映像檔建立的容器為何無法存取 /home 及 /work？ 
+
+:::info
+因目前的 Matlab 映像檔尚未整合 HFS 高速檔案系統，因此請在 terminal 執行以下指令來存取 /home 及 /work：  
+```
+$ sudo su -
+$ su <主機帳號>
+$ /opt/matlab/R2019b/bin/matlab
+```
+
+:::
+
+:::spoiler Q20. 在程式執行時，如何知道用了幾顆 GPU？ 
+
+:::info
+在 terminal 執行以下指令即可得知 GPU 的使用數量：  
+`$ nvidia-smi`
+:::
+
 

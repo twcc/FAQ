@@ -15,5 +15,5 @@
 
 :::spoiler Q2. 使用跨節點運算，節點是系統自動選取或需手動選取？
 :::info
-您可以使用 Slurm 指令選取節點，相關指令可以參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hpc_cli#6-Slurm%E6%8C%87%E4%BB%A4)
+您可以使用 Slurm 指令選取節點，相關指令請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hpc_cli#6-Slurm%E6%8C%87%E4%BB%A4)
 :::

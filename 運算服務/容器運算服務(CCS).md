@@ -121,7 +121,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 :::spoiler Q15. 為何切換成 root 無法存取自己的 /home 與 /work？ 
 
 :::info
-- 為保障資料安全，/home 與 /work 兩目錄僅限使用者本身的帳號能存取，容器的 root 身分無法存取您的目錄，
+- 為保障資料安全，容器的 root 身分無法存取您的目錄，僅限使用者與租戶管理員之帳號有權限存取。
 - /home 與 /work 為高速檔案系統 (HFS) 掛載於容器的兩個目錄空間，其 root 權限為 HFS 系統管理員所擁有，非使用者可取得。
 :::
 

@@ -170,4 +170,58 @@ $ /opt/matlab/R2019b/bin/matlab
 `$ nvidia-smi`
 :::
 
+:::spoiler Q21. 請問目前容器支援多少種計算環境？ 
+
+:::info
+在TWCC的容器服務中，提供了14種環境供使用者選擇，包含
+
+* Tensorflow
+* Pytorch
+* CUDA
+* Matlab(目前為公開預覽版，如有特殊需求亦可以透過客服人員提出需求)
+* Caffe
+* CNTK
+* MXNet
+* Caffe2
+* TensorRT
+* TensorRT_Server
+* Theano
+* Pytorch
+* DIGITS
+* RAPIDS
+:::
+
+:::spoiler Q22. 如何登入容器？ 
+
+:::info
+請參考 [連結](https://www.twcc.ai/doc?page=container) 中的"連線使用方式"段落
+:::
+
+:::spoiler Q23. 我可以建立一個容器給其他人用嗎？ 
+
+:::info
+開一個容器給他人使用時，需要特別思考以下幾點
+
+* 連線容器會需要您的主機密碼，您的密碼必須給他人
+* /home與/work為您的個人HFS檔案區，他人在使用上可能造成這兩個檔案夾中的資料毀損、遺失...等變動，即使您再開新容器也無法復原這些變動
+* 分享計算資源會有資料安全的風險，請審慎考慮。
+* 您亦可以透過iService將使用者加入計畫中，即可自行開設容器資源。
+:::
+
+:::spoiler Q24. 請問怎麼使用超級電腦？ 
+
+:::info
+TWCC中有許多超級電腦的運算資源，您可透過下列方式使用
+
+* 開發型容器: 您可參考此文件建立開發型容器
+* 高速運算: 您可參考此文件，連線進入高速運算節點，以command line方式使用高速運算
+:::
+
+:::spoiler Q25. 請問如何確認容器映像檔中包的python是什麼版本？ 
+
+:::info
+有兩種方法
+* 在 [NGC網站](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，右上角搜尋框架名稱，例如tensorflow、pytorch，找尋**release note**，再去點擊您要確認的框架版本進行內容確認
+* 在建立開發型容器時，在選擇映像檔類型時會看到映像檔名稱旁有驚嘆號，滑鼠移過去會看到NGC的網址，進去後就可以找到相對應版本的資料
+:::
 

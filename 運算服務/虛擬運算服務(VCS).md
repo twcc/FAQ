@@ -20,7 +20,9 @@
 
 :::info
 
-使用 corntab 的方式設定定時的時間，對虛擬運算個體執行快照的功能。
+您可透過 TWCC-CLI 與 `crontab -e` 進行定時快照設定。
+- TWCC-CLI 使用詳情請參考 [3-7. 虛擬運算個體快照](https://man.twcc.ai/@twccdocs/twcc-cli-v05#3-7-%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7-TBD%E2%80%A6)。
+- `crontab -e` 請參考 [crontab guru](https://crontab.guru/) 或 [crontab(5) - Linux man page](https://linux.die.net/man/5/crontab)。
 
 :::
 
@@ -28,7 +30,9 @@
 
 :::info
 
-使用 corntab 指令碼設定時間、備份資料路徑和雲端物件儲存的目標儲存體，即可完成虛擬運算中資料定時備份。
+您可透過 TWCC-CLI 與 `crontab -e` 進行定時快照設定。
+- TWCC-CLI 使用詳情請參考 [4-3. 上傳檔案至儲存體](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-3-%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88%E8%87%B3%E5%84%B2%E5%AD%98%E9%AB%94)。
+- `crontab -e` 請參考 [crontab guru](https://crontab.guru/) 或 [crontab(5) - Linux man page](https://linux.die.net/man/5/crontab)。
 
 :::
 
@@ -37,7 +41,7 @@
 
 :::info
 
-如果您是想要使用 TWCC 提供的虛擬運算服務作為 SMTP 的伺服器，是可以允許 SMTP 發送信件的。
+在虛擬運算個體中，使用者可以依需求安裝任何軟體或應用程式，因此您可以將虛擬運算個體作為 SMTP 伺服器來發送信件。
 
 :::
 

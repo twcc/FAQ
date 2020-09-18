@@ -60,6 +60,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 - 在 PyTorch 環境下，將 Dataloader 的 num workers 設置為 0
 - 重新建立一個容器，選擇有 share memory 的設定。
+
 :::
 
 :::spoiler Q8. 程式執行時顯示 bus error？ 
@@ -68,6 +69,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 - 重新建立一個容器，選擇較舊的映像檔版本。
+
 :::
 
 :::spoiler Q9. 容器只能建立一次複本？ 
@@ -121,8 +123,8 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 :::spoiler Q15. 為何切換成 root 無法存取自己的 /home 與 /work？ 
 
 :::info
-為保障資料安全，/home 與 /work 僅限使用者本身的帳號能存取，root 身分及其他使用者皆無法存取您的 /home 與 /work。
-
+- 為保障資料安全，容器的 root 身分無法存取您的目錄，僅限使用者與租戶管理員之帳號有權限存取。
+- /home 與 /work 為高速檔案系統 (HFS) 掛載於容器的兩個目錄空間，其 root 權限為 HFS 系統管理員所擁有，非使用者可取得。
 :::
 
 :::spoiler Q16. 要如何分享/home與/work的資料給其他同計畫使用者？ 

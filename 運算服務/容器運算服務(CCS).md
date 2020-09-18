@@ -60,6 +60,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 - 在 PyTorch 環境下，將 Dataloader 的 num workers 設置為 0
 - 重新建立一個容器，選擇有 share memory 的設定。
+
 :::
 
 :::spoiler Q8. 程式執行時顯示 bus error？ 
@@ -68,6 +69,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 - 重新建立一個容器，選擇較舊的映像檔版本。
+
 :::
 
 :::spoiler Q9. 容器只能建立一次複本？ 

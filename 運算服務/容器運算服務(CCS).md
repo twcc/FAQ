@@ -173,20 +173,19 @@ $ /opt/matlab/R2019b/bin/matlab
 :::spoiler Q21. 請問目前容器支援多少種計算環境？ 
 
 :::info
-在TWCC的容器服務中，提供了14種環境供使用者選擇，包含
+在 TWCC 的容器服務中，提供了 14 種環境供使用者選擇，包含：
 
-* Tensorflow
-* Pytorch
+* TensorFlow
+* PyTorch
 * CUDA
-* Matlab(目前為公開預覽版，如有特殊需求亦可以透過客服人員提出需求)
+* MATLAB (目前為公開預覽版，如有特殊需求請透過客服人員提出需求)
 * Caffe
 * CNTK
 * MXNet
 * Caffe2
 * TensorRT
-* TensorRT_Server
+* TensorRT Server
 * Theano
-* Pytorch
 * DIGITS
 * RAPIDS
 :::
@@ -194,34 +193,35 @@ $ /opt/matlab/R2019b/bin/matlab
 :::spoiler Q22. 如何登入容器？ 
 
 :::info
-請參考 [連結](https://www.twcc.ai/doc?page=container) 中的"連線使用方式"段落
+請參考 [<ins>連線使用方式</ins>](https://www.twcc.ai/doc?page=container#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)。
 :::
 
 :::spoiler Q23. 我可以建立一個容器給其他人用嗎？ 
 
 :::info
-開一個容器給他人使用時，需要特別思考以下幾點
+建立容器給他人使用時，需考量以下幾點注意事項：
 
-* 連線容器會需要您的主機密碼，您的密碼必須給他人
-* /home與/work為您的個人HFS檔案區，他人在使用上可能造成這兩個檔案夾中的資料毀損、遺失...等變動，即使您再開新容器也無法復原這些變動
+* 您的主機密碼必須提供給他人連線容器。
+* /home 與/work 為您的個人 HFS 儲存空間，他人在使用上可能造成這兩個檔案夾中的資料毀損、遺失...等可能，即使您再開新容器也無法復原這些變動。
 * 分享計算資源會有資料安全的風險，請審慎考慮。
-* 您亦可以透過iService將使用者加入計畫中，即可自行開設容器資源。
+
+因此，除為他人建立容器之外，您亦可以透過 iService 將他人加入計畫中，該使用者即可自行運用容器資源。
 :::
 
 :::spoiler Q24. 請問怎麼使用超級電腦？ 
 
 :::info
-TWCC中有許多超級電腦的運算資源，您可透過下列方式使用
+TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用：
 
-* 開發型容器: 您可參考此文件建立開發型容器
-* 高速運算: 您可參考此文件，連線進入高速運算節點，以command line方式使用高速運算
+* 開發型容器：您可參考[此文件](https://www.twcc.ai/doc?page=container)，建立快速部署的容器環境。
+* 高速運算服務：您可參考[此文件](https://www.twcc.ai/doc?page=hpc_cli)，連線進入高速運算節點，以 Command Line 的方式使用超級電腦資源，進行跨節點的高速運算。
 :::
 
-:::spoiler Q25. 請問如何確認容器映像檔中包的python是什麼版本？ 
+:::spoiler Q25. 請問如何確認容器映像檔中包的 Python 是什麼版本？ 
 
 :::info
-有兩種方法
-* 在 [NGC網站](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，右上角搜尋框架名稱，例如tensorflow、pytorch，找尋**release note**，再去點擊您要確認的框架版本進行內容確認
-* 在建立開發型容器時，在選擇映像檔類型時會看到映像檔名稱旁有驚嘆號，滑鼠移過去會看到NGC的網址，進去後就可以找到相對應版本的資料
+以下兩種方法皆可以確認容器映像檔的 Python 版本：
+* 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，右上角搜尋框架名稱，例如 TensorFlow、PyTorch，並搜尋 **release note**，再點擊您要確認的框架版本，即可查看 Python 版本。
+* 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相對應的 Python 版本資訊。
 :::
 

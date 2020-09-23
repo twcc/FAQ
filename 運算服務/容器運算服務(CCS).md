@@ -30,8 +30,9 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 
-可能是主機密碼輸入錯誤，請重新輸入或到下列網址重設主機密碼：
-https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=nchc_unix_account_edit
+可能是主機密碼輸入錯誤，請重新輸入或到[<ins>此網址
+</ins>](https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=nchc_unix_account_edit)重設主機密碼
+
 
 :::
 
@@ -49,7 +50,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 :::info
 
-- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core。
+- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://en.wikipedia.org/wiki/Non-uniform_memory_access)。
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 
 :::
@@ -72,7 +73,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 :::
 
-:::spoiler Q9. 容器只能建立一次複本？ 
+:::spoiler Q9. 容器能建立幾次複本？ 
 
 :::info
 
@@ -99,7 +100,7 @@ https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nc
 
 :::info
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core。
+- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://en.wikipedia.org/wiki/Non-uniform_memory_access)。
 - 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
 - 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以安排到較不繁忙的節點。
 
@@ -217,11 +218,32 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 * 高速運算服務：您可參考[此文件](https://www.twcc.ai/doc?page=hpc_cli)，連線進入高速運算節點，以 Command Line 的方式使用超級電腦資源，進行跨節點的高速運算。
 :::
 
-:::spoiler Q25. 請問如何確認容器映像檔中包的 Python 是什麼版本？ 
+:::spoiler Q25. 請問如何確認容器映像檔中包了什麼套件及其版本？ 
 
 :::info
-以下兩種方法皆可以確認容器映像檔的 Python 版本：
-* 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，右上角搜尋框架名稱，例如 TensorFlow、PyTorch，並搜尋 **release note**，再點擊您要確認的框架版本，即可查看 Python 版本。
-* 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相對應的 Python 版本資訊。
+以下兩種方法皆可以確認：
+* 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，右上角搜尋框架名稱，例如 TensorFlow、PyTorch，並搜尋 **release note**，再點擊您要確認的框架版本，即可查看包含什麼套件及其版本。
+* 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
 :::
 
+:::spoiler Q26. 如何將檔案上傳至容器？ 
+
+:::info
+請參考此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs)中的"使用SFTP+Filezilla傳輸檔案"段落，把檔案傳到/home或/work中 
+:::
+
+:::spoiler Q27. 為何我刪除容器後再重新建立容器，新容器內仍存在舊容器上的套件？ 
+
+:::info
+在容器中的/home及/work為HFS高速檔案系統，綁定個人帳號，因此每當建立新容器，HFS都會掛載上來，因此刪除容器並不會改變安裝在/home及/work的套件 
+:::
+
+:::spoiler Q28. 我要如何還原容器環境？ 
+
+:::info
+- 請參考此[<ins>文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)中的"程式執行異常的建議排除方式"段落 
+- 計算過程產生的暫存檔會存放在以下兩個隱藏目錄，可下 ls -la 指令查看：
+
+    /home/主機帳號/.cache/  
+    /home/主機帳號/.local/
+:::

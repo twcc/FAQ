@@ -30,8 +30,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 
-可能是主機密碼輸入錯誤，請重新輸入或到[<ins>此網址
-</ins>](https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=nchc_unix_account_edit)重設主機密碼
+可能是主機密碼輸入錯誤，請重新輸入或到[<ins>此網址</ins>](https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=nchc_unix_account_edit)重設主機密碼。
 
 
 :::
@@ -50,7 +49,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 
-- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://en.wikipedia.org/wiki/Non-uniform_memory_access)。
+- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此說明</ins>](https://en.wikipedia.org/wiki/Non-uniform_memory_access)。
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 
 :::
@@ -171,7 +170,7 @@ $ /opt/matlab/R2019b/bin/matlab
 `$ nvidia-smi`
 :::
 
-:::spoiler Q21. 請問目前容器支援多少種計算環境？ 
+:::spoiler Q21. 目前容器支援多少種計算環境？ 
 
 :::info
 在 TWCC 的容器服務中，提供了 14 種環境供使用者選擇，包含：
@@ -209,7 +208,7 @@ $ /opt/matlab/R2019b/bin/matlab
 因此，除為他人建立容器之外，您亦可以透過 iService 將他人加入計畫中，該使用者即可自行運用容器資源。
 :::
 
-:::spoiler Q24. 請問怎麼使用超級電腦？ 
+:::spoiler Q24. 怎麼使用超級電腦？ 
 
 :::info
 TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用：
@@ -218,32 +217,32 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 * 高速運算服務：您可參考[此文件](https://www.twcc.ai/doc?page=hpc_cli)，連線進入高速運算節點，以 Command Line 的方式使用超級電腦資源，進行跨節點的高速運算。
 :::
 
-:::spoiler Q25. 請問如何確認容器映像檔中包了什麼套件及其版本？ 
+:::spoiler Q25. 如何確認容器映像檔中包了什麼套件及其版本？ 
 
 :::info
 以下兩種方法皆可以確認：
-* 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，右上角搜尋框架名稱，例如 TensorFlow、PyTorch，並搜尋 **release note**，再點擊您要確認的框架版本，即可查看包含什麼套件及其版本。
+* 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，在右上角搜尋框依不同框架輸入 **TensorFlow release notes**、**PyTorch release notes** ...等內容，進入 release notes 列表頁面後，再點擊您要確認的框架版本，即可檢視套件內容及版本。
 * 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
 :::
 
 :::spoiler Q26. 如何將檔案上傳至容器？ 
 
 :::info
-請參考此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs)中的"使用SFTP+Filezilla傳輸檔案"段落，把檔案傳到/home或/work中 
+請參考此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs)中的**使用SFTP+Filezilla傳輸檔案**段落，把檔案傳到 /home 或 /work 中。 
 :::
 
 :::spoiler Q27. 為何我刪除容器後再重新建立容器，新容器內仍存在舊容器上的套件？ 
 
 :::info
-在容器中的/home及/work為HFS高速檔案系統，綁定個人帳號，因此每當建立新容器，HFS都會掛載上來，因此刪除容器並不會改變安裝在/home及/work的套件 
+為提供運算便利性，TWCC 預設會將高速檔案系統之儲存空間 (/home 及 /work，綁定個人帳號) 掛載至您建立的所有容器，讓您的資料或套件可跨容器使用，因此刪除容器不會影響安裝在 /home 及 /work 的套件與資料。 
 :::
 
-:::spoiler Q28. 我要如何還原容器環境？ 
+:::spoiler Q28. 我要如何將容器還原至初始狀態？ 
 
 :::info
-- 請參考此[<ins>文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)中的"程式執行異常的建議排除方式"段落 
-- 計算過程產生的暫存檔會存放在以下兩個隱藏目錄，可下 ls -la 指令查看：
+進行以下操作即可將容器還原至初始狀態：
 
-    /home/主機帳號/.cache/  
-    /home/主機帳號/.local/
+- 參考[<ins>程式執行異常的建議排除方式</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。
+- 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。
+    
 :::

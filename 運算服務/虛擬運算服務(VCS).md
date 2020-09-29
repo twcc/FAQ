@@ -50,7 +50,7 @@
 
 :::info
 
-可以直接掛載 COS，您在 VCS 個體擁有管理者權限，可以對 VCS 個體進行任意操作，掛載建議使用 s3fs 或是相關的套件，可參考 https://github.com/s3fs-fuse/s3fs-fuse
+可以直接掛載 COS，您在 VCS 個體擁有管理者權限，可以對 VCS 個體進行任意操作，掛載建議使用 s3fs 或是相關的套件，可參考 [<ins>s3fs-fuse</ins>](https://github.com/s3fs-fuse/s3fs-fuse)。
 
 :::
 
@@ -111,13 +111,12 @@
 
 請檢查個體的安全性群組或防火牆規則是否阻擋連線，相關文件請參考：
 
-安全性群組：https://www.twcc.ai/doc?page=security_group
-
-基礎虛擬防火牆：https://www.twcc.ai/doc?page=firewall_fwaas
+- [安全性群組](https://www.twcc.ai/doc?page=security_group)
+[基礎虛擬防火牆](https://www.twcc.ai/doc?page=firewall_fwaas)
 
 :::
 
-:::spoiler Q11. 請問快照建立的時間需要多久？
+:::spoiler Q11. 快照建立的時間需要多久？
 
 :::info
 
@@ -125,7 +124,7 @@
 
 :::
 
-:::spoiler Q12. 請問如何節省快照製作的時間？
+:::spoiler Q12. 如何節省快照製作的時間？
 
 :::info
 
@@ -133,11 +132,23 @@
 
 :::
 
-:::spoiler Q13. 請問建立虛擬運算個體失敗該怎麼處理？
+:::spoiler Q13. 建立虛擬運算個體失敗該怎麼處理？
 
 :::info
 
 請您至虛擬運算個體詳細資料頁面，游標移至狀態`Unsuccessful`上將顯示建立失敗的訊息，
-請將此頁面截圖 (和建立失敗訊息)，連同計畫代碼與虛擬運算個體的資訊 (ID、映像檔、硬體規格...等) 寄發 e-mail 至 `isupport@twcc.ai`，技術團隊將協助您處理。
+請將此頁面截圖 (和建立失敗訊息)，連同計畫代碼與虛擬運算個體的資訊 (ID、映像檔、硬體規格...等) 寄發 e-mail 至 isupport@twcc.ai，技術團隊將協助您處理。
+
+:::
+
+:::spoiler Q14. 用快照所建立的虛擬運算個體無法連線進入作業該怎麼處理？
+
+:::info
+
+請先檢查快照前虛擬運算個體的以下兩項設定：
+1. 若有設定 /etc/fstab 自動掛載磁碟，請註解該設定或加入 `nofail` 的相關設定，否則利用快照所建立的虛擬運算個體找不到裝置，便會導致無法連入虛擬運算個體的情況。
+2. 若您所使用的作業系統版本為 Ubuntu 18.04，且有更改 /etc/network/interfaces 網路設定 ，也會造成無法連線。
+
+確認檢查以上兩項設定無誤後，對該台虛擬運算個體再進行一次快照，並利用新建的快照建立虛擬運算個體，如仍無法連線，請詳述情況並寄發 e-mail 至 isupport@twcc.ai，技術團隊將協助您處理。
 
 :::

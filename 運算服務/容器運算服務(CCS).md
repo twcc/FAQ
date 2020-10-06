@@ -8,7 +8,7 @@
 
 :::
 
-:::spoiler Q2. 如何從容器轉移至 HPC 進行訓練運算？ 
+:::spoiler Q2. 如何從容器轉移至高速運算任務(台灣杉二號命令列介面)進行訓練運算？ 
 
 :::info
 - 可參考網路上 Horovod 和 Singularity 的使用說明文件
@@ -20,7 +20,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::spoiler Q3. 如何使用 8 張 GPU 以上的資源？ 
 :::info
-請改為使用 HPC 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
+請改為使用 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
 https://www.twcc.ai/doc?page=howto_hpc3  
 https://www.twcc.ai/doc?page=howto_hpc4
 

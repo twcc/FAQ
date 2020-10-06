@@ -12,16 +12,16 @@
 
 :::info
 - 可參考網路上 Horovod 和 Singularity 的使用說明文件
-- 參考網址中的 tutorial 進行
-https://www.twcc.ai/doc?page=howto_hpc3
+- 參考網址中的 tutorial 進行  
+https://www.twcc.ai/doc?page=howto_hpc3  
 https://www.twcc.ai/doc?page=howto_hpc4
 
 :::
 
 :::spoiler Q3. 如何使用 8 張 GPU 以上的資源？ 
 :::info
-請改為使用 HPC 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：
-https://www.twcc.ai/doc?page=howto_hpc3
+請改為使用 HPC 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
+https://www.twcc.ai/doc?page=howto_hpc3  
 https://www.twcc.ai/doc?page=howto_hpc4
 
 :::
@@ -49,7 +49,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 
-- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此說明</ins>](https://en.wikipedia.org/wiki/Non-uniform_memory_access)。
+- 用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/trbl-ccs-numactl-zh)。
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 
 :::
@@ -99,7 +99,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://en.wikipedia.org/wiki/Non-uniform_memory_access)。
+- 用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://man.twcc.ai/@twccdocs/trbl-ccs-numactl-zh)。
 - 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
 - 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以安排到較不繁忙的節點。
 
@@ -109,15 +109,16 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 可能是程式中呼叫的 library 版本與容器中的版本不符。請執行以下指令，取得環境中的 library 版本後，再修改程所呼叫的 library 版本：  
-`$sudo find / -name "library名稱"`
+`$ sudo find / -name "library名稱"`
 
 :::
 
 :::spoiler Q14. 無法連線 Jupyter notebook 時如何處理？ 
 
 :::info
-請您檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-
+- 請檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
+- 請檢查貴單位防火牆設定是否有擋port，請參考Q1的port範圍。
+- 有些套件會改變Jupyter設定，且在上述套件管理時不會檢查到，例如anaconda3，請備份該資料夾並移除。
 :::
 
 :::spoiler Q15. 為何切換成 root 無法存取自己的 /home 與 /work？ 
@@ -144,10 +145,10 @@ https://www.twcc.ai/doc?page=howto_hpc4
 :::
 
 
-:::spoiler Q18. 要如何將容器內資料回傳 local 端？ 
+:::spoiler Q18. 要設定自動化將容器內資料回傳 local 端，請如何處理？ 
 
 :::info
-容器服務的網路設定，有開啟 port：22、53、80、443，請利用這 4 個 port 進行資料傳送。  
+- 容器服務的網路設定有開啟 port：22、53、80、443，請利用這 4 個 port 進行資料傳送。  
 
 :::
 
@@ -213,8 +214,8 @@ $ /opt/matlab/R2019b/bin/matlab
 :::info
 TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用：
 
-* 開發型容器：您可參考[此文件](https://www.twcc.ai/doc?page=container)，建立快速部署的容器環境。
-* 高速運算服務：您可參考[此文件](https://www.twcc.ai/doc?page=hpc_cli)，連線進入高速運算節點，以 Command Line 的方式使用超級電腦資源，進行跨節點的高速運算。
+* 開發型容器：您可參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=container)，建立快速部署的容器環境。
+* 高速運算服務：您可參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hpc_cli)，連線進入高速運算節點，以 Command Line 的方式使用超級電腦資源，進行跨節點的高速運算。
 :::
 
 :::spoiler Q25. 如何確認容器映像檔中包了什麼套件及其版本？ 
@@ -225,10 +226,10 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 * 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
 :::
 
-:::spoiler Q26. 如何將檔案上傳至容器？ 
+:::spoiler Q26. 如何將檔案上傳至容器，或從容器下載？ 
 
 :::info
-請參考此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs)中的**使用SFTP+Filezilla傳輸檔案**段落，把檔案傳到 /home 或 /work 中。 
+請參考此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs)中的**使用SFTP+Filezilla傳輸檔案**段落，把檔案傳到容器的 /home 或 /work 中，或從 /home 或 /work將檔案下載下來。 
 :::
 
 :::spoiler Q27. 為何我刪除容器後再重新建立容器，新容器內仍存在舊容器上的套件？ 
@@ -267,3 +268,29 @@ $ sudo -i
 - 可能是您的程式與您所選擇的容器映像檔有版本相容性問題，請您參考Q25，選擇適合的映像檔版本。
 
 :::
+
+:::spoiler Q31. 安裝套件時發生錯誤訊息Permission denied如何處理？ 
+
+:::info
+- 以下圖為例，如果Permission denied指出的檔案，其位置不在/home或/work底下，請參考Q29切換成容器root再行安裝。
+![](https://i.imgur.com/oKeqxdV.png)
+
+:::
+
+:::spoiler Q32. 為何Jupyter notebook無法寫入檔案？ 
+
+:::info
+- 可能是高速儲存快滿，請參考高速儲存的Q6，檢查並清理HFS。
+
+:::
+
+:::spoiler Q33. 如何開始使用容器？ 
+
+:::info
+- 請您先準備好您要訓練的程式，參考Q26上傳至容器。
+- 參考[<ins>開發型容器文件</ins>](https://www.twcc.ai/doc?page=container)，建立容器，並連線容器進行訓練。
+- 訓練完成，若要檔案下載請參考Q26。
+- 若要進行推斷，可參考[<ins>HowTo文件</ins>](https://www.twcc.ai/doc?page=howto_ctn2)於容器內進行，或參考[<ins>虛擬運算文件</ins>](https://www.twcc.ai/doc?page=vm)，建立虛擬運算進行推斷。
+
+:::
+

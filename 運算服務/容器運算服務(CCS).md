@@ -8,20 +8,20 @@
 
 :::
 
-:::spoiler Q2. 如何從容器轉移至 HPC 進行訓練運算？ 
+:::spoiler Q2. 如何從容器轉移至台灣杉二號(命令列介面)進行訓練運算？ 
 
 :::info
 - 可參考網路上 Horovod 和 Singularity 的使用說明文件
-- 參考網址中的 tutorial 進行
-https://www.twcc.ai/doc?page=howto_hpc3
+- 參考網址中的 tutorial 進行：  
+https://www.twcc.ai/doc?page=howto_hpc3  
 https://www.twcc.ai/doc?page=howto_hpc4
 
 :::
 
 :::spoiler Q3. 如何使用 8 張 GPU 以上的資源？ 
 :::info
-請改為使用 HPC 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：
-https://www.twcc.ai/doc?page=howto_hpc3
+請改為使用 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
+https://www.twcc.ai/doc?page=howto_hpc3  
 https://www.twcc.ai/doc?page=howto_hpc4
 
 :::
@@ -49,8 +49,8 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 
-- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此說明</ins>](https://en.wikipedia.org/wiki/Non-uniform_memory_access)。
-- 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
+- 可使用 NUMA control 套件來鎖定 CPU 使用數量，改善效能，詳情可參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/trbl-ccs-numactl-zh)。
+- 或檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 
 :::
 
@@ -58,8 +58,8 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 
-- 在 PyTorch 環境下，將 Dataloader 的 num workers 設置為 0
-- 重新建立一個容器，選擇有 share memory 的設定。
+- 在 PyTorch 環境下，將 Dataloader 的 num workers 設置為 0。
+- 或重新建立一個容器，並選擇有 shared memory 的規格。
 
 :::
 
@@ -99,7 +99,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-- 如在 PyTorch 環境下，可用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://en.wikipedia.org/wiki/Non-uniform_memory_access)。
+- 用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://man.twcc.ai/@twccdocs/trbl-ccs-numactl-zh)。
 - 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
 - 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以安排到較不繁忙的節點。
 
@@ -109,15 +109,16 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 可能是程式中呼叫的 library 版本與容器中的版本不符。請執行以下指令，取得環境中的 library 版本後，再修改程所呼叫的 library 版本：  
-`$sudo find / -name "library名稱"`
+`$ sudo find / -name [library名稱]`
 
 :::
 
 :::spoiler Q14. 無法連線 Jupyter notebook 時如何處理？ 
 
 :::info
-請您檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-
+- 請檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
+- 部分套件會改變 Jupyter 的設定 (例：`anaconda3`)，且使用上述套件管理方法時無法檢查，請備份該資料夾並移除套件，即可連線。
+- 請檢查貴單位防火牆設定是否有擋 port，容器 port 範圍請參考 Q1。
 :::
 
 :::spoiler Q15. 為何切換成 root 無法存取自己的 /home 與 /work？ 
@@ -127,10 +128,10 @@ https://www.twcc.ai/doc?page=howto_hpc4
 - /home 與 /work 為高速檔案系統 (HFS) 掛載於容器的兩個目錄空間，其 root 權限為 HFS 系統管理員所擁有，非使用者可取得。
 :::
 
-:::spoiler Q16. 要如何分享/home與/work的資料給其他同計畫使用者？ 
+:::spoiler Q16. 要如何分享 /home 與 /work 的資料給其他同計畫使用者？ 
 
 :::info
-請使用 TWCC 雲端物件儲存 (COS) 為媒介，以 TWCC CLI 為工具，操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)。
+可以透過 TWCC CLI 操作 TWCC 雲端物件儲存 (COS)，將容器資料分享給其他使用者，操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)。
 
 :::
 
@@ -144,10 +145,10 @@ https://www.twcc.ai/doc?page=howto_hpc4
 :::
 
 
-:::spoiler Q18. 要如何將容器內資料回傳 local 端？ 
+:::spoiler Q18. 如何設定自動化將容器內資料回傳 local 端？ 
 
 :::info
-容器服務的網路設定，有開啟 port：22、53、80、443，請利用這 4 個 port 進行資料傳送。  
+- 容器服務的網路設定有開啟 port：22、53、80、443，請利用這 4 個 port 進行資料傳送。  
 
 :::
 
@@ -157,7 +158,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 因目前的 Matlab 映像檔尚未整合 HFS 高速檔案系統，因此請在 terminal 執行以下指令來存取 /home 及 /work：  
 ```
 $ sudo su -
-$ su <主機帳號>
+$ su [主機帳號]
 $ /opt/matlab/R2019b/bin/matlab
 ```
 
@@ -193,7 +194,7 @@ $ /opt/matlab/R2019b/bin/matlab
 :::spoiler Q22. 如何登入容器？ 
 
 :::info
-請參考 [<ins>連線使用方式</ins>](https://www.twcc.ai/doc?page=container#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)。
+可以透過 SSH 或 Jupyter notebook 連線容器，請參考 [<ins>連線使用方式</ins>](https://www.twcc.ai/doc?page=container#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)。
 :::
 
 :::spoiler Q23. 我可以建立一個容器給其他人用嗎？ 
@@ -213,8 +214,8 @@ $ /opt/matlab/R2019b/bin/matlab
 :::info
 TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用：
 
-* 開發型容器：您可參考[此文件](https://www.twcc.ai/doc?page=container)，建立快速部署的容器環境。
-* 高速運算服務：您可參考[此文件](https://www.twcc.ai/doc?page=hpc_cli)，連線進入高速運算節點，以 Command Line 的方式使用超級電腦資源，進行跨節點的高速運算。
+* 開發型容器：您可參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=container)，建立快速部署的容器環境。
+* 高速運算服務：您可參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hpc_cli)，連線進入高速運算節點，以 Command Line 的方式使用超級電腦資源，進行跨節點的高速運算。
 :::
 
 :::spoiler Q25. 如何確認容器映像檔中包了什麼套件及其版本？ 
@@ -225,10 +226,10 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 * 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
 :::
 
-:::spoiler Q26. 如何將檔案上傳至容器？ 
+:::spoiler Q26. 如何將檔案上傳至容器，或從容器下載？ 
 
 :::info
-請參考此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs)中的**使用SFTP+Filezilla傳輸檔案**段落，把檔案傳到 /home 或 /work 中。 
+請參考此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，將檔案上傳到容器的 /home 或 /work 中，或將檔案下載到 local 端。 
 :::
 
 :::spoiler Q27. 為何我刪除容器後再重新建立容器，新容器內仍存在舊容器上的套件？ 
@@ -245,4 +246,53 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 - 參考[<ins>程式執行異常的建議排除方式</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。
 - 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。
     
+:::
+
+:::spoiler Q29. 如何切換成容器的 root 身份？ 
+
+:::info
+
+執行以下指令即可切換為 root 身分：  
+```
+$ sudo su
+
+或
+
+$ sudo -i
+```    
+:::
+
+:::spoiler Q30. 為何無法使用容器內的 GPU？ 
+
+:::info
+- 請先確認您的程式使用的 GPU 數量。
+- 可能是套件版本相容性問題，請使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
+- 可能是您的程式與您所選擇的容器映像檔有版本相容性問題，請您參考 Q25，選擇適合的映像檔版本。
+
+:::
+
+:::spoiler Q31. 安裝套件時發生錯誤訊息 Permission denied 如何處理？ 
+
+:::info
+- 以下圖為例，如果 Permission denied 指出的檔案，其位置不在 /home 或 /work 底下，請參考 Q29 切換成容器 root 身分後再行安裝。
+
+![](https://i.imgur.com/oKeqxdV.png)
+
+:::
+
+:::spoiler Q32. 為何 Jupyter notebook 無法寫入檔案？ 
+
+:::info
+高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或增購更多儲存空間。
+
+:::
+
+:::spoiler Q33. 如何開始使用容器？ 
+
+:::info
+- 請先準備好您要訓練的程式，參考 Q26 上傳至高速檔案系統。
+- 參考[<ins>開發型容器文件</ins>](https://www.twcc.ai/doc?page=container)，建立容器，並連線容器進行訓練。
+- 訓練完成，若要檔案下載請參考 Q26。
+- 若要進行推斷，可參考[<ins>HowTo文件</ins>](https://www.twcc.ai/doc?page=howto_ctn2)於容器內進行，或參考[<ins>虛擬運算文件</ins>](https://www.twcc.ai/doc?page=vm)，建立虛擬運算個體進行推斷。
+
 :::

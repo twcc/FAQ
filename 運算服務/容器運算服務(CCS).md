@@ -164,11 +164,14 @@ $ /opt/matlab/R2019b/bin/matlab
 
 :::
 
-:::spoiler Q20. 在程式執行時，如何知道用了幾顆 GPU？ 
+:::spoiler Q20. 在程式執行時，如何知道 GPU 使用情況？ 
 
 :::info
-在 terminal 執行以下指令即可得知 GPU 的使用數量：  
-`$ nvidia-smi`
+在 terminal 執行以下指令：  
+`$ nvidia-smi`  
+再確認 GPU-Util 欄位，非 0% 代表使用中，如下圖即為未使用。
+![](https://i.imgur.com/khfDIDi.png)
+
 :::
 
 :::spoiler Q21. 目前容器支援多少種計算環境？ 
@@ -294,5 +297,17 @@ $ sudo -i
 - 參考[<ins>開發型容器文件</ins>](https://www.twcc.ai/doc?page=container)，建立容器，並連線容器進行訓練。
 - 訓練完成，若要檔案下載請參考 Q26。
 - 若要進行推斷，可參考[<ins>HowTo文件</ins>](https://www.twcc.ai/doc?page=howto_ctn2)於容器內進行，或參考[<ins>虛擬運算文件</ins>](https://www.twcc.ai/doc?page=vm)，建立虛擬運算個體進行推斷。
+
+:::
+
+
+:::spoiler Q34. 如何知道容器配置的 GPU 數量？ 
+
+:::info
+1. 在 terminal 執行以下指令：  
+`$ nvidia-smi`  
+
+2. 在網頁中，開發型容器管理 -> 詳細資料，"基本設定"欄位即有顯示。
+![](https://i.imgur.com/OsDikGV.png)
 
 :::

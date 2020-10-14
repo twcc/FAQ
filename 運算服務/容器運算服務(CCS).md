@@ -167,10 +167,11 @@ $ /opt/matlab/R2019b/bin/matlab
 :::spoiler Q20. 在程式執行時，如何知道 GPU 使用情況？ 
 
 :::info
-在 terminal 執行以下指令：  
-`$ nvidia-smi`  
-再確認 GPU-Util 欄位，非 0% 代表使用中，如下圖即為未使用。
-![](https://i.imgur.com/khfDIDi.png)
+Step 1. 在 terminal 執行指令： `$ nvidia-smi`  
+Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (如下圖)。
+
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_dbfac86546357537571cb99c4cceb37d.png)
+
 
 :::
 
@@ -304,10 +305,12 @@ $ sudo -i
 :::spoiler Q34. 如何知道容器配置的 GPU 數量？ 
 
 :::info
-1. 在 terminal 執行以下指令：  
-`$ nvidia-smi`  
+以下兩種方式皆可查詢容器的 GPU 配置數量：
+1. 在 terminal 執行指令：`$ nvidia-smi`  
+2. 在使用者網站中，開發型容器管理頁 > 容器詳細資料頁的「**基本設定**」欄位即有顯示。
 
-2. 在網頁中，開發型容器管理 -> 詳細資料，"基本設定"欄位即有顯示。
-![](https://i.imgur.com/OsDikGV.png)
+![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_03f616bd18d162c3dfb11da5e39a3530.png)
+
+
 
 :::

@@ -287,7 +287,7 @@ $ sudo -i
 :::spoiler Q32. 為何 Jupyter notebook 無法寫入檔案？ 
 
 :::info
-高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或增購更多儲存空間。
+高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考Q4增購更多儲存空間。
 
 :::
 
@@ -311,6 +311,12 @@ $ sudo -i
 
 ![](https://cos.twcc.ai/SYS-MANUAL/uploads/upload_03f616bd18d162c3dfb11da5e39a3530.png)
 
+:::
 
+
+:::spoiler Q35. 為何 Jupyter notebook 儲存檔案失敗？ 
+
+:::info
+- 高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考Q4增購更多儲存空間。
 
 :::

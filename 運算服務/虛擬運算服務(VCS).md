@@ -175,6 +175,6 @@
 1. 輸入指令vi /etc/ssh/sshd_config
 2. 編輯Use DNS no 
 3. DNS設定改成nameserver 101.101.101.101(或是 nameserver 8.8.8.8)
-4. 如修改後還是有ssh VCS較慢問題請使用者提供所在地IP與traceroute 至VCS之結果給TWCC技術支援服務
+4. 如修改後還是有ssh VCS較慢問題請使用者提供所在地IP與traceroute 至VCS之結果給TWCC技術支援服務信箱 isupport@twcc.ai
 
 :::

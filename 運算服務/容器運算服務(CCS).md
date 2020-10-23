@@ -1,3 +1,12 @@
+---
+title : FAQ-CCS | zh
+tags: FAQ, ZH
+GA: UA-155999456-1
+---
+
+
+{%hackmd @docsharedstyle/default %}
+
 # TWCC FAQs | 容器運算服務 (CCS)
 
 :::spoiler Q1. 容器的 Port 範圍是什麼？
@@ -287,11 +296,18 @@ $ sudo -i
 :::spoiler Q32. 為何 Jupyter notebook 無法寫入檔案？ 
 
 :::info
+高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考 Q4 增購更多儲存空間。
+
+:::
+
+:::spoiler Q33. 為何 Jupyter notebook 儲存檔案失敗？ 
+
+:::info
 高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考Q4增購更多儲存空間。
 
 :::
 
-:::spoiler Q33. 如何開始使用容器？ 
+:::spoiler Q34. 如何開始使用容器？ 
 
 :::info
 - 請先準備好您要訓練的程式，參考 Q26 上傳至高速檔案系統。
@@ -302,7 +318,7 @@ $ sudo -i
 :::
 
 
-:::spoiler Q34. 如何知道容器配置的 GPU 數量？ 
+:::spoiler Q35. 如何知道容器配置的 GPU 數量？ 
 
 :::info
 以下兩種方式皆可查詢容器的 GPU 配置數量：
@@ -314,9 +330,3 @@ $ sudo -i
 :::
 
 
-:::spoiler Q35. 為何 Jupyter notebook 儲存檔案失敗？ 
-
-:::info
-- 高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考Q4增購更多儲存空間。
-
-:::

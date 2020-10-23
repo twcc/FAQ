@@ -1,3 +1,12 @@
+---
+title : FAQ-VCS | zh
+tags: FAQ, ZH
+GA: UA-155999456-1
+---
+
+{%hackmd @docsharedstyle/default %}
+
+
 # TWCC FAQs | 虛擬運算服務 (VCS)
 
 <!-- 
@@ -167,14 +176,22 @@
 在建立虛擬運算個體時，請務必下載並妥善自行保存您的金鑰，如果遺失金鑰您可以刪除該個體並重新建立；如須保存原個體的資料與配置，請先對該個體進行快照，並利用該快照建立新的個體，即可使用新的金鑰。
 :::
 
-:::spoiler Q17. SSH連線虛擬運算個體速度有點慢該如何解決?
+:::spoiler Q17. SSH 連線個體速度有點慢該如何解決？
 
 :::info
 
-請調整虛擬運算個體的DNS設定來提升SSH連線的速度，設定的方法與步驟如下:
-1. 輸入指令vi /etc/ssh/sshd_config
-2. 編輯Use DNS no 
-3. DNS設定改成nameserver 101.101.101.101(或是 nameserver 8.8.8.8)
-4. 如修改後還是有ssh VCS較慢問題請使用者提供所在地IP與traceroute 至VCS之結果給TWCC技術支援服務信箱 isupport@twcc.ai
+請調整虛擬運算個體的 DNS 設定來提升 SSH 連線的速度，設定的方法與步驟如下：
+1. 輸入指令：
+```
+$ sudo vi /etc/ssh/sshd_config
+```
+2. 輸入`i` 進入編輯模式
+4. 新增一行內容： 
+
+```
+Use DNS no nameserver 101.101.101.101 或 Use DNS no nameserver 8.8.8.8
+```
+6. 按 `esc` 鍵跳離編輯模式，接著輸入 `:wq!` 存檔。
+7. 如修改後還是有連線較慢的問題，請您洽詢 TWCC 技術支援服務信箱：isupport@twcc.ai，並提供所在地 IP 與 traceroute 至個體之結果。
 
 :::

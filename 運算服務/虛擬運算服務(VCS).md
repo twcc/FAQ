@@ -186,10 +186,10 @@ GA: UA-155999456-1
 $ sudo vi /etc/ssh/sshd_config
 ```
 2. 輸入`i` 進入編輯模式
-4. 新增一行內容： 
+4. 新增一行指令： 
 
 ```
-Use DNS no nameserver 101.101.101.101 或 Use DNS no nameserver 8.8.8.8
+Use DNS no
 ```
 6. 按 `esc` 鍵跳離編輯模式，接著輸入 `:wq!` 存檔。
 7. 如修改後還是有連線較慢的問題，請您洽詢 TWCC 技術支援服務信箱：isupport@twcc.ai，並提供所在地 IP 與 traceroute 至個體之結果。

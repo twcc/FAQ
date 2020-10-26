@@ -22,13 +22,12 @@ jobs:
         python mk_toc.py 
         git diff ../README.md
     - name: push
-      uses: actions-x/commit@v2
+      uses: github-actions-x/commit@v2.7
       with:
-        email: 1803001@narlabs.org.tw
-        name: GitHub Actions Autocommitter
-        message: Automatically updated using GitHub Actions
-        branch: ${{ github.base_ref}}
+        github-token: ${{ secrets.API_TOKEN_GITHUB }}
+        push-branch: ${{ github.base_ref}}
+        commit-message: 'publish'
+        force-add: 'true'
         files: README.md
-        repository: https://github.com/${{ github.repository }}.git
-        token: ${{ secrets.API_TOKEN_GITHUB }}
-        force: true
+        name: GitHub Actions Autocommitter
+        email: 1803001@narlabs.org.tw

@@ -1,6 +1,6 @@
 name: making new TOC
 on: 
-  pull_request:
+  push:
     branches:
     - TSE_dev
 jobs:
@@ -27,7 +27,7 @@ jobs:
         email: 1803001@narlabs.org.tw
         name: GitHub Actions Autocommitter
         message: Automatically updated using GitHub Actions
-        branch: TSE_dev
+        branch: ${{ github.base_ref}}
         files: README.md
         repository: https://github.com/${{ github.repository }}.git
         token: ${{ secrets.API_TOKEN_GITHUB }}

@@ -1,8 +1,8 @@
 name: making new TOC
 on: 
-  pull_request:
+  push:
     branches:
-    - TSE_dev
+    - test_robot
 jobs:
   mk-toc:
     runs-on: ubuntu-latest
@@ -29,6 +29,6 @@ jobs:
         message: Automatically updated using GitHub Actions
         branch: TSE_dev
         files: README.md
-        repository: https://github.com/${{ github.repository }}
+        repository: https://github.com/${{ github.repository }}.git
         token: ${{ secrets.API_TOKEN_GITHUB }}
         force: true

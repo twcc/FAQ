@@ -25,6 +25,7 @@ jobs:
         git config --local user.email "1803001@narlabs.org.tw"
         git config --local user.name "AUGUST CHAO's ROBOT"
         git commit -m "TOC created" -a
+        git fetch --unshallow origin
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:

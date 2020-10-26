@@ -16,9 +16,10 @@ jobs:
     - name: Making TOC
       run: |
         cd $GITHUB_WORKSPACE
-        pwd
+        git checkout TSE_dev
+        git checkout robot
+        git merge TSE_dev
         cd tools/
-        pwd
         python mk_toc.py 
         git diff ../README.md
         git config --local user.email "1803001@narlabs.org.tw"

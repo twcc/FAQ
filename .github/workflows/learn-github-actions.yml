@@ -25,8 +25,10 @@ jobs:
         git config --local user.email "1803001@narlabs.org.tw"
         git config --local user.name "AUGUST CHAO's ROBOT"
         git commit -m "TOC created" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    - name: Merge staging -> uat
+      uses: devmasx/merge-branch@v1.3.0
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+        type: now
+        from_branch: ${{ github.ref }}
+        target_branch: TSE_dev
+        github_token: ${{ github.token }}

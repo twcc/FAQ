@@ -26,7 +26,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: $GITHUB_WORKSPACE/README.md
-        destination_repo: $GITHUB_REPOSITORY
+        source_file: ${{GITHUB_WORKSPACE}}/README.md
+        destination_repo: ${{GITHUB_REPOSITORY}}
         user_email: "1803001@narlabs.org.tw"
         user_name: "AUGUST CHAO's ROBOT"

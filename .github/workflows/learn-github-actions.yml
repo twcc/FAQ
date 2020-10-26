@@ -28,6 +28,6 @@ jobs:
         name: GitHub Actions Autocommitter
         branch: TSE_dev
         files: README.md
-        repository: https://github.com/TW-NCHC/FAQ/
+        repository: https://github.com/TW-NCHC/FAQ.git
         token: ${{ secrets.API_TOKEN_GITHUB }}
         force: true

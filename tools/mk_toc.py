@@ -3,7 +3,7 @@ import os
 from collections import defaultdict
 
 if 'GITHUB_WORKSPACE' in os.environ:
-    bdir = os.environ['API_PASSWORD'] 
+    bdir = os.environ['GITHUB_WORKSPACE'] 
 else:
     bdir = "../"
     

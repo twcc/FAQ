@@ -20,20 +20,15 @@ jobs:
         cd $GITHUB_WORKSPACE
         cd tools/
         python mk_toc.py 
-        git config --local user.email "1803001@narlabs.org.tw"
-        git config --local user.name "AUGUST CHAO's ROBOT"
         git diff ../README.md
         git add ../README.md
         git commit -m "TOC created"
-    - name: fix shallow update
-      run: |
-        cd $GITHUB_WORKSPACE
-        git checkout origin ${{ github.head_ref }}
-        git merge ${{ github.ref }}
-        git commit
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    - name: Pushes test file
+      uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        force: true
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.head_ref }}
+        source_file: $GITHUB_WORKSPACE/README.md
+        destination_repo: $GITHUB_REPOSITORY
+        user_email: '1803001@narlabs.org.tw'
+        user_name: 'AUGUST CHAO's ROBOT'

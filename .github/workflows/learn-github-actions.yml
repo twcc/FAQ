@@ -29,6 +29,6 @@ jobs:
         message: Automatically updated using GitHub Actions
         branch: TSE_dev
         files: README.md
-        repository: ${{ github.repository }}
+        repository: https://github.com/${{ github.repository }}
         token: ${{ secrets.API_TOKEN_GITHUB }}
         force: true

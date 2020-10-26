@@ -27,6 +27,6 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: ${{github.workspace}}/README.md
-        destination_repo: ${{ github.base_ref }}
+        destination_repo: ${{ github.repository }}
         user_email: "1803001@narlabs.org.tw"
-        user_name: "AUGUST CHAO's ROBOT"
+        user_name: "NCHC-InfraServ"

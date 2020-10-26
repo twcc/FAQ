@@ -11,6 +11,7 @@ jobs:
         python-version: [2.7]
 
     steps:
+    - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
@@ -23,11 +24,9 @@ jobs:
         git diff ../README.md
         git config --local user.email "1803001@narlabs.org.tw"
         git config --local user.name "AUGUST CHAO's ROBOT"
-        git add ../README.md
-        git commit -m "TOC created"
+        git commit -m "TOC created" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: TSE_dev
-    - uses: actions/checkout@v2
+        branch: ${{ github.ref }}

@@ -1,8 +1,8 @@
 name: making new TOC
 on: 
-  push:
+  pull_request:
     branches:
-    - test_robot
+    - TSE_dev
 jobs:
   mk-toc:
     runs-on: ubuntu-latest

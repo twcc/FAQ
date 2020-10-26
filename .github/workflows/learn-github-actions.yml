@@ -22,15 +22,16 @@ jobs:
         commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
     - name: Making TOC
       run: |
-        cd tools/
-        python mk_toc.py 
-        git diff ../README.md
-        git config --local user.email "1803001@narlabs.org.tw"
-        git config --local user.name "AUGUST CHAO's ROBOT"
-        cd $GITHUB_WORKSPACE
-        git commit -m "TOC created" -a
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: ${{ github.ref }}
+      git status
+    #     cd tools/
+    #     python mk_toc.py 
+    #     git diff ../README.md
+    #     git config --local user.email "1803001@narlabs.org.tw"
+    #     git config --local user.name "AUGUST CHAO's ROBOT"
+    #     cd $GITHUB_WORKSPACE
+    #     git commit -m "TOC created" -a
+    # # - name: Push changes
+    # #   uses: ad-m/github-push-action@master
+    # #   with:
+    # #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    # #     branch: ${{ github.ref }}

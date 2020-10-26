@@ -21,13 +21,13 @@ jobs:
         cd tools/
         python mk_toc.py 
         git diff ../README.md
-    - name: Pushes test file
-      uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+    - name: push
+      uses: actions-x/commit@v2
       with:
-        source_file: ${{github.workspace}}/README.md
-        destination_repo: ${{ github.repository }}
-        destination_branch: ${{ github.head_ref }}
-        user_email: "1803001@narlabs.org.tw"
-        user_name: "NCHC-InfraServ"
+        email: 1803001@narlabs.org.tw
+        name: GitHub Actions Autocommitter
+        branch: TSE_dev
+        files: README.md
+        repository: https://github.com/TW-NCHC/FAQ/
+        token: ${{ secrets.API_TOKEN_GITHUB }}
+        force: true

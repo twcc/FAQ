@@ -15,8 +15,8 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - uses: actions/checkout@v2
-    - run: |
+    - name: Making TOC
+      run: |
         cd $GITHUB_WORKSPACE
         cd tools/
         python mk_toc.py 
@@ -25,3 +25,15 @@ jobs:
         git diff ../README.md
         git add ../README.md
         git commit -m "TOC created"
+    - name: fix shallow update
+      run: |
+        cd $GITHUB_WORKSPACE
+        git checkout ${{ github.head_ref }}
+        git merge ${{ github.ref }}
+        git commit
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        force: true
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.head_ref }}

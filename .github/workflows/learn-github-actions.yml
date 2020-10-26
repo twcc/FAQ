@@ -28,5 +28,6 @@ jobs:
       with:
         source_file: ${{github.workspace}}/README.md
         destination_repo: ${{ github.repository }}
+        destination_branch: ${{ github.head_ref }}
         user_email: "1803001@narlabs.org.tw"
         user_name: "NCHC-InfraServ"

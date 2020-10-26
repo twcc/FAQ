@@ -21,3 +21,13 @@ jobs:
         pwd
         python mk_toc.py 
         git diff ../README.md
+    - name: Commit files
+      run: |
+        git config --local user.email "1803001@narlabs.org.tw"
+        git config --local user.name "AUGUST CHAO's ROBOT"
+        git commit -m "TOC created" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}

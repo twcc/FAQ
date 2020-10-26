@@ -9,12 +9,13 @@ jobs:
     strategy:
       matrix:
         python-version: [2.7]
-
     steps:
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
+    - uses: actions/checkout@v2
+      repository: ${{ github.head_ref }}
     - name: Making TOC
       run: |
         cd $GITHUB_WORKSPACE

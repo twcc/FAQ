@@ -30,3 +30,8 @@ jobs:
         git config --local user.name "AUGUST CHAO's ROBOT"
         cd $GITHUB_WORKSPACE
         git commit -m "TOC created" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: robot

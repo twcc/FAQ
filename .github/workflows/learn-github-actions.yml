@@ -15,8 +15,6 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - uses: actions/checkout@v2
-      with:
-        repository: ${{ github.head_ref }}
     - name: Making TOC
       run: |
         cd $GITHUB_WORKSPACE

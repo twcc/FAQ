@@ -21,8 +21,6 @@ jobs:
         cd tools/
         python mk_toc.py 
         git diff ../README.md
-        git add ../README.md
-        git commit -m "TOC created"
     - name: Pushes test file
       uses: dmnemec/copy_file_to_another_repo_action@v1.0.4
       env:

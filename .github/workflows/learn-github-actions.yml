@@ -26,8 +26,9 @@ jobs:
       with:
         email: 1803001@narlabs.org.tw
         name: GitHub Actions Autocommitter
+        message: Automatically updated using GitHub Actions
         branch: TSE_dev
         files: README.md
-        repository: https://github.com/TW-NCHC/FAQ.git
+        repository: ${{ github.repository }}
         token: ${{ secrets.API_TOKEN_GITHUB }}
         force: true

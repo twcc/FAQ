@@ -2,8 +2,12 @@ import re
 import os
 from collections import defaultdict
 
-bdir = "../"
-not_bdir = [".", "..", ".git", ".circleci", "venv", "tools"]
+if 'GITHUB_WORKSPACE' in os.environ:
+    bdir = os.environ['GITHUB_WORKSPACE'] 
+else:
+    bdir = "../"
+    
+not_bdir = [".", "..", ".git", ".circleci", "venv", "tools", ".github"]
 toc_buf = defaultdict(lambda: defaultdict(list)) # https://stackoverflow.com/a/27809959
 for fn in os.listdir(bdir):
     wdir = bdir+os.path.sep+fn
@@ -14,7 +18,8 @@ for fn in os.listdir(bdir):
             for li in cnt:
                 if re.search(":::spoiler Q", li):
                     buf = li.strip().replace(":::spoiler ", "")
-                    foo, bar, cate1, cate2 = abs_md.split("/")
+                    dirs =  abs_md.split("/")
+                    cate1, cate2 = dirs[-2], dirs[-1]
                     toc_buf[cate1][cate2].append(buf)
 
 output = []

@@ -11,7 +11,6 @@ jobs:
         python-version: [2.7]
 
     steps:
-    - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
@@ -31,3 +30,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: TSE_dev
+    - uses: actions/checkout@v2

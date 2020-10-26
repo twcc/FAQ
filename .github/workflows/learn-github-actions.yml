@@ -19,5 +19,5 @@ jobs:
         pwd
         cd tools/
         pwd
-        python mk_toc.py
+        python mk_toc.py 
         git diff ../README.md

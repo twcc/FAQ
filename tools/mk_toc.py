@@ -2,7 +2,11 @@ import re
 import os
 from collections import defaultdict
 
-bdir = "../"
+if 'GITHUB_WORKSPACE' in os.environ:
+    bdir = os.environ['API_PASSWORD'] 
+else:
+    bdir = "../"
+    
 not_bdir = [".", "..", ".git", ".circleci", "venv", "tools"]
 toc_buf = defaultdict(lambda: defaultdict(list)) # https://stackoverflow.com/a/27809959
 for fn in os.listdir(bdir):

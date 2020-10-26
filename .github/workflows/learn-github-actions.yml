@@ -13,12 +13,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Pull TSE_dev
-      run: |
-        cd $GITHUB_WORKSPACE
-        git checkout TSE_dev
-        git checkout robot
-        git merge TSE_dev
+    - uses: actions/checkout@v2
+    - uses: everlytic/branch-merge@1.1.0
+      with:
+        github_token: ${{ github.token }}
+        source_ref: 'TSE_dev'
+        target_branch: 'robot'
+        commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
     - name: Making TOC
       run: |
         cd tools/
@@ -28,8 +29,8 @@ jobs:
         git config --local user.name "AUGUST CHAO's ROBOT"
         cd $GITHUB_WORKSPACE
         git commit -m "TOC created" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: ${{ github.ref }}

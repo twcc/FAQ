@@ -13,13 +13,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - uses: actions/checkout@v2
-    - uses: everlytic/branch-merge@1.1.0
-      with:
-        github_token: ${{ github.token }}
-        source_ref: 'TSE_dev'
-        target_branch: 'robot'
-        commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
     - name: Making TOC
       run: |
         cd $GITHUB_WORKSPACE
@@ -34,4 +27,4 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: robot
+        branch: ${{ github.ref }}

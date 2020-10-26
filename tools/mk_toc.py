@@ -14,6 +14,7 @@ for fn in os.listdir(bdir):
     if not fn in not_bdir and os.path.isdir(wdir):
         for md in os.listdir(wdir):
             abs_md = wdir+os.path.sep+md
+            print(abs_md)
             cnt = open(abs_md, 'r').readlines()
             for li in cnt:
                 if re.search(":::spoiler Q", li):

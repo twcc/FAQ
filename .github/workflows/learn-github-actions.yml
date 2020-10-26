@@ -15,14 +15,13 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Making TOC
-      uses: actions/checkout@v2
-        run: |
-          cd $GITHUB_WORKSPACE
-          cd tools/
-          python mk_toc.py 
-          git config --local user.email "1803001@narlabs.org.tw"
-          git config --local user.name "AUGUST CHAO's ROBOT"
-          git diff ../README.md
-          git add ../README.md
-          git commit -m "TOC created"
+    - uses: actions/checkout@v2
+    - run: |
+        cd $GITHUB_WORKSPACE
+        cd tools/
+        python mk_toc.py 
+        git config --local user.email "1803001@narlabs.org.tw"
+        git config --local user.name "AUGUST CHAO's ROBOT"
+        git diff ../README.md
+        git add ../README.md
+        git commit -m "TOC created"

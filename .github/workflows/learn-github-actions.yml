@@ -13,12 +13,14 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Making TOC
+    - name: Pull TSE_dev
       run: |
         cd $GITHUB_WORKSPACE
         git checkout TSE_dev
         git checkout robot
         git merge TSE_dev
+    - name: Making TOC
+      run: |
         cd tools/
         python mk_toc.py 
         git diff ../README.md

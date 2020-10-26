@@ -24,7 +24,6 @@ jobs:
         git diff ../README.md
         git config --local user.email "1803001@narlabs.org.tw"
         git config --local user.name "AUGUST CHAO's ROBOT"
-        cd $GITHUB_WORKSPACE
         git add ../README.md
         git commit -m "TOC created"
     - name: Push changes

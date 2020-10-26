@@ -15,9 +15,9 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Making TOC
       run: |
-        pwd
-        cd ~
+        cd $GITHUB_WORKSPACE
         pwd
         cd tools/
+        pwd
         python mk_toc.py
         git diff ../README.md

@@ -7,7 +7,7 @@ if 'GITHUB_WORKSPACE' in os.environ:
 else:
     bdir = "../"
     
-not_bdir = [".", "..", ".git", ".circleci", "venv", "tools"]
+not_bdir = [".", "..", ".git", ".circleci", "venv", "tools", ".github"]
 toc_buf = defaultdict(lambda: defaultdict(list)) # https://stackoverflow.com/a/27809959
 for fn in os.listdir(bdir):
     wdir = bdir+os.path.sep+fn

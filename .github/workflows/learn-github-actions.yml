@@ -21,12 +21,12 @@ jobs:
         cd tools/
         python mk_toc.py 
         git diff ../README.md
-    - name: push
+    - name: push TOC
       uses: github-actions-x/commit@v2.7
       with:
         github-token: ${{ secrets.API_TOKEN_GITHUB }}
         push-branch: ${{ github.base_ref}}
-        commit-message: 'publish'
+        commit-message: 'auto-generated TOC'
         force-add: 'true'
         files: README.md
         name: GitHub Actions Autocommitter

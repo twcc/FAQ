@@ -329,4 +329,19 @@ $ sudo -i
 
 :::
 
+:::spoiler Q36. 什麼是共享記憶體？ 
+
+:::info
+共享記憶體是某些framework會使用到的記憶體空間，例如Pytorch，詳情可查看[<ins>Pytorch</ins>](https://pytorch.org/docs/stable/multiprocessing.html)
+
+:::
+
+:::spoiler Q37. 能否將共享記憶體當硬碟空間使用？ 
+
+:::info
+只要您選擇有共享記憶體設定的環境， `/dev/shm` 就是共享記憶體空間可供存放資料當硬碟使用
+:::warning
+* 由於存放資料在共享記憶體中會占掉共享記憶體空間，因此存放前請先考量您程式所需要的空間
+* 存放於此的資料一但容器刪除就會消失，若要保存請在刪除容器前，將資料搬移到`/home/主機帳號`或`/work/主機帳號`
+:::
 

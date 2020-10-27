@@ -58,7 +58,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 
-- 可使用 NUMA control 套件來鎖定 CPU 使用數量，改善效能，詳情可參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/trbl-ccs-numactl-zh)。
+- 可使用 NUMA control 套件來鎖定 CPU 使用數量，改善效能，詳情可參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-numactl-zh)。
 - 或檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 
 :::
@@ -108,7 +108,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-- 用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://man.twcc.ai/@twccdocs/trbl-ccs-numactl-zh)。
+- 用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-numactl-zh)。
 - 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
 - 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以安排到較不繁忙的節點。
 
@@ -329,7 +329,7 @@ $ sudo -i
 
 :::
 
-:::spoiler Q36. 什麼是共享記憶體？ 
+:::spoiler Q36. 建立容器時基本設定中，為何有共享記憶體？ 
 
 :::info
 共享記憶體是某些framework會使用到的記憶體空間，例如Pytorch，詳情可查看[<ins>Pytorch</ins>](https://pytorch.org/docs/stable/multiprocessing.html)

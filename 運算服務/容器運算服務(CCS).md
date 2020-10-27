@@ -345,3 +345,11 @@ $ sudo -i
 * 存放於此的資料一但容器刪除就會消失，若要保存請在刪除容器前，將資料搬移到`/home/主機帳號`或`/work/主機帳號`
 :::
 
+:::spoiler Q38. 在容器中如何安裝cudnn？ 
+
+:::info
+容器的環境中已安裝cudnn，詳細版本資訊可透過以下兩種方法確認：
+* 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，在右上角搜尋框依不同框架輸入 **TensorFlow release notes**、**PyTorch release notes** ...等內容，進入 release notes 列表頁面後，再點擊您要確認的框架版本，即可檢視套件內容及版本。
+* 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
+:::
+

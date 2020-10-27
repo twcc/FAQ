@@ -332,7 +332,7 @@ $ sudo -i
 :::spoiler Q36. 建立容器時基本設定中，為何有共享記憶體？ 
 
 :::info
-共享記憶體是某些framework會使用到的記憶體空間，例如Pytorch，詳情可查看[<ins>Pytorch</ins>](https://pytorch.org/docs/stable/multiprocessing.html)
+共享記憶體是某些framework會使用到的記憶體空間，例如Pytorch，詳情可查看[<ins>Pytorch document</ins>](https://pytorch.org/docs/stable/multiprocessing.html)
 
 :::
 

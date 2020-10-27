@@ -8,8 +8,9 @@ Link to our FAQ page:
 ## TOC
 
 ## [TWCC CLI](TWCC%20CLI)
-### [部屬環境](TWCC%20CLI/部屬環境.md) (1) 
+### [部屬環境](TWCC%20CLI/部屬環境.md) (2) 
 - Q1. 請問 TWCC-CLI 怎麼安裝？
+- Q2. 請問 TWCC-CLI 支援的環境是？
 ### [雲端物件儲存](TWCC%20CLI/雲端物件儲存.md) (1) 
 - Q1. 為何我使用 TWCC-CLI 上傳、下載大量檔案時無法成功？
 ## [儲存服務](儲存服務)

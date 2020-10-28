@@ -188,7 +188,9 @@ Use DNS no
 :::
 
 :::spoiler Q18. 已經外掛區塊儲存到指定的虛擬運算個體，卻無法在虛擬運算個體中找到儲存空間該如何解決?
+
 :::info
+
 掛上區塊儲存後，仍需要進行初始化的動作，才可以使用儲存空間，如何初始化可以參考以下文件:
 
 Windows: https://man.twcc.ai/@twccdocs/HykztzH_D

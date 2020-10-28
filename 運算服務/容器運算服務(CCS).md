@@ -58,7 +58,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 
-- 可使用 NUMA control 套件來鎖定 CPU 使用數量，改善效能，詳情可參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/trbl-ccs-numactl-zh)。
+- 可使用 NUMA control 套件來鎖定 CPU 使用數量，改善效能，詳情可參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-numactl-zh)。
 - 或檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 
 :::
@@ -108,7 +108,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::info
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-- 用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://man.twcc.ai/@twccdocs/trbl-ccs-numactl-zh)。
+- 用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-numactl-zh)。
 - 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
 - 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以安排到較不繁忙的節點。
 
@@ -329,4 +329,28 @@ $ sudo -i
 
 :::
 
+:::spoiler Q36. 建立容器時基本設定中，為何有共享記憶體？ 
+
+:::info
+共享記憶體是某些framework會使用到的記憶體空間，例如Pytorch，詳情可查看[<ins>Pytorch document</ins>](https://pytorch.org/docs/stable/multiprocessing.html)
+
+:::
+
+:::spoiler Q37. 能否將共享記憶體當硬碟空間使用？ 
+
+:::info
+只要您選擇有共享記憶體設定的環境， `/dev/shm` 就是共享記憶體空間可供存放資料當硬碟使用
+:::warning
+* 由於存放資料在共享記憶體中會占掉共享記憶體空間，因此存放前請先考量您程式所需要的空間
+* 存放於此的資料一但容器刪除就會消失，若要保存請在刪除容器前，將資料搬移到`/home/主機帳號`或`/work/主機帳號`
+:::
+
+:::spoiler Q38. 在容器中如何安裝cudnn？ 
+
+:::info
+容器的環境中已安裝cudnn，詳細版本資訊可透過以下兩種方法確認：
+* 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，在右上角搜尋框依不同框架輸入 **TensorFlow release notes**、**PyTorch release notes** ...等內容，進入 release notes 列表頁面後，再點擊您要確認的框架版本，即可檢視套件內容及版本。
+* 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
+* 連線容器下指令 `$ set | grep CUDNN`
+:::
 

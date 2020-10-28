@@ -1,0 +1,33 @@
+name: making new TOC
+on: 
+  push:
+    branches:
+    - TSE_dev
+jobs:
+  mk-toc:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [2.7]
+    steps:
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - uses: actions/checkout@v2
+    - name: Making TOC
+      run: |
+        cd $GITHUB_WORKSPACE
+        cd tools/
+        python mk_toc.py 
+        git diff ../README.md
+    - name: push TOC
+      uses: github-actions-x/commit@v2.7
+      with:
+        github-token: ${{ secrets.API_TOKEN_GITHUB }}
+        push-branch: ${{ github.base_ref}}
+        commit-message: 'auto-generated TOC'
+        force-add: 'true'
+        files: README.md
+        name: GitHub Actions Autocommitter
+        email: 1803001@narlabs.org.tw

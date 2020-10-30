@@ -36,7 +36,7 @@ Link to our FAQ page:
 - Q5. 容器運算 (CCS)、虛擬運算 (VCS) 及高速運算 (HPC) 有什麼不同？
 - Q6. 如何查詢計畫的 GPU 使用上限？
 - Q7. 為什麼創建資源時出現錯誤訊息:[i-service] no quota to request resource.user？
-- Q8. 請問SSH連線至TWCC上的資源CCS、VCS和HPC有那些可使用的的開源軟體?
+- Q8. 請問 SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有那些可使用的的開源軟體？
 ## [網路與安全服務](網路與安全服務)
 ### [基礎虛擬防火牆](網路與安全服務/基礎虛擬防火牆.md) (1) 
 - Q1. 為什麼防火牆裡面的規則沒有作用？

@@ -187,14 +187,13 @@ Use DNS no
 
 :::
 
-:::spoiler Q18. 已經外掛區塊儲存到指定的虛擬運算個體，卻無法在虛擬運算個體中找到儲存空間該如何解決?
+:::spoiler Q18. 已將 Volume 連結到指定的虛擬運算個體，卻無法找到儲存空間？
 
 :::info
 
-掛上區塊儲存後，仍需要進行初始化的動作，才可以使用儲存空間，如何初始化可以參考以下文件:
+將區塊儲存 Volume 連結至虛擬運算個體後後，仍需將 Volume 初始化，才可以使用儲存空間，如何初始化可以參考以下文件：
 
-Windows: https://man.twcc.ai/@twccdocs/HykztzH_D
+[<ins>HowTo：初始化磁碟- Windows 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
 
-Linux: https://man.twcc.ai/@twccdocs/rkyc_bHdP
-
+[<ins>HowTo：初始化磁碟- Linux 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
 :::

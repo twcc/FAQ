@@ -197,3 +197,13 @@ Use DNS no
 
 [<ins>HowTo：初始化磁碟- Linux 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
 :::
+
+:::spoiler Q19. 如何開啟虛擬運算個體非預設埠進行服務?
+
+:::info
+
+虛擬運算個體(Linux): 預設開啟的埠為22、443
+虛擬運算個體(Windows): 預設開啟的埠為22、443、9833
+如要開啟額外的埠，可以在安全性群組處進行設定，設定方法與步驟可以參考以下文件: https://www.twcc.ai/doc?page=security_group
+
+:::

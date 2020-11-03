@@ -55,3 +55,8 @@
 :::info
 因為個人主機密碼時效是180天，如超過時效，需至 iService 更改個人主機密碼，修改完成後再進行登入。
 :::
+
+:::spoiler Q11. 使用台灣杉二號時出現此錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`，請問是發生什麼問題?
+:::info
+此錯誤訊息是因為提交超過20個計算工作上限(gtest 為測試用 queue，此queue上限為5個 )，建議使用者遇到此情況，可用squeue指令查看任務狀態，再使用scancel取消等待中，或運行中的任務。
+:::

@@ -356,3 +356,17 @@ $ sudo -i
 * 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
 * 連線容器後執行 `$ set | grep CUDNN` 指令
 :::
+
+:::spoiler Q39. 容器收費是一建立就開始收費，還是開始跑程式才收費？ 
+
+:::info
+容器一但建立成功就開始計費，費用計算方式可參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price)
+
+:::
+
+:::spoiler Q40. 如何上傳檔案到 Jupyter Notebook？ 
+
+:::info
+Jupyter Notebook 空間即高速儲存服務 (HFS) ，請透過此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，將檔案上傳
+
+:::

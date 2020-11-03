@@ -198,3 +198,13 @@ Windows: https://man.twcc.ai/@twccdocs/HykztzH_D
 Linux: https://man.twcc.ai/@twccdocs/rkyc_bHdP
 
 :::
+
+:::spoiler Q19. 如何開啟虛擬運算個體額外埠進行服務?
+
+:::info
+
+虛擬運算個體(Linux): 預設開啟的埠為22、443
+虛擬運算個體(Windows): 預設開啟的埠為22、443、9833
+如要開啟額外的埠，可以在安全性群組處進行設定，設定方法與步驟可以參考以下文件: https://www.twcc.ai/doc?page=security_group
+
+:::

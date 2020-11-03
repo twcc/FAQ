@@ -356,3 +356,10 @@ $ sudo -i
 * 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
 * 連線容器後執行 `$ set | grep CUDNN` 指令
 :::
+
+:::spoiler Q39. 容器收費是一建立就開始收費，還是開始跑程式才收費？ 
+
+:::info
+容器一但建立成功就開始計費，費用計算方式可參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price)
+
+:::

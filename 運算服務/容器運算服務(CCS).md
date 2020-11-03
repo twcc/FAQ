@@ -332,25 +332,27 @@ $ sudo -i
 :::spoiler Q36. 建立容器時基本設定中，為何有共享記憶體？ 
 
 :::info
-共享記憶體是某些framework會使用到的記憶體空間，例如Pytorch，詳情可查看[<ins>Pytorch document</ins>](https://pytorch.org/docs/stable/multiprocessing.html)
+共享記憶體是使用某些 framework 運算時會使用到的記憶體空間，例：PyTorch，詳情可查看[<ins>PyTorch document</ins>](https://pytorch.org/docs/stable/multiprocessing.html)。
 
 :::
 
 :::spoiler Q37. 能否將共享記憶體當硬碟空間使用？ 
 
 :::info
-只要您選擇有共享記憶體設定的環境， `/dev/shm` 就是共享記憶體空間可供存放資料當硬碟使用
-:::warning
-* 由於存放資料在共享記憶體中會占掉共享記憶體空間，因此存放前請先考量您程式所需要的空間
-* 存放於此的資料一但容器刪除就會消失，若要保存請在刪除容器前，將資料搬移到`/home/主機帳號`或`/work/主機帳號`
+
+若您選擇有共享記憶體設定的規格，`/dev/shm` 即為共享記憶體空間，可供存放資料當硬碟使用
+<i class="fa fa-exclamation-triangle fa-20" aria-hidden="true"></i> **重要：**
+
+* 由於存放資料在共享記憶體中會占掉共享記憶體空間，因此存放前請先考量您程式所需要的空間。
+* 存放於此的資料會隨容器刪除而消失，若資料需保存，請在刪除容器前將資料搬移到`/home/主機帳號`或`/work/主機帳號`。
 :::
 
-:::spoiler Q38. 在容器中如何安裝cudnn？ 
+:::spoiler Q38. 在容器中如何安裝 cuDNN？ 
 
 :::info
-容器的環境中已安裝cudnn，詳細版本資訊可透過以下兩種方法確認：
+
+容器的環境中已安裝 cuDNN，詳細版本資訊可透過以下兩種方法確認：
 * 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，在右上角搜尋框依不同框架輸入 **TensorFlow release notes**、**PyTorch release notes** ...等內容，進入 release notes 列表頁面後，再點擊您要確認的框架版本，即可檢視套件內容及版本。
 * 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
-* 連線容器下指令 `$ set | grep CUDNN`
+* 連線容器後執行 `$ set | grep CUDNN` 指令
 :::
-

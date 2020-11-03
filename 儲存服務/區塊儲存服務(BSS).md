@@ -8,3 +8,9 @@
 
 若上述情況確認後，仍無法掛載，請洽技術支援服務：isupport@twcc.ai。
 :::
+
+:::spoiler Q2. 我想要將舊有的資料碟換成新的資料碟，請問要如何操作?
+
+:::info
+詳細操作請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-zh)。
+:::

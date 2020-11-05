@@ -1,12 +1,3 @@
----
-title : FAQ-CCS | zh
-tags: FAQ, ZH
-GA: UA-155999456-1
----
-
-
-{%hackmd @docsharedstyle/default %}
-
 # TWCC FAQs | 容器運算服務 (CCS)
 
 :::spoiler Q1. 容器的 Port 範圍是什麼？
@@ -258,7 +249,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 - 參考[<ins>程式執行異常的建議排除方式</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。
 - 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。
-- 有安裝 anaconda 或 miniconda 的也請移除或重新命名。 
+- 有安裝 Anaconda 或 Miniconda 的也請移除或重新命名。 
 :::
 
 :::spoiler Q29. 如何切換成容器的 root 身份？ 
@@ -293,14 +284,14 @@ $ sudo -i
 
 :::
 
-:::spoiler Q32. 為何 Jupyter notebook 無法寫入檔案？ 
+:::spoiler Q32. 為何 Jupyter Notebook 無法寫入檔案？ 
 
 :::info
 高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考 Q4 增購更多儲存空間。
 
 :::
 
-:::spoiler Q33. 為何 Jupyter notebook 儲存檔案失敗？ 
+:::spoiler Q33. 為何 Jupyter Notebook 儲存檔案失敗？ 
 
 :::info
 高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考Q4增購更多儲存空間。
@@ -360,13 +351,13 @@ $ sudo -i
 :::spoiler Q39. 容器收費是一建立就開始收費，還是開始跑程式才收費？ 
 
 :::info
-容器一但建立成功就開始計費，費用計算方式可參考[<ins>價目表</ins>](https://www.twcc.ai/doc?page=price)
+容器一建立即開始佔用計算資源，因此建立後、在您刪除容器之前，將會持續計費。
 
 :::
 
 :::spoiler Q40. 如何上傳檔案到 Jupyter Notebook？ 
 
 :::info
-Jupyter Notebook 空間即高速儲存服務 (HFS) ，請透過此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，將檔案上傳
+Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透過[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，上傳您的檔案。
 
 :::

@@ -90,8 +90,8 @@ Link to our FAQ page:
 - Q29. 如何切換成容器的 root 身份？
 - Q30. 為何無法使用容器內的 GPU？
 - Q31. 安裝套件時發生錯誤訊息 Permission denied 如何處理？
-- Q32. 為何 Jupyter notebook 無法寫入檔案？
-- Q33. 為何 Jupyter notebook 儲存檔案失敗？
+- Q32. 為何 Jupyter Notebook 無法寫入檔案？
+- Q33. 為何 Jupyter Notebook 儲存檔案失敗？
 - Q34. 如何開始使用容器？
 - Q35. 如何知道容器配置的 GPU 數量？
 - Q36. 建立容器時基本設定中，為何有共享記憶體？

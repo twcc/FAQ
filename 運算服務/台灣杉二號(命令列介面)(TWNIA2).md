@@ -1,3 +1,12 @@
+---
+title : FAQ-TWNIA2 | zh
+tags: FAQ, ZH
+GA: UA-155999456-1
+---
+
+{%hackmd @docsharedstyle/default %}
+
+
 # TWCC FAQs | 台灣杉二號 (命令列介面) (TWNIA2)
 
 :::spoiler Q1. 是否可以在台灣衫二號上安裝 Rclone 軟體同步工具？

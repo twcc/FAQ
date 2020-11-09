@@ -1,3 +1,12 @@
+---
+title : FAQ-TWNIA2 | zh
+tags: FAQ, ZH
+GA: UA-155999456-1
+---
+
+{%hackmd @docsharedstyle/default %}
+
+
 # TWCC FAQs | 台灣杉二號 (命令列介面) (TWNIA2)
 
 :::spoiler Q1. 是否可以在台灣衫二號上安裝 Rclone 軟體同步工具？
@@ -54,4 +63,16 @@
 :::spoiler Q10. 半年前登入過台灣杉二號 (命令列介面)，而最近想使用時卻無法成功登入?
 :::info
 因為個人主機密碼時效是180天，如超過時效，需至 iService 更改個人主機密碼，修改完成後再進行登入。
+:::
+
+:::spoiler Q11. 使用台灣杉二號時出現此錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
+:::info
+此錯誤訊息顯示您提交超過 20 個計算工作上限 (**gtest** 為測試用 Queue，僅能提交 5 個工作)。若遇此情況，建議您先使用 `squeue` 指令查看任務狀態，再使用 `scancel` 取消狀態為等待中或運行中的任務，減少提交的任務數量。Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)。
+:::
+
+:::spoiler Q12. SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有哪些可使用的的開源軟體？
+:::info
+
+可以使用 MobaXterm、PuTTY 和 VSCode...等第三方開源軟體。
+
 :::

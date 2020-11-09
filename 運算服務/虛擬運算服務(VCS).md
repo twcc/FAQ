@@ -1,20 +1,13 @@
+---
+title : FAQ-VCS | zh
+tags: FAQ, ZH
+GA: UA-155999456-1
+---
+
+{%hackmd @docsharedstyle/default %}
+
+
 # TWCC FAQs | 虛擬運算服務 (VCS)
-
-<!-- 
-:::spoiler Q1. 虛擬運算的浮動 IP 範圍？
-
-:::info
-
-- 203.145.217.0/24
-- 203.145.218.0/24
-- 203.145.220.0/22
-- 203.145.219.0/24
-- 103.124.73.0/24
-- 103.124.74.0/24
-- 103.124.75.0/24
-
-:::
- -->
 
 :::spoiler Q1. 如何使虛擬運算個體進行自動快照？ 
 
@@ -196,4 +189,21 @@ Use DNS no
 [<ins>HowTo：初始化磁碟- Windows 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-windows-zh)
 
 [<ins>HowTo：初始化磁碟- Linux 個體</ins>](https://man.twcc.ai/@twccdocs/howto-bss-init-vol-linux-zh)
+:::
+
+:::spoiler Q19. 如何開啟虛擬運算個體非預設埠進行服務？
+
+:::info
+
+Linux 個體預設開啟的埠為： 22、443
+Windows 個體預設開啟的埠為： 22、443、9833
+如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=security_group)。
+
+:::
+
+:::spoiler Q20. SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有哪些可使用的的開源軟體？
+:::info
+
+可以使用 MobaXterm、PuTTY 和 VSCode...等第三方開源軟體。
+
 :::

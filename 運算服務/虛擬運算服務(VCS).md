@@ -200,3 +200,10 @@ Windows 個體預設開啟的埠為： 22、443、9833
 如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=security_group)。
 
 :::
+
+:::spoiler 20. 請問 SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有那些可使用的的開源軟體？
+:::info
+
+可以使用 MobaXterm、PuTTY 和 VSCode...等第三方開源軟體。
+
+:::

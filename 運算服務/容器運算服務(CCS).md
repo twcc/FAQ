@@ -41,14 +41,21 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 可以透過 SSH 或 Jupyter notebook 連線容器，請參考 [<ins>連線使用方式</ins>](https://www.twcc.ai/doc?page=container#%E9%80%A3%E7%B7%9A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)。
 :::
 
-:::spoiler Q4. 開發型容器 SSH 連線時顯示 `Permission denied`？ 
+:::spoiler Q4. SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有哪些可使用的的開源軟體？
+:::info
+
+可以使用 MobaXterm、PuTTY 和 VSCode...等第三方開源軟體。
+
+:::
+
+:::spoiler Q5. 開發型容器 SSH 連線時顯示 `Permission denied`？ 
 
 :::info
 
 可能是主機密碼輸入錯誤，請重新輸入或到[<ins>此網址</ins>](https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=nchc_unix_account_edit)重設主機密碼。
 :::
 
-:::spoiler Q5. 無法連線 Jupyter notebook 時如何處理？ 
+:::spoiler Q6. 無法連線 Jupyter notebook 時如何處理？ 
 
 :::info
 - 請檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
@@ -58,7 +65,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 ## 資源配置
 
-:::spoiler Q6. 如何使用 8 張 GPU 以上的資源？ 
+:::spoiler Q7. 如何使用 8 張 GPU 以上的資源？ 
 :::info
 請改為使用 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
 https://www.twcc.ai/doc?page=howto_hpc3  
@@ -67,7 +74,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 :::
 
 
-:::spoiler Q7. 如何知道容器配置的 GPU 數量？ 
+:::spoiler Q8. 如何知道容器配置的 GPU 數量？ 
 
 :::info
 以下兩種方式皆可查詢容器的 GPU 配置數量：
@@ -78,7 +85,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::
 
-:::spoiler Q8. 在程式執行時，如何知道 GPU 使用情況？ 
+:::spoiler Q9. 在程式執行時，如何知道 GPU 使用情況？ 
 
 :::info
 Step 1. 在 terminal 執行指令： `$ nvidia-smi`  
@@ -89,7 +96,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 :::
 
-:::spoiler Q9. 為何無法使用容器內的 GPU？ 
+:::spoiler Q10. 為何無法使用容器內的 GPU？ 
 
 :::info
 - 請先確認您的程式使用的 GPU 數量。
@@ -98,7 +105,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 :::
 
-:::spoiler Q10. 建立容器時基本設定中，為何有共享記憶體？ 
+:::spoiler Q11. 建立容器時基本設定中，為何有共享記憶體？ 
 
 :::info
 共享記憶體是使用某些 framework 運算時會使用到的記憶體空間，例：PyTorch，詳情可查看[<ins>PyTorch document</ins>](https://pytorch.org/docs/stable/multiprocessing.html)。
@@ -107,7 +114,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 ## 計算環境
 
-:::spoiler Q11. 目前容器支援多少種計算環境？ 
+:::spoiler Q12. 目前容器支援多少種計算環境？ 
 
 :::info
 在 TWCC 的容器服務中，提供了 14 種環境供使用者選擇，包含：
@@ -129,7 +136,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 ## 套件軟體
 
-:::spoiler Q12. 如何確認容器映像檔中包了什麼套件及其版本？ 
+:::spoiler Q13. 如何確認容器映像檔中包了什麼套件及其版本？ 
 
 :::info
 以下兩種方法皆可以確認：
@@ -137,13 +144,13 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 * 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
 :::
 
-:::spoiler Q13. 如何將檔案上傳至容器，或從容器下載？ 
+:::spoiler Q14. 如何將檔案上傳至容器，或從容器下載？ 
 
 :::info
 請參考此[<ins>文件</ins>](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，將檔案上傳到容器的 /home 或 /work 中，或將檔案下載到 local 端。 
 :::
 
-:::spoiler Q14. 為何我刪除容器後再重新建立容器，新容器內仍存在舊容器上的套件？ 
+:::spoiler Q15. 為何我刪除容器後再重新建立容器，新容器內仍存在舊容器上的套件？ 
 
 :::info
 為提供運算便利性，TWCC 預設會將高速檔案系統之儲存空間 (/home 及 /work，綁定個人帳號) 掛載至您建立的所有容器，讓您的資料或套件可跨容器使用，因此刪除容器不會影響安裝在 /home 及 /work 的套件與資料。 
@@ -151,7 +158,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 :::
 
-:::spoiler Q15. 安裝套件時發生錯誤訊息 `Permission denied` 如何處理？ 
+:::spoiler Q16. 安裝套件時發生錯誤訊息 `Permission denied` 如何處理？ 
 
 :::info
 - 以下圖為例，如果 Permission denied 指出的檔案，其位置不在 /home 或 /work 底下，請參考 Q29 切換成容器 root 身分後再行安裝。
@@ -160,7 +167,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 :::
 
-:::spoiler Q16. 在容器中如何安裝 cuDNN？ 
+:::spoiler Q17. 在容器中如何安裝 cuDNN？ 
 
 :::info
 
@@ -172,7 +179,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 ## 容器複本
 
-:::spoiler Q17. 容器能建立幾次複本？ 
+:::spoiler Q18. 容器能建立幾次複本？ 
 
 :::info
 
@@ -180,7 +187,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 :::
 
-:::spoiler Q18. 如何建立第二次複本？ 
+:::spoiler Q19. 如何建立第二次複本？ 
 
 :::info
 
@@ -191,7 +198,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 ## 網路安全
 
-:::spoiler Q19. 容器的 Port 範圍是什麼？
+:::spoiler Q20. 容器的 Port 範圍是什麼？
 
 :::info
 容器 Port 的範圍為：50000 ~ 60000。
@@ -200,7 +207,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 ## 管理容器
 
-:::spoiler Q20. 如何暫停容器？ 
+:::spoiler Q21. 如何暫停容器？ 
 
 :::info
 目前系統不支援容器暫停的功能。
@@ -208,7 +215,7 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 :::
 
 
-:::spoiler Q21. 我要如何將容器還原至初始狀態？ 
+:::spoiler Q22. 我要如何將容器還原至初始狀態？ 
 
 :::info
 進行以下操作即可將容器還原至初始狀態：
@@ -222,28 +229,28 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 
 ## 儲存與資料傳輸
 
-:::spoiler Q22. 為何切換成 root 無法存取自己的 /home 與 /work？ 
+:::spoiler Q23. 為何切換成 root 無法存取自己的 /home 與 /work？ 
 
 :::info
 - 為保障資料安全，容器的 root 身分無法存取您的目錄，僅限使用者與租戶管理員之帳號有權限存取。
 - /home 與 /work 為高速檔案系統 (HFS) 掛載於容器的兩個目錄空間，其 root 權限為 HFS 系統管理員所擁有，非使用者可取得。
 :::
 
-:::spoiler Q23. 要如何分享 /home 與 /work 的資料給其他同計畫使用者？ 
+:::spoiler Q24. 要如何分享 /home 與 /work 的資料給其他同計畫使用者？ 
 
 :::info
 可以透過 TWCC CLI 操作 TWCC 雲端物件儲存 (COS)，將容器資料分享給其他使用者，操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)。
 
 :::
 
-:::spoiler Q24. 如何設定自動化將容器內資料回傳 local 端？ 
+:::spoiler Q25. 如何設定自動化將容器內資料回傳 local 端？ 
 
 :::info
 - 容器服務的網路設定有開啟 port：22、53、80、443，請利用這 4 個 port 進行資料傳送。  
 
 :::
 
-:::spoiler Q25. 以 Matlab 映像檔建立的容器為何無法存取 /home 及 /work？ 
+:::spoiler Q26. 以 Matlab 映像檔建立的容器為何無法存取 /home 及 /work？ 
 
 :::info
 因目前的 Matlab 映像檔尚未整合 HFS 高速檔案系統，因此請在 terminal 執行以下指令來存取 /home 及 /work：  
@@ -255,7 +262,7 @@ $ /opt/matlab/R2019b/bin/matlab
 
 :::
 
-:::spoiler Q26. 能否將共享記憶體當硬碟空間使用？ 
+:::spoiler Q27. 能否將共享記憶體當硬碟空間使用？ 
 
 :::info
 
@@ -266,21 +273,21 @@ $ /opt/matlab/R2019b/bin/matlab
 * 存放於此的資料會隨容器刪除而消失，若資料需保存，請在刪除容器前將資料搬移到`/home/主機帳號`或`/work/主機帳號`。
 :::
 
-:::spoiler Q27. 為何 Jupyter Notebook 無法寫入檔案？ 
+:::spoiler Q28. 為何 Jupyter Notebook 無法寫入檔案？ 
 
 :::info
 高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考 Q4 增購更多儲存空間。
 
 :::
 
-:::spoiler Q28. 為何 Jupyter Notebook 儲存檔案失敗？ 
+:::spoiler Q29. 為何 Jupyter Notebook 儲存檔案失敗？ 
 
 :::info
 高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考Q4增購更多儲存空間。
 
 :::
 
-:::spoiler Q29. 如何上傳檔案到 Jupyter Notebook？ 
+:::spoiler Q30. 如何上傳檔案到 Jupyter Notebook？ 
 
 :::info
 Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透過[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，上傳您的檔案。
@@ -288,7 +295,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 ## 執行效能
 
-:::spoiler Q30. 執行程式時發現 I/O 緩慢？ 
+:::spoiler Q31. 執行程式時發現 I/O 緩慢？ 
 
 :::info
 
@@ -298,7 +305,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 :::
 
-:::spoiler Q31. 程式執行時效能不如預期？ 
+:::spoiler Q32. 程式執行時效能不如預期？ 
 
 :::info
 
@@ -306,7 +313,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 - 或檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 :::
 
-:::spoiler Q32. 程式執行時發現比 local 端還慢？ 
+:::spoiler Q33. 程式執行時發現比 local 端還慢？ 
 
 :::info
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
@@ -318,7 +325,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 ## 執行錯誤
 
-:::spoiler Q33. 程式執行時顯示 `insufficient shared memory`？ 
+:::spoiler Q34. 程式執行時顯示 `insufficient shared memory`？ 
 
 :::info
 
@@ -327,7 +334,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 :::
 
-:::spoiler Q34. 程式執行時顯示 `bus error`？ 
+:::spoiler Q35. 程式執行時顯示 `bus error`？ 
 
 :::info
 
@@ -336,7 +343,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 :::
 
-:::spoiler Q35. 程式執行時發生有些 library 無法載入 (`Could not load dynamic library...`)？ 
+:::spoiler Q36. 程式執行時發生有些 library 無法載入 (`Could not load dynamic library...`)？ 
 
 :::info
 可能是程式中呼叫的 library 版本與容器中的版本不符。請執行以下指令，取得環境中的 library 版本後，再修改程所呼叫的 library 版本：  
@@ -344,7 +351,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 :::
 
-:::spoiler Q36. 為何 `sudo  apt  update` 產生 `Unable  to  change  to  /home/wistron1/ -chdir  (13:  Permission  denied)`？ 
+:::spoiler Q37. 為何 `sudo  apt  update` 產生 `Unable  to  change  to  /home/wistron1/ -chdir  (13:  Permission  denied)`？ 
 
 :::info
 請切換成 root 身分後再執行：  
@@ -354,7 +361,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 ## 其他疑問
 
-:::spoiler Q37. 如何從容器轉移至台灣杉二號(命令列介面)進行訓練運算？ 
+:::spoiler Q38. 如何從容器轉移至台灣杉二號(命令列介面)進行訓練運算？ 
 
 :::info
 - 可參考網路上 Horovod 和 Singularity 的使用說明文件
@@ -364,7 +371,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::
 
-:::spoiler Q38. 我可以建立一個容器給其他人用嗎？ 
+:::spoiler Q39. 我可以建立一個容器給其他人用嗎？ 
 
 :::info
 建立容器給他人使用時，需考量以下幾點注意事項：
@@ -377,7 +384,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 :::
 
 
-:::spoiler Q39. 如何切換成容器的 root 身份？ 
+:::spoiler Q40. 如何切換成容器的 root 身份？ 
 
 :::info
 
@@ -391,7 +398,7 @@ $ sudo -i
 ```    
 :::
 
-:::spoiler Q40. 容器收費是一建立就開始收費，還是開始跑程式才收費？ 
+:::spoiler Q41. 容器收費是一建立就開始收費，還是開始跑程式才收費？ 
 
 :::info
 容器一建立即開始佔用計算資源，因此建立後、在您刪除容器之前，將會持續計費。

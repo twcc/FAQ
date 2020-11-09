@@ -201,7 +201,7 @@ Windows 個體預設開啟的埠為： 22、443、9833
 
 :::
 
-:::spoiler 20. 請問 SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有那些可使用的的開源軟體？
+:::spoiler 20. SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有哪些可使用的的開源軟體？
 :::info
 
 可以使用 MobaXterm、PuTTY 和 VSCode...等第三方開源軟體。

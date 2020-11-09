@@ -1,5 +1,5 @@
 ---
-title : FAQ-CLI-COS | zh
+title : FAQ-COS | zh
 tags: FAQ, ZH
 GA: UA-155999456-1
 ---

@@ -22,3 +22,12 @@ GA: UA-155999456-1
 :::info
 詳細操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-zh)，可變更磁碟類型、容量，並透過同步方式將舊磁碟資料保存至新磁碟。
 :::
+
+:::spoiler Q3. 為何我的資料碟(Volume)刪不掉？
+
+:::info
+
+刪除前請先檢查該資料碟(Volume)是否已經與虛擬運算個體分離，並確定狀態是否為AVAILABLE，再進行刪除的動作。
+
+若上述情況確認後，仍無法掛載，請洽技術支援服務：isupport@twcc.ai。
+:::

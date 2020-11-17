@@ -24,9 +24,9 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 :::spoiler Q2. 如何開始使用容器？ 
 
 :::info
-- 請先準備好您要訓練的程式，參考 Q26 上傳至高速檔案系統。
+- 請準備好您要上傳至容器的程式，參考[<ins>高速檔案系統文件</ins>](https://www.twcc.ai/doc?page=hfs)，將需要程式上傳到高速檔案系統，存在 `/home/主機帳號` 或 `/work/主機帳號`。
 - 參考[<ins>開發型容器文件</ins>](https://www.twcc.ai/doc?page=container)，建立容器，並連線容器進行訓練。
-- 訓練完成，若要檔案下載請參考 Q26。
+- 訓練完成，若要資料下載請參考[<ins>高速檔案系統文件</ins>](https://www.twcc.ai/doc?page=hfs)，將需要資料下載。
 - 若要進行推斷，可參考[<ins>HowTo文件</ins>](https://www.twcc.ai/doc?page=howto_ctn2)於容器內進行，或參考[<ins>虛擬運算文件</ins>](https://www.twcc.ai/doc?page=vm)，建立虛擬運算個體進行推斷。
 
 :::
@@ -60,7 +60,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 :::info
 - 請檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 - 部分套件會改變 Jupyter 的設定 (例：`anaconda3`)，且使用上述套件管理方法時無法檢查，請備份該資料夾並移除套件，即可連線。
-- 請檢查貴單位防火牆設定是否有擋 port，容器 port 範圍請參考 Q1。
+- 請檢查貴單位防火牆設定是否有擋 port，容器 port 範圍為 50000 - 60000。
 :::
 
 
@@ -124,7 +124,9 @@ Step 2. 確認 `GPU-Util` 欄位，非 0% 代表使用中，0% 即為未使用 (
 :::info
 - 請先確認您的程式使用的 GPU 數量。
 - 可能是套件版本相容性問題，請使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-- 可能是您的程式與您所選擇的容器映像檔有版本相容性問題，請您參考 Q25，選擇適合的映像檔版本。
+- 可能是您的程式與您所選擇的容器映像檔有版本相容性問題，請您先確認適合之映像檔版本環境，確認方式有2種。
+   1. 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，在右上角搜尋框依不同框架輸入 **TensorFlow release notes**、**PyTorch release notes** ...等內容，進入 release notes 列表頁面後，再點擊您要確認的框架版本，即可檢視套件內容及版本。
+   2. 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。 
 
 :::
 
@@ -264,14 +266,14 @@ $ /opt/matlab/R2019b/bin/matlab
 :::spoiler Q27. 為何 Jupyter Notebook 無法寫入檔案？ 
 
 :::info
-高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考 Q4 增購更多儲存空間。
+高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考增購更多儲存空間，增購方式請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格以及增購空間的方法。。
 
 :::
 
 :::spoiler Q28. 為何 Jupyter Notebook 儲存檔案失敗？ 
 
 :::info
-高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考Q4增購更多儲存空間。
+高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考增購更多儲存空間，增購方式請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格以及增購空間的方法。。
 
 :::
 
@@ -349,7 +351,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 :::info
 
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-- 重新建立一個容器，選擇較舊的映像檔版本。
+- 選擇新版的映像檔容易導致套件相容性問題，建議選擇版本較舊的映像檔。
 
 :::
 

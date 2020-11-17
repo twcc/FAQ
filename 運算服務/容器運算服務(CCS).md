@@ -351,7 +351,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 :::info
 
 - 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-- 選擇到新的映像檔版本導致套件相容性問題，選擇比原本舊的映像檔版本。
+- 選擇新版的映像檔容易導致套件相容性問題，建議選擇版本較舊的映像檔。
 
 :::
 

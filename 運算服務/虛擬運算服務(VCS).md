@@ -1,12 +1,3 @@
----
-title : FAQ-VCS | zh
-tags: FAQ, ZH
-GA: UA-155999456-1
----
-
-{%hackmd @docsharedstyle/default %}
-
-
 # TWCC FAQs | 虛擬運算服務 (VCS)
 
 :::spoiler Q1. 如何使虛擬運算個體進行自動快照？ 
@@ -205,5 +196,12 @@ Windows 個體預設開啟的埠為： 22、443、9833
 :::info
 
 可以使用 MobaXterm、PuTTY 和 VSCode...等第三方開源軟體。
+
+:::
+
+:::spoiler Q21. 如何調整已建立好的虛擬運算個體規格？
+:::info
+
+如選用的規格在建立後不符使用需求，需調整至較小規格或更大規格的個體請參考文件:[HowTo：調整虛擬運算個體規格](https://man.twcc.ai/@twccdocs/howto-vcs-resize-instance-zh)
 
 :::

@@ -36,7 +36,7 @@ Link to our FAQ page:
 - Q3. 登入密碼連續輸入錯誤會有甚麼情況？
 - Q4. 租戶管理員與一般租戶使用者身分，在使用 TWCC 各服務上有什麼區別？
 - Q5. 如何查詢計畫的 GPU 使用上限？
-- Q6. 為什麼創建資源時出現錯誤訊息:[i-service] no quota to request resource.user？
+- Q6. 為什麼創建資源時出現錯誤訊息:`[i-service] no quota to request resource.user`？
 ### [產品概觀](產品與平台/產品概觀.md) (2) 
 - Q1. 容器運算 (CCS)、虛擬運算 (VCS) 及高速運算 (HPC) 有什麼不同？
 - Q2. 高速儲存服務 (HFS)、區塊儲存服務 (BSS) 及雲端物件儲存服務 (COS) 有什麼不同？

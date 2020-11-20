@@ -44,7 +44,7 @@ GA: UA-155999456-1
 
 :::info
 
-請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
+請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「**查看容量**」及「**HFS空間管理政策**」兩個段落，即可得知價格以及增購空間的方法。
 
 :::
 

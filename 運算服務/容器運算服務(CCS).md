@@ -33,6 +33,12 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 :::
 
+:::spoiler Q3. 容器與高速運算該如何選擇？ 
+
+:::info
+- 如果您只需要8顆GPU以下的計算資源，請使用容器。
+- 如果您需要超過8顆GPU的計算資源，請使用高速運算。
+:::
 
 
 ## 連線登入
@@ -222,6 +228,13 @@ https://www.twcc.ai/doc?page=howto_hpc4
 1. 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，在右上角搜尋框依不同框架輸入 **TensorFlow release notes**、**PyTorch release notes** ...等內容，進入 release notes 列表頁面後，再點擊您要確認的框架版本，即可檢視套件內容及版本。
 2. 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
 3. 連線容器後執行 `$ set | grep CUDNN` 指令
+:::
+
+:::spoiler Q6. 容器中有哪些內建的套件管理工具？ 
+
+:::info
+容器環境中有內建 `apt` , `apt-get` , `pip` 等3個套件管理工具可供管理套件。
+
 :::
 
 

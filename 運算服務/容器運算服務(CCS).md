@@ -33,6 +33,13 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 :::
 
+:::spoiler Q3. 容器與高速運算該如何選擇？ 
+
+:::info
+兩種服務皆可運行 GPU 的容器化環境：
+- 若您的運算工作僅需要 8 顆 GPU 以下的計算資源，請使用容器運算服務。
+- 而若需要 8 顆 以上的 GPU 資源，並希望能部署跨節點的分散式高速平行運算環境，請使用台灣杉二號 (命令列介面) 高速運算服務。
+:::
 
 
 ## 連線登入
@@ -88,6 +95,14 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。 
 :::
 
+
+:::spoiler Q3. 不同容器中的環境是否也不同？
+:::info
+- 容器中的環境是[<ins>HFS 高速儲存服務</ins>](https://www.twcc.ai/doc?page=hfs)，HFS是跟著用戶的主機帳號。
+- 每當用戶建立容器，容器會自動將用戶的HFS掛載上來作為容器環境。
+- 只要是同一用戶建立的容器，環境都一樣是該用戶的HFS。
+
+:::
 
 
 ## 資源配置與監控
@@ -214,6 +229,13 @@ https://www.twcc.ai/doc?page=howto_hpc4
 1. 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，在右上角搜尋框依不同框架輸入 **TensorFlow release notes**、**PyTorch release notes** ...等內容，進入 release notes 列表頁面後，再點擊您要確認的框架版本，即可檢視套件內容及版本。
 2. 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。
 3. 連線容器後執行 `$ set | grep CUDNN` 指令
+:::
+
+:::spoiler Q6. 容器中有哪些內建的套件管理工具？ 
+
+:::info
+容器環境中有內建 `apt` , `apt-get` , `pip` 等3個套件管理工具可供管理套件。
+
 :::
 
 

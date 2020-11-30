@@ -145,6 +145,23 @@ Use DNS no
 
 :::
 
+:::spoiler Q4.如何將虛擬運算個體內的資料傳入本機？
+
+:::info
+
+請參考以下兩種做法
+1. 透過雲端物件儲存: 此種方法不僅達到資料傳輸的目的，更可以在雲端物件儲存進行備份，首先先將資料備份到雲端物件儲存，請參考[使用 TWCC COS 備份/同步、還原運算資料](https://www.twcc.ai/doc?page=backup)，在到雲端物件儲存使用者介面進行下載，如需要一次下載多個檔案，可以在搭配第三方軟體進行使用，請參考[雲端物件儲存-第三方軟體下載](https://www.twcc.ai/doc?page=object)
+2. 使用MobaXter連線虛擬運算個體，於頁面左側處選取Sftp，進行檔案的上傳與下載，如何連線請參考[連線虛擬運算個體-使用使用第三方軟體：MobaXterm](https://www.twcc.ai/doc?page=vm)
+:::
+
+:::spoiler Q5.如何將本機內的資料傳傳入虛擬運算個體？
+
+:::info
+
+請參考以下兩種做法
+1. 透過雲端物件儲存介面或是第三方軟體進行檔案上傳，在使用TWCC-CLI將檔案下載到指定位置﹐請參考[TWCC CLI-雲端物件儲存](https://www.twcc.ai/doc?page=s3_cli)
+2. 使用MobaXter連線虛擬運算個體，於頁面左側處選取Sftp，進行檔案的上傳與下載，如何連線請參考文件[連線虛擬運算個體-使用使用第三方軟體：MobaXterm](https://www.twcc.ai/doc?page=vm)
+:::
 ## 網路安全
 
 

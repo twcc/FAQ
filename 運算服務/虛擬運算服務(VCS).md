@@ -145,23 +145,32 @@ Use DNS no
 
 :::
 
-:::spoiler Q4.如何將虛擬運算個體內的資料傳入本機？
+
+:::spoiler Q4.如何將虛擬運算個體內的資料下載至本機？
 
 :::info
 
-請參考以下兩種做法
-1. 透過雲端物件儲存: 此種方法不僅達到資料傳輸的目的，更可以在雲端物件儲存進行備份，首先先將資料備份到雲端物件儲存，請參考[使用 TWCC COS 備份/同步、還原運算資料](https://www.twcc.ai/doc?page=backup)，在到雲端物件儲存使用者介面進行下載，如需要一次下載多個檔案，可以在搭配第三方軟體進行使用，請參考[雲端物件儲存-使用第三方軟體管理檔案](https://www.twcc.ai/doc?page=object)
-2. 使用MobaXter連線虛擬運算個體，於頁面左側處選取Sftp，進行檔案的上傳與下載，如何連線請參考[連線虛擬運算個體-使用使用第三方軟體：MobaXterm](https://www.twcc.ai/doc?page=vm)
+請參考以下兩種下載方式：
+
+1. 透過雲端物件儲存服務 (COS)傳入本機，此方法不僅能達到資料傳輸的目的，更可以將個體資料備份至 COS：
+    - **Step 1.** [<ins>將資料備份到 COS</ins>](https://www.twcc.ai/doc?page=backup)。
+    - **Step 2.** 至 TWCC 使用者網站 COS 管理介面[<ins>下載檔案</ins>](https://www.twcc.ai/doc?page=object#%E4%B8%8B%E8%BC%89%E6%AA%94%E6%A1%88)，如需要一次下載多個檔案，可搭配[<ins>第三方軟體</ins>](https://www.twcc.ai/doc?page=object#%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BB%9F%E9%AB%94%E7%AE%A1%E7%90%86%E6%AA%94%E6%A1%88)使用。
+
+2. [<ins>使用 MobaXterm 連線虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 :::
 
-:::spoiler Q5.如何將本機內的資料傳傳入虛擬運算個體？
+:::spoiler Q5.如何將本機內的資料上傳至虛擬運算個體？
 
 :::info
 
-請參考以下兩種做法
-1. 透過雲端物件儲存介面或是第三方軟體請參考[雲端物件儲存-使用第三方軟體管理檔案](https://www.twcc.ai/doc?page=object)進行檔案上傳，在使用TWCC-CLI將檔案下載到指定位置﹐請參考[TWCC CLI-雲端物件儲存](https://www.twcc.ai/doc?page=s3_cli)
-2. 使用MobaXter連線虛擬運算個體，於頁面左側處選取Sftp，進行檔案的上傳與下載，如何連線請參考[連線虛擬運算個體-使用使用第三方軟體：MobaXterm](https://www.twcc.ai/doc?page=vm)
+請參考以下兩種上傳方式：
+1. 透過雲端物件儲存服務 (COS)
+    - **Step 1.** 將本機檔案[<ins>上傳至雲端物件儲存服務 (COS)</ins>](https://www.twcc.ai/doc?page=object#%E4%B8%8A%E5%82%B3%E6%AA%94%E6%A1%88)
+    - **Step 2.** [<ins>連線進入虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)
+    - **Step 3.** 透過內建之 TWCC-CLI 工具[<ins>將 COS 檔案下載到指定位置</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)。
+3. [<ins>使用 MobaXterm 連線虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 :::
+
 ## 網路安全
 
 

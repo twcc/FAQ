@@ -238,6 +238,13 @@ https://www.twcc.ai/doc?page=howto_hpc4
 
 :::
 
+:::spoiler Q7. 安裝套件時發生 `Unable to change to /home/主機帳號 - chdir (13: Permission denied)` 如何處理？ 
+
+:::info
+為保障資料安全，容器的 root 身分無法存取您的 /home與 /work 目錄，因此請使用主機帳號的身分安裝，勿切換成 root 權限。
+
+:::
+
 
 
 ## 儲存與資料傳輸

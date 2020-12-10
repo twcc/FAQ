@@ -77,7 +77,7 @@ Link to our FAQ page:
 - Q2. 計畫到期後儲存在台灣杉二號的檔案會刪除嗎？
 - Q1. 請問台灣杉二號的登入節點 IP 位置為何？
 - Q1. 使用台灣杉二號時出現此錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
-### [容器運算服務(CCS)](運算服務/容器運算服務(CCS).md) (45) 
+### [容器運算服務(CCS)](運算服務/容器運算服務(CCS).md) (46) 
 - Q1. 怎麼使用超級電腦？
 - Q2. 如何開始使用容器？
 - Q3. 容器與高速運算該如何選擇？
@@ -101,6 +101,7 @@ Link to our FAQ page:
 - Q4. 安裝套件時發生錯誤訊息 `Permission denied` 如何處理？
 - Q5. 在容器中如何安裝 cuDNN？
 - Q6. 容器中有哪些內建的套件管理工具？
+- Q7. 安裝套件時發生 `Unable to change to /home/主機帳號 - chdir (13: Permission denied)` 如何處理？
 - Q1. 如何將檔案上傳至容器，或從容器下載？
 - Q2. 為何切換成 root 無法存取自己的 /home 與 /work？
 - Q3. 要如何分享 /home 與 /work 的資料給其他同計畫使用者？

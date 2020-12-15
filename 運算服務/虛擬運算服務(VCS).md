@@ -60,6 +60,16 @@ Use DNS no
 
 :::
 
+
+:::spoiler Q5. 如何使用帳號密碼連線虛擬運算個體？
+
+:::info
+請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-zh)
+
+:::
+
+
+
 ## 管理個體
 :::spoiler Q1. 建立虛擬運算個體失敗該怎麼處理？
 

@@ -149,7 +149,7 @@ https://www.twcc.ai/doc?page=howto_hpc4
 3. 您的程式與您所選擇的容器映像檔有版本相容性問題，請您先確認適合之映像檔版本環境，確認方式有 2 種。
    1. 在 [<ins>NGC 網站</ins>](https://docs.nvidia.com/deeplearning/frameworks/index.html) 中，在右上角搜尋框依不同框架輸入 **TensorFlow release notes**、**PyTorch release notes** ...等內容，進入 release notes 列表頁面後，再點擊您要確認的框架版本，即可檢視套件內容及版本。
    2. 建立開發型容器、選擇映像檔類型時，請將滑鼠移至 <i class="fa fa-info-circle" aria-hidden="true"></i> ，提示內容將顯示 NGC 的網址，進入後即可找到相關資訊。 
-
+4. 若有安裝 Anaconda 或 Miniconda，也容易造成套件衝突，因此安裝 Anaconda 或 Miniconda 前，請先確認套件相容性。 
 :::
 
 :::spoiler Q5. 建立容器時基本設定中，為何有共享記憶體？ 
@@ -258,8 +258,8 @@ https://www.twcc.ai/doc?page=howto_hpc4
 :::spoiler Q2. 為何切換成 root 無法存取自己的 /home 與 /work？ 
 
 :::info
-- 為保障資料安全，容器的 root 身分無法存取您的目錄，僅限使用者與租戶管理員之帳號有權限存取。
-- /home 與 /work 為高速檔案系統 (HFS) 掛載於容器的兩個目錄空間，其 root 權限為 HFS 系統管理員所擁有，非使用者可取得。
+為保障資料安全，容器的 root 身分無法存取您的目錄，僅限用戶本人帳號有權限存取。
+
 :::
 
 :::spoiler Q3. 要如何分享 /home 與 /work 的資料給其他同計畫使用者？ 

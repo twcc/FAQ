@@ -60,6 +60,16 @@ Use DNS no
 
 :::
 
+
+:::spoiler Q5. 如何使用帳號密碼連線 Linux 個體？
+
+:::info
+請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-zh)操作，即可使用帳號密碼連線 Linux 個體，可預防鑰匙對遺失或檔案毀損。
+
+:::
+
+
+
 ## 管理個體
 :::spoiler Q1. 建立虛擬運算個體失敗該怎麼處理？
 

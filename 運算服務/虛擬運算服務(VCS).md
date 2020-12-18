@@ -61,10 +61,10 @@ Use DNS no
 :::
 
 
-:::spoiler Q5. 如何使用帳號密碼連線虛擬運算個體？
+:::spoiler Q5. 如何使用帳號密碼連線 Linux 個體？
 
 :::info
-請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-zh)
+請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-zh)操作，即可免用鑰匙對，使用帳號密碼連線 Linux 個體。
 
 :::
 

@@ -70,10 +70,13 @@ GA: UA-155999456-1
 有的，在登入台灣杉二號節點後執行 `module avail` 指令，將會列出所有的可被載入的 module 資訊，您可使用 `module load` 指令選擇所需的 CUDA 版本。
 :::
 
-:::spoiler Q5. 為什麼有些套件在開發型容器可以使用，但在台灣杉二號不能，兩者不是共用高速儲存空間(HFS)嗎?
+:::spoiler Q5. 為什麼有些套件在開發型容器可以使用，但在台灣杉二號不能，兩者不是共用高速儲存空間 (HFS) 嗎?
 :::info
-台灣杉二號與開發型容器的儲存環境是相同的，但執行環境卻不同，開發型容器的執行環境是由映像檔所建，台灣杉二號的環境則需自己去建立維護。  
-<i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> **提示：** 台灣杉二號可使用module去載入所需套件，module詳細使用方法請看[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#7-Module-%E4%BD%BF%E7%94%A8)。
+兩者儲存環境相同，但計算環境不同：
+
+- 開發型容器的計算環境是由 TWCC 容器映像檔所建置。
+- 而台灣杉二號則需使用者自行部署計算環境。
+    <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> **提示：** 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#7-Module-%E4%BD%BF%E7%94%A8)。
 :::
 
 ## 儲存與資料傳輸

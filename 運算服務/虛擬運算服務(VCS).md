@@ -1,3 +1,11 @@
+---
+title : FAQ-VCS | zh
+tags: FAQ, ZH
+GA: UA-155999456-1
+---
+
+{%hackmd @docsharedstyle/default %}
+
 # TWCC FAQs | 虛擬運算服務 (VCS)
 
 ## 連線登入
@@ -118,7 +126,7 @@ Use DNS no
 :::info
 
 1. 安裝套件或進行更新時，可能產生許多類似與 lock 檔案相關的錯誤訊息。請您將 lock 檔案刪除後，再次執行您的任務。
-2. 請使用映像檔Ubuntu 20.04
+2. 建議改為使用映像檔 Ubuntu 20.04，可避免產生此問題。
 
 :::
 ## 儲存與資料傳輸

@@ -92,16 +92,16 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 **Step 1.** 參考[<ins>程式執行異常的建議排除方式</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。
 **Step 2.** 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。
-**Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。 
+**Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。
+**Step 4.** 重新建立一個新的容器。
 :::
 
 
 :::spoiler Q3. 不同容器中的環境是否也不同？
 :::info
-- 容器中的環境是[<ins>HFS 高速儲存服務</ins>](https://www.twcc.ai/doc?page=hfs)，HFS是跟著用戶的主機帳號。
-- 每當用戶建立容器，容器會自動將用戶的HFS掛載上來作為容器環境。
-- 只要是同一用戶建立的容器，環境都一樣是該用戶的HFS。
+容器的儲存環境是[<ins>高速檔案系統 (HFS) </ins>](https://www.twcc.ai/doc?page=hfs)，用戶建立不同的容器，系統皆會自動將用戶的 HFS 掛載作為容器環境。
 
+而 HFS 空間的生命週期是隨著用戶的主機帳號，因此只要是同一用戶建立的容器，環境都是相同的 HFS 空間。
 :::
 
 
@@ -357,8 +357,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 :::info
 
-1. 可使用 NUMA control 套件來鎖定 CPU 使用數量，改善效能，詳情可參考[<ins>此說明</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-numactl-zh)。
-2. 或檢查套件相容性，參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
+檢查套件相容性，參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
 :::
 
 :::spoiler Q3. 程式執行時發現比 local 端還慢？ 
@@ -368,9 +367,8 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 改善效能的方式請參考如下：
 
 1. 檢查套件相容性，使用[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-2. 使用 NUMA control 來鎖定 CPU core，詳情可參考[<ins>此連結</ins>](https://man.twcc.ai/@twccdocs/howto-ccs-numactl-zh)。
-3. 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
-4. 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以將容器安排建立在較不繁忙的節點。
+2. 若您的 dataset 為許多小檔案，且 dataset 佔了大量空間，我們建議您將小檔案集合成大檔案，以減少 I/O 壓力。
+3. 製作容器複本，再以複本開一個新的容器，若系統整體負載仍有餘裕，可以將容器安排建立在較不繁忙的節點。
 
 :::
 
@@ -447,7 +445,7 @@ $ sudo -i
 ```    
 :::
 
-:::spoiler Q4. 容器收費是一建立就開始收費，還是開始跑程式才收費？ 
+:::spoiler Q4. 容器是一建立就開始收費，還是開始跑程式才收費？ 
 
 :::info
 容器一建立即開始佔用計算資源，因此建立後、在您刪除容器之前，將會持續計費。

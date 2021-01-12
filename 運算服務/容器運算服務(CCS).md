@@ -319,6 +319,13 @@ $ /opt/matlab/R2019b/bin/matlab
 Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透過[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs#%E4%BD%BF%E7%94%A8-SFTP--Filezilla-%E5%82%B3%E8%BC%B8%E6%AA%94%E6%A1%88)，上傳您的檔案。
 :::
 
+:::spoiler Q10. 如何於容器內與雲端物件儲存間傳輸檔案？ 
+
+:::info
+1. 在容器內部署 TWCC CLI，請參考[<ins>部署 CLI</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#1-1-%E6%96%BCTWCC%E9%96%8B%E5%95%9F%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8)
+2. 使用 TWCC CLI 進行容器與雲端物件儲存的檔案傳輸，請參考[<ins>雲端物件儲存 CLI 介紹</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)
+:::
+
 ## 網路安全
 
 :::spoiler Q1. 容器的 Port 範圍是什麼？

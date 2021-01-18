@@ -110,8 +110,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 :::spoiler Q1. 如何使用 8 張 GPU 以上的資源？ 
 :::info
 請改為使用 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
-https://www.twcc.ai/doc?page=howto_hpc3  
-https://www.twcc.ai/doc?page=howto_hpc4
+[HowTo：容器跨節點高速運算－AI Benchmark](https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-zh#HowTo%EF%BC%9A%E5%AE%B9%E5%99%A8%E8%B7%A8%E7%AF%80%E9%BB%9E%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%EF%BC%8DAI-Benchmark)
 
 :::
 
@@ -419,9 +418,9 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 
 :::info
 
-可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
-https://www.twcc.ai/doc?page=howto_hpc3  
-https://www.twcc.ai/doc?page=howto_hpc4
+可參考網路上 Conda 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
+[HowTo：建立 TWNIA2 容器](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh#HowTo%EF%BC%9A%E5%BB%BA%E7%AB%8B-TWNIA2-%E5%AE%B9%E5%99%A8)
+[HowTo：使用 Conda 管理套件與執行 Job](https://man.twcc.ai/@twccdocs/howto-twnia2-conda-manage-packages-submit-job-zh#HowTo%EF%BC%9A%E4%BD%BF%E7%94%A8-Conda-%E7%AE%A1%E7%90%86%E5%A5%97%E4%BB%B6%E8%88%87%E5%9F%B7%E8%A1%8C-Job)
 
 :::
 

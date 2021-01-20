@@ -109,8 +109,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 :::spoiler Q1. 如何使用 8 張 GPU 以上的資源？ 
 :::info
-請改為使用 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行：  
-[HowTo：容器跨節點高速運算－AI Benchmark](https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-zh#HowTo%EF%BC%9A%E5%AE%B9%E5%99%A8%E8%B7%A8%E7%AF%80%E9%BB%9E%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%EF%BC%8DAI-Benchmark)
+請改為使用 台灣杉二號 (命令列介面)，使用方法可參考網路上 Horovod 和 Singularity 的使用說明文件，或參考以下的 tutorial 進行： [<ins>HowTo：容器跨節點高速運算－AI Benchmark</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-zh#HowTo%EF%BC%9A%E5%AE%B9%E5%99%A8%E8%B7%A8%E7%AF%80%E9%BB%9E%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%EF%BC%8DAI-Benchmark)。
 
 :::
 
@@ -301,7 +300,7 @@ $ /opt/matlab/R2019b/bin/matlab
 :::spoiler Q7. 為何 Jupyter Notebook 無法寫入檔案？ 
 
 :::info
-高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考增購更多儲存空間，增購方式請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格以及增購空間的方法。。
+高速檔案系統空間已快用滿，導致無法寫入檔案，請參考[<ins>高速檔案系統 FAQ Q6</ins>](https://man.twcc.ai/@twccdocs/faq-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Ffaq-hfs-zh)，檢查並清理您的儲存空間，或參考增購更多儲存空間，增購方式請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)中「查看容量」及「HFS空間管理政策」兩個段落，即可得知價格以及增購空間的方法。
 
 :::
 
@@ -321,8 +320,8 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 :::spoiler Q10. 如何於容器內與雲端物件儲存間傳輸檔案？ 
 
 :::info
-1. 在容器內部署 TWCC CLI，請參考[<ins>部署 CLI</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#1-1-%E6%96%BCTWCC%E9%96%8B%E5%95%9F%E9%96%8B%E7%99%BC%E5%9E%8B%E5%AE%B9%E5%99%A8)
-2. 使用 TWCC CLI 進行容器與雲端物件儲存的檔案傳輸，請參考[<ins>雲端物件儲存 CLI 介紹</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)
+1. 請在容器內[<ins>部署 TWCC CLI</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#1-%E9%83%A8%E7%BD%B2%E6%93%8D%E4%BD%9C%E7%92%B0%E5%A2%83)。
+2. 再參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#4-%E9%9B%B2%E7%AB%AF%E7%89%A9%E4%BB%B6%E5%84%B2%E5%AD%98%E6%9C%8D%E5%8B%99COS-Cloud-Object-Storage)，使用 TWCC CLI 進行容器與雲端物件儲存的檔案傳輸。
 :::
 
 ## 網路安全

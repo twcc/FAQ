@@ -30,7 +30,7 @@ GA: UA-155999456-1
 
 台灣杉二號 (命令列介面) 可執行跨節點高速運算，將高負載的工作量平均分派，提升處理效率。
 
-可使用 Slurm 指令索取所需節點資源數，Slurm 系統使用說明請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B#5-Slurm-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)，跨節點操作範例請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B1Bvn55p4?type=view#HowTo%EF%BC%9A%E8%B7%A8%E7%AF%80%E9%BB%9E%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%EF%BC%8DAI-Benchmark-with-Singularity-PyTorch)。
+可使用 Slurm 指令索取所需節點資源數，Slurm 系統使用說明請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#5-Slurm-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)，跨節點操作範例請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-zh#HowTo%EF%BC%9A%E5%AE%B9%E5%99%A8%E8%B7%A8%E7%AF%80%E9%BB%9E%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%EF%BC%8DAI-Benchmark)。
 
 :::
 

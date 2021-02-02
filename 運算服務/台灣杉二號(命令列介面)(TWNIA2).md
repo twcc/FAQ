@@ -25,7 +25,14 @@ GA: UA-155999456-1
 
 ## 資源配置與監控
 
-:::spoiler Q1. 台灣杉二號 (命令列介面) 是否可使用跨節點的運算？
+:::spoiler Q1. 請問在台灣杉二號 (命令列介面)如何去部屬環境執行我的程式? 
+:::info
+1. Conda: 使用簡單的 Conda 指令即可將套件安裝完成，並能切換至指定的虛擬環境，使用不同版本的 Python，解決多版本的相容問題。詳細請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-conda-manage-packages-submit-job-zh#HowTo%EF%BC%9A%E4%BD%BF%E7%94%A8-Conda-%E7%AE%A1%E7%90%86%E5%A5%97%E4%BB%B6%E8%88%87%E5%9F%B7%E8%A1%8C-Job)
+2. Singularity: 透過 「Singularity」 包裝您所需的套件與程式，建立可在台灣杉二號 (命令列介面)  服務執行運算工作的容器環境，並可以快速部署套件、搬移、以及分享。詳細請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh#HowTo%EF%BC%9A%E5%BB%BA%E7%AB%8B-TWNIA2-%E5%AE%B9%E5%99%A8)
+
+
+:::
+:::spoiler Q2. 台灣杉二號 (命令列介面) 是否可使用跨節點的運算？
 :::info
 
 台灣杉二號 (命令列介面) 可執行跨節點高速運算，將高負載的工作量平均分派，提升處理效率。
@@ -34,12 +41,12 @@ GA: UA-155999456-1
 
 :::
 
-:::spoiler Q2. 使用跨節點運算，節點是系統自動選取或需手動選取？
+:::spoiler Q3. 使用跨節點運算，節點是系統自動選取或需手動選取？
 :::info
 您可以使用 Slurm 指令選取節點，相關指令請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hpc_cli#6-Slurm%E6%8C%87%E4%BB%A4)。
 :::
 
-:::spoiler Q3. 為什麼我執行任務索取多個 CPU 資源會發生錯誤？
+:::spoiler Q4. 為什麼我執行任務索取多個 CPU 資源會發生錯誤？
 :::info
 請確認使用的資源比例，因台灣杉二號的資源比例必須為 1 GPU : 4 CPU : 90 GB Memory，例：GPU 數量須設定為 8 個才能取得 32 個 CPU。
 :::

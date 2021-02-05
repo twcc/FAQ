@@ -4,7 +4,6 @@ tags: FAQ, ZH
 GA: UA-155999456-1
 ---
 
-
 {%hackmd @docsharedstyle/default %}
 
 # TWCC FAQs | 容器運算服務 (CCS)
@@ -68,11 +67,14 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 :::info
 
-請參考以下處理方式：
+請參考以下 2 種處理方式：
 
-1. 請檢查套件相容性，並使用以[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh)進行套件管理。
-2. 部分套件會改變 Jupyter 的設定 (例：`anaconda3`)，且使用上述套件管理方法時無法檢查，請備份該資料夾並移除套件，即可連線。
-3. 請檢查貴單位防火牆設定是否有阻擋容器使用的 port，容器 port 範圍為 50000 ~ 60000。
+1. 進行以下操作將容器還原至初始狀態：
+    - **Step 1.** 參考[<ins>程式執行異常的建議排除方式</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。
+    - **Step 2.** 進入 `/home/主機帳號/.cache/` 目錄，清除計算過程產生的暫存檔。
+    - **Step 3.** 若有安裝 Anaconda 或 Miniconda，也請移除或重新命名。
+    - **Step 4.** 重新建立一個新的容器再連線 Jupyter Notebook。
+2. 請檢查貴單位防火牆設定是否有阻擋容器使用的 port，容器 port 範圍為 50000 ~ 60000。
 :::
 
 
@@ -80,8 +82,9 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 :::spoiler Q1. 如何暫停容器？
 :::info
-目前系統不支援容器暫停的功能，您可製作容器複本保留工作環境，並刪除容器，待需要使用容器時再以複本建立新容器。
-
+目前系統不支援容器暫停的功能，您可依需求選擇任一節省計算成本的方案：
+1. 您可製作容器複本保留工作環境，並刪除容器，待需要使用容器時再以複本建立新容器。
+2. 您可參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-cli-ccs-automate-compute-delete-with-twccli-zh)，編寫腳本自動執行運算、刪除容器。
 :::
 
 

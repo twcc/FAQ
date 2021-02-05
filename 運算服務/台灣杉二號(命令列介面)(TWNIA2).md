@@ -25,12 +25,11 @@ GA: UA-155999456-1
 
 ## 資源配置與監控
 
+
 :::spoiler Q1. 台灣杉二號 (命令列介面) 是否可使用跨節點的運算？
 :::info
 
-台灣杉二號 (命令列介面) 可執行跨節點高速運算，將高負載的工作量平均分派，提升處理效率。
-
-可使用 Slurm 指令索取所需節點資源數，Slurm 系統使用說明請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B#5-Slurm-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)，跨節點操作範例請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B1Bvn55p4?type=view#HowTo%EF%BC%9A%E8%B7%A8%E7%AF%80%E9%BB%9E%E9%AB%98%E9%80%9F%E9%81%8B%E7%AE%97%EF%BC%8DAI-Benchmark-with-Singularity-PyTorch)。
+台灣杉二號 (命令列介面) 可透過 [<ins>Slurm</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#5-Slurm-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E) 指令索取計算資源，執行[<ins>跨節點高速運算</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-zh)，將高負載的工作量平均分派，提升處理效率。
 
 :::
 
@@ -47,30 +46,38 @@ GA: UA-155999456-1
 
 
 ## 套件軟體
-:::spoiler Q1. 可以協助我安裝套件嗎？
+:::spoiler Q1. 請問在台灣杉二號 (命令列介面) 如何部屬環境執行我的程式？
+:::info
+1. Conda：使用簡單的 Conda 指令即可將套件安裝完成，並能切換至指定的虛擬環境，使用不同版本的 Python，解決多版本的相容問題，請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-conda-manage-packages-submit-job-zh)了解更多。
+2. Singularity：透過 Singularity 包裝您所需的套件與程式，建立可在台灣杉二號 (命令列介面)  服務執行運算工作的容器環境，並可以快速部署套件、搬移、以及分享，請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh)了解更多。
+
+
+:::
+
+:::spoiler Q2. 可以協助我安裝套件嗎？
 :::info
 您擁有自由安裝套件的權限，請您依所需自行安裝。此外，我們建議您使用 Conda 或 Singularity 容器管理套件。
 :::
 
 
-:::spoiler Q2. 排程系統 Slurm 是什麼？
+:::spoiler Q3. 排程系統 Slurm 是什麼？
 :::info
 請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B#Slurm-%E5%9F%BA%E6%9C%AC%E8%AA%AA%E6%98%8E)有 Slurm 系統架構的詳細說明。
 :::
 
-:::spoiler Q3. 是否可以在台灣衫二號上安裝 Rclone 軟體同步工具？
+:::spoiler Q4. 是否可以在台灣衫二號上安裝 Rclone 軟體同步工具？
 
 :::info
 
 台灣杉二號有安裝最新版的 Rclone，可以使用 `module load rclone` 指令來取得 Rclone 的使用環境。而 Rclone 是使用 Go 語言撰寫，解壓縮在家目錄即可直接使用。 
 :::
 
-:::spoiler Q4. 台灣杉二號有支援 Nvidia 的 CUDA 運算架構嗎?
+:::spoiler Q5. 台灣杉二號有支援 Nvidia 的 CUDA 運算架構嗎?
 :::info
 有的，在登入台灣杉二號節點後執行 `module avail` 指令，將會列出所有的可被載入的 module 資訊，您可使用 `module load` 指令選擇所需的 CUDA 版本。
 :::
 
-:::spoiler Q5. 為什麼有些套件在開發型容器可以使用，但在台灣杉二號不能，兩者不是共用高速儲存空間 (HFS) 嗎?
+:::spoiler Q6. 為什麼有些套件在開發型容器可以使用，但在台灣杉二號不能，兩者不是共用高速儲存空間 (HFS) 嗎?
 :::info
 兩者儲存環境相同，但計算環境不同：
 
@@ -108,15 +115,6 @@ GA: UA-155999456-1
 
 若遇此情況，建議您先使用 `squeue` 指令查看任務狀態，再使用 `scancel` 取消狀態為等待中或運行中的任務，減少提交的任務數量。Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)。
 :::
-
-
-
-
-
-
-
-
-
 
 
 

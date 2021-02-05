@@ -67,7 +67,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 :::info
 
-請參考以下2種處理方式：
+請參考以下 2 種處理方式：
 
 1. 進行以下操作將容器還原至初始狀態：
     - **Step 1.** 參考[<ins>程式執行異常的建議排除方式</ins>](https://man.twcc.ai/@twccdocs/ccs-intactv-howto-zh#%E7%A8%8B%E5%BC%8F%E5%9F%B7%E8%A1%8C%E7%95%B0%E5%B8%B8%E7%9A%84%E5%BB%BA%E8%AD%B0%E6%8E%92%E9%99%A4%E6%96%B9%E5%BC%8F) 清空或搬移`/home/主機帳號/.local/` 目錄下之套件。

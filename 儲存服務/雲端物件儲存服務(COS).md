@@ -11,7 +11,7 @@ GA: UA-155999456-1
 :::spoiler Q1. 請問在舊計畫的雲端物件儲存資料，可以直接沿用到新計畫內嗎？
 :::info
 
-很抱歉！目前 TWCC 沒有提供雲端物件儲存資料直接移轉至另一計畫的服務，您可以使用第三方軟體將舊計畫資料下載至本地端，再從本機端將資料上傳到新計畫的雲端物件儲存空間，詳細操作方法請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/howto-project-data-transfer-zh#HowTo%EF%BC%9A%E6%96%B0%E8%88%8A%E8%A8%88%E7%95%AB%E8%B3%87%E6%96%99%E8%BD%89%E7%A7%BB)
+很抱歉！目前 TWCC 沒有提供雲端物件儲存資料直接移轉至另一計畫的服務，您可以使用第三方軟體將舊計畫資料下載至本地端，再從本機端將資料上傳到新計畫的雲端物件儲存空間，詳細操作方法請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/howto-project-data-transfer-zh)。
 
 :::
 :::spoiler Q2. 為什麼我在 TWCC 網頁下載檔案失敗了？

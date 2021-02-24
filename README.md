@@ -79,7 +79,7 @@ Link to our FAQ page:
 - Q2. 計畫到期後儲存在台灣杉二號的檔案會刪除嗎？
 - Q1. 請問台灣杉二號的登入節點 IP 位置為何？
 - Q1. 使用台灣杉二號時出現此錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
-### [容器運算服務(CCS)](運算服務/容器運算服務(CCS).md) (47) 
+### [容器運算服務(CCS)](運算服務/容器運算服務(CCS).md) (48) 
 - Q1. 怎麼使用超級電腦？
 - Q2. 如何開始使用容器？
 - Q3. 容器與高速運算該如何選擇？
@@ -123,6 +123,7 @@ Link to our FAQ page:
 - Q2. 程式執行時顯示 `bus error`？
 - Q3. 程式執行時發生有些 library 無法載入 (`Could not load dynamic library...`)？
 - Q4. 為何 `sudo  apt  update` 產生 `Unable  to  change  to  /home/wistron1/ -chdir  (13:  Permission  denied)`？
+- Q5. 為何使用 Jupyter Notebook 時，右上角顯示 `kernel busy`？
 - Q1. 如何從容器轉移至台灣杉二號(命令列介面)進行訓練運算？
 - Q2. 我可以建立一個容器給其他人用嗎？
 - Q3. 如何切換成容器的 root 身份？

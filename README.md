@@ -8,9 +8,13 @@ Link to our FAQ page:
 ## TOC
 
 ## [TWCC CLI](TWCC%20CLI)
-### [部屬環境](TWCC%20CLI/部屬環境.md) (2) 
+### [部屬環境](TWCC%20CLI/部屬環境.md) (6) 
 - Q1. 請問 TWCC-CLI 怎麼安裝？
 - Q2. 請問 TWCC-CLI 支援的環境是？
+- Q3. Credential 錯誤該如何處理？
+- Q4. Python 版本錯誤該如何處理？
+- Q5. 出現 `'ascii' codec can't encode characters in position 610-612: ordinal not in range(128)`？
+- Q6. 安裝後出現 `twccli: command not found`？
 ### [雲端物件儲存](TWCC%20CLI/雲端物件儲存.md) (1) 
 - Q1. 為何我使用 TWCC-CLI 上傳、下載大量檔案時無法成功？
 ## [儲存服務](儲存服務)

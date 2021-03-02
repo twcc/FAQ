@@ -8,9 +8,13 @@ Link to our FAQ page:
 ## TOC
 
 ## [TWCC CLI](TWCC%20CLI)
-### [部屬環境](TWCC%20CLI/部屬環境.md) (2) 
+### [部屬環境](TWCC%20CLI/部屬環境.md) (6) 
 - Q1. 請問 TWCC-CLI 怎麼安裝？
 - Q2. 請問 TWCC-CLI 支援的環境是？
+- Q3. Credential 錯誤該如何處理？
+- Q4. Python 版本錯誤該如何處理？
+- Q5. 出現 `'ascii' codec can't encode characters in position 610-612: ordinal not in range(128)`？
+- Q6. 安裝後出現 `twccli: command not found`？
 ### [雲端物件儲存](TWCC%20CLI/雲端物件儲存.md) (1) 
 - Q1. 為何我使用 TWCC-CLI 上傳、下載大量檔案時無法成功？
 ## [儲存服務](儲存服務)
@@ -53,10 +57,11 @@ Link to our FAQ page:
 - Q9. 如何計算額度用量？
 - Q10. 如何查詢計畫下成員的額度用量紀錄？
 - Q11. 如何查詢某個計算工作用量紀錄？
-### [產品概觀](產品與平台/產品概觀.md) (3) 
+### [產品概觀](產品與平台/產品概觀.md) (4) 
 - Q1. 容器運算 (CCS)、虛擬運算 (VCS) 及高速運算 (HPC) 有什麼不同？
 - Q2. 高速儲存服務 (HFS)、區塊儲存服務 (BSS) 及雲端物件儲存服務 (COS) 有什麼不同？
 - Q3. 容器運算 (CCS) 跟虛擬運算 (VCS) 使用上分別適用於那些情境？
+- Q4. TWCC 資訊安全相關認證與機制？
 ## [網路與安全服務](網路與安全服務)
 ### [基礎虛擬防火牆](網路與安全服務/基礎虛擬防火牆.md) (1) 
 - Q1. 為什麼防火牆裡面的規則沒有作用？
@@ -79,7 +84,7 @@ Link to our FAQ page:
 - Q2. 計畫到期後儲存在台灣杉二號的檔案會刪除嗎？
 - Q1. 請問台灣杉二號的登入節點 IP 位置為何？
 - Q1. 使用台灣杉二號時出現此錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
-### [容器運算服務(CCS)](運算服務/容器運算服務(CCS).md) (47) 
+### [容器運算服務(CCS)](運算服務/容器運算服務(CCS).md) (48) 
 - Q1. 怎麼使用超級電腦？
 - Q2. 如何開始使用容器？
 - Q3. 容器與高速運算該如何選擇？
@@ -123,11 +128,12 @@ Link to our FAQ page:
 - Q2. 程式執行時顯示 `bus error`？
 - Q3. 程式執行時發生有些 library 無法載入 (`Could not load dynamic library...`)？
 - Q4. 為何 `sudo  apt  update` 產生 `Unable  to  change  to  /home/wistron1/ -chdir  (13:  Permission  denied)`？
+- Q5. 為何使用 Jupyter Notebook 時，右上角顯示 `kernel busy`？
 - Q1. 如何從容器轉移至台灣杉二號(命令列介面)進行訓練運算？
 - Q2. 我可以建立一個容器給其他人用嗎？
 - Q3. 如何切換成容器的 root 身份？
 - Q4. 容器是一建立就開始收費，還是開始跑程式才收費？
-### [虛擬運算服務(VCS)](運算服務/虛擬運算服務(VCS).md) (23) 
+### [虛擬運算服務(VCS)](運算服務/虛擬運算服務(VCS).md) (24) 
 - Q1. SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有哪些可使用的的開源軟體？
 - Q2. 欲使用虛擬運算個體架設服務，卻無法連入？
 - Q3. 用快照所建立的虛擬運算個體無法連線進入作業該怎麼處理？
@@ -137,7 +143,8 @@ Link to our FAQ page:
 - Q2. 忘記 Windows 虛擬運算個體登入密碼該怎麼處理？
 - Q3. 遺失 Linux 虛擬運算個體的金鑰該怎麼處理？
 - Q1. 如何調整已建立好的虛擬運算個體規格？
-- Q2. 請問要如何知道虛擬運算服務個體網路流量狀態？
+- Q2. 為什麼我在建立虛擬運算個體時，母錢包與子錢包皆有額度，卻出現`計畫資源已用盡，無法創建資源`的訊息？
+- Q3. 請問要如何知道虛擬運算服務個體網路流量狀態？
 - Q1. 虛擬運算服務是否支援 SMTP？
 - Q2. 對虛擬運算個體安裝套件或進行更新，出現`E: Could not get lock /var/lib/apt/lists/lock`該如何解決？
 - Q1. 虛擬運算服務個體是否可直接掛載雲端物件儲存 (COS)？

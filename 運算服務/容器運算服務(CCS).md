@@ -84,7 +84,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 :::info
 目前系統不支援容器暫停的功能，您可依需求選擇任一節省計算成本的方案：
 1. 您可製作容器複本保留工作環境，並刪除容器，待需要使用容器時再以複本建立新容器。
-2. 您可參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-cli-ccs-automate-compute-delete-with-twccli-zh)，編寫腳本自動執行運算、刪除容器。
+2. 您可參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=howto-cli-ccs-automate-compute-delete-with-twccli)，編寫腳本自動執行運算、刪除容器。
 :::
 
 

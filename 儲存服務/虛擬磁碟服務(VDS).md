@@ -1,12 +1,12 @@
 ---
-title : FAQ-BSS | zh
+title : FAQ-VDS | zh
 tags: FAQ, ZH
 GA: UA-155999456-1
 ---
 
 {%hackmd @docsharedstyle/default %}
 
-# TWCC FAQs | 區塊儲存服務 (BSS)
+# TWCC FAQs | 虛擬磁碟服務 (VDS)
 
 :::spoiler Q1. 為何保留的 HDD 無法成功掛載到新的虛擬運算服務個體上？
 

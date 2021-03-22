@@ -18,13 +18,26 @@ GA: UA-155999456-1
 若上述情況確認後，仍無法掛載，請洽技術支援服務：isupport@twcc.ai。
 :::
 
-:::spoiler Q2. 我想要將舊有的資料碟換成新的資料碟，請問要如何操作？
+:::spoiler Q2. 無法讀取新掛載的磁碟？
+
+:::info
+新掛載的磁碟，需完成初始化才能存取資料，初始化步驟請參考：
+[<ins>HowTo：初始化磁碟- Linux 個體</ins>](https://www.twcc.ai/doc?page=howto-bss-init-vol-linux) 或 [<ins>HowTo：初始化磁碟- Windows</ins>](https://www.twcc.ai/doc?page=howto-bss-init-vol-windows)。
+:::
+
+:::spoiler Q3. 如何上傳及下載檔案？
+
+:::info
+將磁碟掛載至虛擬運算個體後，[<ins>使用 MobaXterm 連線個體</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，並完成磁碟初始化，於 MobaXterm 頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
+:::
+
+:::spoiler Q4. 我想要將舊有的資料碟換成新的資料碟，請問要如何操作？
 
 :::info
 詳細操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-zh)，可變更磁碟類型、容量，並透過同步方式將舊磁碟資料保存至新磁碟。
 :::
 
-:::spoiler Q3. 為何我的資料碟刪不掉？
+:::spoiler Q5. 為何我的資料碟刪不掉？
 
 :::info
 1. 刪除前請先檢查該資料碟是否已經與虛擬運算個體分離，並確認狀態為 **`AVAILABLE`**，再進行刪除。

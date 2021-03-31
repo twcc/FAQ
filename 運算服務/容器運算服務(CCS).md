@@ -60,7 +60,11 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 :::info
 
-可能是主機密碼輸入錯誤，請重新輸入或至[<ins>此處</ins>](https://iservice.nchc.org.tw/module_page.php?module=nchc_service#nchc_service/nchc_service.php?action=nchc_unix_account_edit)重設主機密碼。
+可能是主機密碼輸入錯誤，請重新輸入或至 Service 網站重設主機密碼。
+
+進入 Service 網站的方法如下圖，在網頁右上角按下自己的名字，選擇帳戶計畫資訊
+
+![](https://i.imgur.com/TbamJ63.png)
 :::
 
 :::spoiler Q4. 無法連線 Jupyter Notebook 時如何處理？ 
@@ -456,7 +460,12 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 * /home 與/work 為您的個人 HFS 儲存空間，他人在使用上可能造成這兩個檔案夾中的資料毀損、遺失...等可能，即使您再開新容器也無法復原這些變動。
 * 分享計算資源會有資料安全的風險，請審慎考慮。
 
-因此，除為他人建立容器之外，您亦可以透過 iService 將他人加入計畫中，該使用者即可自行運用容器資源。
+因此，除為他人建立容器之外，您亦可以透過 Service 網站，將他人加入計畫中，該使用者即可自行運用容器資源。
+
+進入 Service 網站的方法如下圖，在網頁右上角按下自己的名字，選擇帳戶計畫資訊
+
+![](https://i.imgur.com/TbamJ63.png)
+
 :::
 
 

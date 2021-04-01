@@ -44,7 +44,7 @@ Link to our FAQ page:
 - Q5. 如何查詢計畫的 GPU 使用上限？
 - Q6. 為什麼創建資源時出現錯誤訊息:`[i-service] no quota to request resource.user`？
 ### [會員、計畫與帳務](產品與平台/會員、計畫與帳務.md) (16) 
-- Q1. 如何進入Service會員系統?
+- Q1. 如何進入 Service 會員服務系統?
 - Q2. 手機收不到簡訊驗證碼如何處理？
 - Q3. 當忘記主機密碼時，該如何進行？
 - Q4. 當忘記使用網站密碼時，該如何進行？

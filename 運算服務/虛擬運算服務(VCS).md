@@ -78,20 +78,23 @@ Use DNS no
 
 :::
 
-:::spoiler Q7. 使用ssh連線虛擬運算個體時，出現錯誤訊息```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!```該如何排除？
+:::spoiler Q7. SSH 連線虛擬運算個體時，出現錯誤訊息```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!```該如何排除？
 
 :::info
-此訊息出現的原因為儲存在用戶端電腦的認證與伺服器端不同，因此只要將用戶端電腦的認證資訊進行刪除，並在連線時重新產生，即可解決該情況的發生，您可以參考以下的指令
+此訊息出現的原因為儲存在 local 端電腦的認證與虛擬運算個體不同，因此只要刪除 local 端電腦的認證資訊，並在連線時重新產生，即可避免發生此問題，您可以參考以下的指令
 
-```ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"```
+```
+$ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
+```
 
-:bulb: 提示：Your_Path 是您電腦的個人路徑
+{%hackmd @docsharedstyle/note-zh %}
 
-下一次連線會出現以下訊息
 
-```Are you sure you want to continue connecting (yes/no)?  yes ```
+`Your_Path` 是您 local 端電腦的個人路徑，再次連線會出現以下訊息：
 
-輸入```Yes```即可順利連線，並且完成新認證的產生。
+```Are you sure you want to continue connecting (yes/no)? ```
+
+輸入```Yes```即可順利連線，並產生新的認證。
 
 :::
 

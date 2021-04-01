@@ -143,7 +143,7 @@ Link to our FAQ page:
 - Q4. 對網路卡設定進行更改，導致無法連線該怎麼處理？
 - Q5. SSH 連線個體速度有點慢該如何解決？
 - Q6. 如何使用帳號密碼連線 Linux 個體？
-- Q7. 使用ssh連線虛擬運算個體時，出現錯誤訊息```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!```該如何排除？
+- Q7. SSH 連線虛擬運算個體時，出現錯誤訊息```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!```該如何排除？
 - Q1. 建立虛擬運算個體失敗該怎麼處理？
 - Q2. 忘記 Windows 虛擬運算個體登入密碼該怎麼處理？
 - Q3. 遺失 Linux 虛擬運算個體的金鑰該怎麼處理？

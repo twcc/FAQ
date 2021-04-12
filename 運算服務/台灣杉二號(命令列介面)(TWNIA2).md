@@ -10,14 +10,21 @@ GA: UA-155999456-1
 # TWCC FAQs | 台灣杉二號 (命令列介面) (TWNIA2)
 
 ## 連線登入
-:::spoiler Q1. SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有哪些可使用的的開源軟體？
+:::spoiler Q1. 請問如何登入台灣杉二號(命令列介面)？
+:::info
+
+使用SSH方式登入，登入節點為 ln01.twcc.ai，密碼格式為先輸入主機密碼成功後再輸入OTP，即完成登入，詳細登入步驟請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#%E7%99%BB%E5%85%A5%E6%AD%A5%E9%A9%9F)
+
+:::
+
+:::spoiler Q2. SSH 連線至 TWCC 上的資源 CCS、VCS 和 HPC 有哪些可使用的的開源軟體？
 :::info
 
 可以使用 MobaXterm、PuTTY 和 VSCode...等第三方開源軟體。
 
 :::
 
-:::spoiler Q2. 半年前登入過台灣杉二號 (命令列介面)，而最近想使用時卻無法成功登入?
+:::spoiler Q3. 半年前登入過台灣杉二號 (命令列介面)，而最近想使用時卻無法成功登入?
 :::info
 因為個人主機密碼時效是 180 天，如超過時效，需至 iService 更改個人主機密碼，修改完成後再進行登入。
 :::

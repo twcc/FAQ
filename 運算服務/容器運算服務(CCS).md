@@ -415,7 +415,7 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 :::spoiler Q3. 程式執行時發生有些 library 無法載入 (`Could not load dynamic library...`)？ 
 
 :::info
-可能是程式中呼叫的 library 版本與容器中的版本不符。請執行以下指令，取得環境中的 library 版本後，再修改程所呼叫的 library 版本：`$ sudo find / -name [library名稱]`
+可能是程式中呼叫的 library 版本與容器中的版本不符。請執行以下指令，取得環境中的 library 版本後，再修改程式所呼叫的 library 版本：`$ sudo find / -name [library名稱]`
 
 :::
 

@@ -150,6 +150,12 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
+:::spoiler Q4. 請問該如何取得 GPU 資源？ 
+
+:::info
+由於虛擬運算個體之 GPU 資源詢問度踴躍，為了讓資源更能妥善利用與調度，如有 GPU 的需求請來信致 isupport@twcc.ai，將由專人與您進行聯繫。
+:::
+
 ## 套件軟體
 :::spoiler Q1. 虛擬運算服務是否支援 SMTP？ 
 

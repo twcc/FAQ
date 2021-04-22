@@ -13,7 +13,7 @@ GA: UA-155999456-1
 :::spoiler Q1. 請問如何登入台灣杉二號(命令列介面)？
 :::info
 
-使用SSH方式登入，登入節點為 ln01.twcc.ai，密碼格式為先輸入主機密碼成功後再輸入OTP，即完成登入，詳細登入步驟請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#%E7%99%BB%E5%85%A5%E6%AD%A5%E9%A9%9F)
+使用 SSH 方式登入，登入節點為 ln01.twcc.ai，先輸入主機密碼再輸入OTP，即完成登入，詳細登入步驟請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#%E7%99%BB%E5%85%A5%E6%AD%A5%E9%A9%9F)。
 
 :::
 

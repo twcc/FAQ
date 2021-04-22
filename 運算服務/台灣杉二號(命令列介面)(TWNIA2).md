@@ -26,7 +26,7 @@ GA: UA-155999456-1
 
 :::spoiler Q3. 半年前登入過台灣杉二號 (命令列介面)，而最近想使用時卻無法成功登入?
 :::info
-因為個人主機密碼時效是 180 天，如超過時效，需至 iService 更改個人主機密碼，修改完成後再進行登入。
+因為個人主機密碼時效是 180 天，如超過時效，需至 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 更改個人主機密碼，修改完成後再進行登入。
 :::
 
 

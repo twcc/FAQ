@@ -78,6 +78,26 @@ Use DNS no
 
 :::
 
+:::spoiler Q7. SSH 連線虛擬運算個體時，出現錯誤訊息```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!```該如何排除？
+
+:::info
+此訊息出現的原因為儲存在 local 端電腦的認證與虛擬運算個體不同，因此只要刪除 local 端電腦的認證資訊，並在連線時重新產生，即可避免發生此問題，您可以參考以下的指令
+
+```
+$ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
+```
+
+{%hackmd @docsharedstyle/note-zh %}
+
+
+`Your_Path` 是您 local 端電腦的個人路徑，再次連線會出現以下訊息：
+
+```Are you sure you want to continue connecting (yes/no)? ```
+
+輸入```Yes```即可順利連線，並產生新的認證。
+
+:::
+
 
 ## 管理個體
 :::spoiler Q1. 建立虛擬運算個體失敗該怎麼處理？
@@ -128,6 +148,12 @@ Use DNS no
 
 使用者介面上有簡易呈現監控 CPU、硬碟、記憶體、網路的狀態及流量，若需要更詳細的資訊可以自行安裝程式監控。
 
+:::
+
+:::spoiler Q4. 請問該如何取得 GPU 資源？ 
+
+:::info
+由於虛擬運算個體之 GPU 資源詢問度踴躍，為了讓資源更能妥善利用與調度，如有 GPU 的需求請來信致 isupport@twcc.ai，將由專人與您進行聯繫。
 :::
 
 ## 套件軟體
@@ -259,7 +285,7 @@ Use DNS no
 
 :::info
 
-若製作快照的同時，仍有資料進行傳輸，不僅無法確保資料的完整與一致性且花費的時間較多，因此建議先將個體進行手動關機 (`$ sudo shutdown`) ，確認資料都已寫入 BSS 儲存後，再進行快照。
+若製作快照的同時，仍有資料進行傳輸，不僅無法確保資料的完整與一致性且花費的時間較多，因此建議先將個體進行手動關機 (`$ sudo shutdown`) ，確認資料都已寫入虛擬磁碟後，再進行快照。
 
 :::
 

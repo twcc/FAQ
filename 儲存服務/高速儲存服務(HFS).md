@@ -76,5 +76,5 @@ GA: UA-155999456-1
 :::spoiler Q7. 增購高速儲存服務空間後多久生效？
 
 :::info
-- 在 iService 完成增購空間步驟後，稍等 15 分鐘後即可使用。
+- 在 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 完成增購空間步驟後，稍等 15 分鐘後即可使用。
 :::

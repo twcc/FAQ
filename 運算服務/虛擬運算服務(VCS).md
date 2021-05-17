@@ -302,7 +302,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 :::info
 
 您可透過 TWCC-CLI 與 `crontab -e` 進行定時建立映像檔設定。
-- TWCC-CLI 使用詳情請參考 [<ins>3-7. 虛擬運算個體映像檔</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#3-7-%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7-TBD%E2%80%A6)。
+- TWCC-CLI 使用詳情請參考 [<ins>3-6. 虛擬運算個體映像檔</ins>](https://man.twcc.ai/@twccdocs/twcc-cli-v05#3-6-%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94%E5%BF%AB%E7%85%A7-TBD%E2%80%A6)。
 - `crontab -e` 請參考 [<ins>crontab guru</ins>](https://crontab.guru/) 或 [<ins>crontab(5) - Linux man page</ins>](https://linux.die.net/man/5/crontab)。
 
 :::

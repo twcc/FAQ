@@ -35,7 +35,7 @@ GA: UA-155999456-1
 1. 若有設定 /etc/fstab 自動掛載磁碟，請註解該設定或加入 `nofail` 的相關設定，否則利用映像檔所建立的虛擬運算個體找不到裝置，便會導致無法連入虛擬運算個體的情況。
 2. 若您所使用的作業系統版本為 Ubuntu 18.04，且有更改 /etc/network/interfaces 網路設定 ，也會造成無法連線。
 
-確認檢查以上兩項設定無誤後，對該台虛擬運算個體再進行一次建立映像檔，並利用新建的映像檔建立虛擬運算個體，如仍無法連線，請詳述情況並寄發 e-mail 至 isupport@narlabs.org.tw，技術團隊將協助您處理。
+確認檢查以上兩項設定無誤後，對該台虛擬運算個體再進行一次建立映像檔，並利用新建的映像檔建立虛擬運算個體，如仍無法連線，請詳述情況並寄發 e-mail 至 isupport@twcc.ai，技術團隊將協助您處理。
 
 :::
 
@@ -45,7 +45,7 @@ GA: UA-155999456-1
 
 網路卡設定經修改後，將會導致無法連線進入虛擬運算個體，因此我們強烈不建議您更動網卡設定，請您操作與部署時特別留意。
 
-如遇無法連線的情形，請詳述情況與虛擬運算個體資訊，寄發 e-mail 至 isupport@narlabs.org.tw，技術團隊將協助您處理。
+如遇無法連線的情形，請詳述情況與虛擬運算個體資訊，寄發 e-mail 至 isupport@twcc.ai，技術團隊將協助您處理。
 
 :::
 
@@ -66,7 +66,7 @@ Use DNS no
 ```
 **Step 4.** 按 `esc` 鍵跳離編輯模式，接著輸入 `:wq!` 存檔。
 <br>
-如修改後還是有連線較慢的問題，請您洽詢 TWCC 技術支援服務信箱：isupport@narlabs.org.tw，並提供所在地 IP 與 traceroute 至個體之結果。
+如修改後還是有連線較慢的問題，請您洽詢 TWCC 技術支援服務信箱：isupport@twcc.ai，並提供所在地 IP 與 traceroute 至個體之結果。
 
 :::
 
@@ -106,7 +106,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 請您至「**虛擬運算個體詳細資料頁面**」，游標移至狀態 **`Unsuccessful`** 上將顯示建立失敗的訊息。
 
-請截圖此頁面 (和建立失敗訊息)，連同計畫代碼與虛擬運算個體的資訊 (ID、映像檔、硬體規格...等) 寄發 e-mail 至 isupport@narlabs.org.tw，技術團隊將協助您處理。
+請截圖此頁面 (和建立失敗訊息)，連同計畫代碼與虛擬運算個體的資訊 (ID、映像檔、硬體規格...等) 寄發 e-mail 至 isupport@twcc.ai，技術團隊將協助您處理。
 
 :::
 
@@ -247,7 +247,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 若有啟用基礎虛擬網路防火牆，但不清楚規則是否設定正確，我們建議您先把防火牆關閉，並再次嘗試連線。
 
-有關基礎虛擬網路防火牆的設定，請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=vm#%E5%9F%BA%E7%A4%8E%E8%99%9B%E6%93%AC%E9%98%B2%E7%81%AB%E7%89%86)，或洽詢技術支援：[isupport@twcc.ai](isupport@narlabs.org.tw)。
+有關基礎虛擬網路防火牆的設定，請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=vm#%E5%9F%BA%E7%A4%8E%E8%99%9B%E6%93%AC%E9%98%B2%E7%81%AB%E7%89%86)，或洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
 
 :::
 

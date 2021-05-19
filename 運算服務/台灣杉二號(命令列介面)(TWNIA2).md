@@ -72,7 +72,7 @@ GA: UA-155999456-1
 請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B#Slurm-%E5%9F%BA%E6%9C%AC%E8%AA%AA%E6%98%8E)有 Slurm 系統架構的詳細說明。
 :::
 
-:::spoiler Q4. 是否可以在台灣衫二號上安裝 Rclone 軟體同步工具？
+:::spoiler Q4. 是否可以在台灣杉二號上安裝 Rclone 軟體同步工具？
 
 :::info
 

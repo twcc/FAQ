@@ -13,7 +13,7 @@ GA: UA-155999456-1
 :::spoiler Q1. 請問如何登入台灣杉二號(命令列介面)？
 :::info
 
-使用 SSH 方式登入，登入節點為 ln01.twcc.ai，先輸入主機密碼再輸入OTP，即完成登入，詳細登入步驟請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#%E7%99%BB%E5%85%A5%E6%AD%A5%E9%A9%9F)。
+使用 SSH 方式登入，登入節點為 ln01.twcc.ai，先輸入主機密碼再輸入OTP，即完成登入，詳細登入步驟請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-prerequisite-for-connection-zh)。
 
 :::
 
@@ -36,13 +36,13 @@ GA: UA-155999456-1
 :::spoiler Q1. 台灣杉二號 (命令列介面) 是否可使用跨節點的運算？
 :::info
 
-台灣杉二號 (命令列介面) 可透過 [<ins>Slurm</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#5-Slurm-%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E) 指令索取計算資源，執行[<ins>跨節點高速運算</ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-run-parallel-job-container-zh)，將高負載的工作量平均分派，提升處理效率。
+台灣杉二號 (命令列介面) 可透過 [<ins>Slurm</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-slurm-intro-zh) 指令索取計算資源，執行[<ins>跨節點高速運算</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-run-parallel-job-container-zh)，將高負載的工作量平均分派，提升處理效率。
 
 :::
 
 :::spoiler Q2. 使用跨節點運算，節點是系統自動選取或需手動選取？
 :::info
-您可以使用 Slurm 指令選取節點，相關指令請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hpc_cli#6-Slurm%E6%8C%87%E4%BB%A4)。
+您可以使用 Slurm 指令選取節點，相關指令請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-job-parameter-zh)。
 :::
 
 :::spoiler Q3. 為什麼我執行任務索取多個 CPU 資源會發生錯誤？
@@ -55,8 +55,8 @@ GA: UA-155999456-1
 ## 套件軟體
 :::spoiler Q1. 請問在台灣杉二號 (命令列介面) 如何部屬環境執行我的程式？
 :::info
-1. Conda：使用簡單的 Conda 指令即可將套件安裝完成，並能切換至指定的虛擬環境，使用不同版本的 Python，解決多版本的相容問題，請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-conda-manage-packages-submit-job-zh)了解更多。
-2. Singularity：透過 Singularity 包裝您所需的套件與程式，建立可在台灣杉二號 (命令列介面)  服務執行運算工作的容器環境，並可以快速部署套件、搬移、以及分享，請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/howto-twnia2-create-sglrt-container-zh)了解更多。
+1. Conda：使用簡單的 Conda 指令即可將套件安裝完成，並能切換至指定的虛擬環境，使用不同版本的 Python，解決多版本的相容問題，請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-conda-manage-packages-submit-job-zh)了解更多。
+2. Singularity：透過 Singularity 包裝您所需的套件與程式，建立可在台灣杉二號 (命令列介面)  服務執行運算工作的容器環境，並可以快速部署套件、搬移、以及分享，請參考[<ins>此文件<ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-twnia2-create-sglrt-container-zh)了解更多。
 
 
 :::
@@ -69,7 +69,7 @@ GA: UA-155999456-1
 
 :::spoiler Q3. 排程系統 Slurm 是什麼？
 :::info
-請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B#Slurm-%E5%9F%BA%E6%9C%AC%E8%AA%AA%E6%98%8E)有 Slurm 系統架構的詳細說明。
+請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-slurm-intro-zh)有 Slurm 系統架構的詳細說明。
 :::
 
 :::spoiler Q4. 是否可以在台灣杉二號上安裝 Rclone 軟體同步工具？
@@ -90,7 +90,7 @@ GA: UA-155999456-1
 
 - 開發型容器的計算環境是由 TWCC 容器映像檔所建置。
 - 而台灣杉二號則需使用者自行部署計算環境。
-    <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> **提示：** 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/B15nJXe-B?type=view#7-Module-%E4%BD%BF%E7%94%A8)。
+    <i class="fa fa-lightbulb-o fa-20" aria-hidden="true"></i> **提示：** 台灣杉二號可使用 `module` 載入所需之套件，詳細使用方法請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-module-intro-zh)。
 :::
 
 ## 儲存與資料傳輸
@@ -120,7 +120,7 @@ GA: UA-155999456-1
 :::info
 此錯誤訊息顯示您提交超過 20 個計算工作上限 (**gtest** 為測試用 Queue，僅能提交 5 個工作)。
 
-若遇此情況，建議您先使用 `squeue` 指令查看任務狀態，再使用 `scancel` 取消狀態為等待中或運行中的任務，減少提交的任務數量。Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hpc_cli#4-Queue-%E8%88%87%E8%A8%88%E7%AE%97%E8%B3%87%E6%BA%90%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E)。
+若遇此情況，建議您先使用 `squeue` 指令查看任務狀態，再使用 `scancel` 取消狀態為等待中或運行中的任務，減少提交的任務數量。Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-queue-zh)。
 :::
 
 

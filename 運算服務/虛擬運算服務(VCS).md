@@ -144,6 +144,13 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
+:::spoiler Q5. 虛擬運算個體在哪些狀態下不會收費?
+
+:::info
+
+虛擬運算個體僅在```Stopped```跟```Error```的狀態下不會收費，其他狀態皆會收費。
+
+:::
 
 ## 資源配置與監控
 :::spoiler Q1. 如何調整已建立好的虛擬運算個體規格？

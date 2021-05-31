@@ -148,7 +148,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::info
 
-虛擬運算個體僅在```Stopped```跟```Error```的狀態下不會收費，其他狀態皆會收費。
+虛擬運算個體僅在```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
 
 :::
 

@@ -129,10 +129,28 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::info
 
-您可以參考[虛擬運算個體生命週期](https://man.twcc.ai/@twccdocs/concept-vcs-lifecycle-zh)的文件了解虛擬運算個體在各種狀態下是否有進行用量計費，如果虛擬運算個體出現```Error```的狀態，代表建立虛擬運算個體失敗無法進行使用，此狀態不會進行用量計費。
+
+
+| 個體狀態 | 個體用量計費| 
+| -------- | -------- | 
+| ```Starting```   | 計費    | 
+| ```Ready```      | 計費     |
+| ```Stopping```   | 計費     |
+| ```Shutdown```   | 計費     |
+| ```Queueing```   | 計費     |
+| ```Deleting```   | 計費，刪除成功後便立即不再計費   |
+| ```Stopped```    | 不計費   |
+| ```Error```      | 不計費   |
 
 :::
 
+:::spoiler Q5. 虛擬運算個體在哪些狀態下不會收費?
+
+:::info
+
+虛擬運算個體僅在```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
+
+:::
 
 ## 資源配置與監控
 :::spoiler Q1. 如何調整已建立好的虛擬運算個體規格？

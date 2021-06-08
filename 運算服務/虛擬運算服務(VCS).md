@@ -133,11 +133,11 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 | 個體狀態 | 個體用量計費| 
 | -------- | -------- | 
-| ```Starting```   | 計費    | 
+| ```Starting```   | 不計費    | 
 | ```Ready```      | 計費     |
 | ```Stopping```   | 計費     |
 | ```Shutdown```   | 計費     |
-| ```Queueing```   | 計費     |
+| ```Queueing```   | 不計費     |
 | ```Deleting```   | 計費，刪除成功後便立即不再計費   |
 | ```Stopped```    | 不計費   |
 | ```Error```      | 不計費   |
@@ -148,7 +148,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::info
 
-虛擬運算個體僅在```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
+虛擬運算個體僅在```Starting```、```Queueing```、```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
 
 :::
 

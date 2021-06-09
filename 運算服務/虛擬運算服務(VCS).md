@@ -129,8 +129,6 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::info
 
-
-
 | 個體狀態 | 個體用量計費| 
 | -------- | -------- | 
 | ```Starting```   | 不計費    | 
@@ -141,6 +139,8 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 | ```Deleting```   | 計費，刪除成功後便立即不再計費   |
 | ```Stopped```    | 不計費   |
 | ```Error```      | 不計費   |
+
+如果使用情境為虛擬運算個體在```Shutdown```的情況下，重新啟動該台虛擬運算個體，```Starting```的過程中會納入用量計費。
 
 :::
 

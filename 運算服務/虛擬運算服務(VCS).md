@@ -148,8 +148,9 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::info
 
-虛擬運算個體僅在```Starting```、```Queueing```、```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
+虛擬運算個體僅在```Queueing```、```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
 
+```Starting```則需是使用情境來決定是否納入用量計費，詳細解說請參考Q4。
 :::
 
 ## 資源配置與監控

@@ -22,8 +22,8 @@ GA: UA-155999456-1
 
 請檢查個體的安全性群組或防火牆規則是否阻擋連線，相關文件請參考：
 
-- [安全性群組](https://www.twcc.ai/doc?page=security_group)
-- [基礎虛擬防火牆](https://www.twcc.ai/doc?page=firewall_fwaas)
+- [安全性群組](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-zh)
+- [基礎虛擬防火牆](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-vnf-zh)
 
 :::
 
@@ -74,7 +74,7 @@ Use DNS no
 :::spoiler Q6. 如何使用帳號密碼連線 Linux 個體？
 
 :::info
-請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-vcs-create-usr-linux-zh)操作，即可使用帳號密碼連線 Linux 個體，可預防鑰匙對遺失或檔案毀損。
+請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-create-usr-linux-zh)操作，即可使用帳號密碼連線 Linux 個體，可預防鑰匙對遺失或檔案毀損。
 
 :::
 
@@ -129,18 +129,18 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::info
 
-
-
 | 個體狀態 | 個體用量計費| 
 | -------- | -------- | 
-| ```Starting```   | 計費    | 
+| ```Starting```   | 不計費    | 
 | ```Ready```      | 計費     |
 | ```Stopping```   | 計費     |
 | ```Shutdown```   | 計費     |
-| ```Queueing```   | 計費     |
+| ```Queueing```   | 不計費     |
 | ```Deleting```   | 計費，刪除成功後便立即不再計費   |
 | ```Stopped```    | 不計費   |
 | ```Error```      | 不計費   |
+
+如果使用情境為虛擬運算個體在```Shutdown```的情況下，重新啟動該台虛擬運算個體，```Starting```的過程中會納入用量計費。
 
 :::
 
@@ -148,15 +148,16 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::info
 
-虛擬運算個體僅在```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
+虛擬運算個體僅在```Queueing```、```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
 
+```Starting```則需是使用情境來決定是否納入用量計費，詳細解說請參考Q4。
 :::
 
 ## 資源配置與監控
 :::spoiler Q1. 如何調整已建立好的虛擬運算個體規格？
 :::info
 
-如選用的規格在建立後不符使用需求，需調整至較小規格或更大規格的個體，請參考文件：[<ins>HowTo：調整虛擬運算個體規格</ins>](https://man.twcc.ai/@twccdocs/howto-vcs-resize-instance-zh)。
+如選用的規格在建立後不符使用需求，需調整至較小規格或更大規格的個體，請參考文件：[<ins>HowTo：調整虛擬運算個體規格</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-vcs-resize-instance-zh)。
 
 :::
 
@@ -265,7 +266,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 若有啟用基礎虛擬網路防火牆，但不清楚規則是否設定正確，我們建議您先把防火牆關閉，並再次嘗試連線。
 
-有關基礎虛擬網路防火牆的設定，請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=vm#%E5%9F%BA%E7%A4%8E%E8%99%9B%E6%93%AC%E9%98%B2%E7%81%AB%E7%89%86)，或洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
+有關基礎虛擬網路防火牆的設定，請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-vnf-zh)，或洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
 
 :::
 
@@ -275,7 +276,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 - Linux 個體預設開啟的埠為： 22、443
 - Windows 個體預設開啟的埠為： 22、443、9833
-  如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=security_group)。
+  如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-zh)。
 
 :::
 ### Auto Scaling

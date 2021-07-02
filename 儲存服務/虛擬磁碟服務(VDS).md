@@ -28,13 +28,15 @@ GA: UA-155999456-1
 :::spoiler Q3. 如何上傳及下載檔案？
 
 :::info
-將磁碟掛載至虛擬運算個體後，[<ins>使用 MobaXterm 連線個體</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，並完成磁碟初始化，於 MobaXterm 頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
+
+將磁碟掛載至虛擬運算個體後，[<ins>使用 MobaXterm 連線個體</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fvcs-guide-connect-to-linux-from-windows-zh)，並完成磁碟初始化，於 MobaXterm 頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
+
 :::
 
 :::spoiler Q4. 我想要將舊有的資料碟換成新的資料碟，請問要如何操作？
 
 :::info
-詳細操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/howto-bss-replace-data-vol-zh)，可變更磁碟類型、容量，並透過同步方式將舊磁碟資料保存至新磁碟。
+詳細操作方式請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-bss-replace-data-vol-zh)，可變更磁碟類型、容量，並透過同步方式將舊磁碟資料保存至新磁碟。
 :::
 
 :::spoiler Q5. 為何我的資料碟刪不掉？
@@ -51,5 +53,13 @@ GA: UA-155999456-1
 :::info
 
 虛擬磁碟計費項目除了資料磁碟，亦包含虛擬運算個體映像檔。請檢查您是否有建立虛擬運算個體映像檔，若無需使用建議刪除以停止計費。
+
+:::
+
+:::spoiler Q7. 虛擬磁碟為什麼無法掛載至虛擬運算個體？
+
+:::info
+
+請留意您所要掛載的虛擬運算個體狀態是否是在```Stopped```的情況，虛擬磁碟無法與```Stopped```狀態的虛擬運算個體進行連結。
 
 :::

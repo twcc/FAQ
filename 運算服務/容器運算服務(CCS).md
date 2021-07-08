@@ -60,7 +60,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 
 :::info
 
-可能是主機密碼輸入錯誤，請重新輸入或參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/guide-service-hostname-pwd-otp-zh#%E9%87%8D%E7%BD%AE%E4%B8%BB%E6%A9%9F%E5%AF%86%E7%A2%BC)至 Service 會員服務系統重設主機密碼。
+可能是主機密碼輸入錯誤，請重新輸入或參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-service-hostname-pwd-otp-zh)至 Service 會員服務系統重設主機密碼。
 
 :::
 

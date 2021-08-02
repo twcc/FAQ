@@ -21,7 +21,8 @@ GA: UA-155999456-1
 :::spoiler Q2. 手機收不到簡訊驗證碼如何處理？
 
 :::info
-本中心為了確認會員的身份並認證手機之有效性，必須接收簡訊並輸入驗證碼方能完成申請步驟，詳細處理步驟請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowo-service-receive-verif-phone-zh)。
+1. 本中心為了確認會員的身份並認證手機之有效性，必須接收簡訊並輸入驗證碼方能完成申請步驟，詳細處理步驟請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-service-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowo-service-receive-verif-phone-zh)。
+2. 如果您門號所屬電信公司未提供線上解除拒收企業簡訊的服務，請致電電信公司請相關人員協助變更作業；變更後不會立即生效，作業生效時間請您洽詢電信公司。
 
 :::
 

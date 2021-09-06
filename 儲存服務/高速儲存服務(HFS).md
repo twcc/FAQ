@@ -6,7 +6,7 @@ GA: UA-155999456-1
 
 {%hackmd @docsharedstyle/default %}
 
-# TWCC FAQs | 高速儲存服務 (HFS)
+# TWCC FAQs | 高速檔案系統 (HFS)
 
 :::spoiler Q1. 高速檔案系統空間已滿，將部分資料刪除，為何容量還是一樣沒變化？
 

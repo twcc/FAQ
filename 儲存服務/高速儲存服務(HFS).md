@@ -79,10 +79,10 @@ GA: UA-155999456-1
 - 在 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 完成增購空間步驟後，稍等 15 分鐘後即可使用。
 :::
 
-:::spoiler Q8. 已刪除高速檔案系統內資料，為何在儲存與資源用量頁面中的已使用容量並未減少?
+:::spoiler Q8. 已刪除高速檔案系統內資料，為何在儲存與資源用量頁面中的已使用容量並未減少？
 
 :::info
 
-頁面中所顯示的已使用容量需要一些時間進行更新，刪除檔案後約1-2小時便可以看到使用容量已經減少。
+頁面中所顯示的已使用容量需一段時間進行更新，請您在刪除檔案約 1-2 小時後，再至頁面查看。
 
 :::

@@ -88,7 +88,7 @@ GA: UA-155999456-1
 :::
 
 
-:::spoiler Q9. JupyterNotebook 刪除檔案後沒有立即釋放空間?
+:::spoiler Q9. Jupyter Notebook 刪除檔案後沒有立即釋放空間?
 
 :::info
 

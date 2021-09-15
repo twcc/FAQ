@@ -86,3 +86,16 @@ GA: UA-155999456-1
 頁面中所顯示的已使用容量需一段時間進行更新，請您在刪除檔案約 1-2 小時後，再至頁面查看。
 
 :::
+
+
+:::spoiler Q9. JupyterNotebook刪除檔案後沒有立即釋放空間?
+
+:::info
+
+在JupyterNotebook使用UI介面進行刪除檔案，  
+該檔案會移至`/home/<主機帳號>/.local/share/Trash`下，  
+若是要立即釋放空間，則需要在terminal下輸入`rm -r /home/<主機帳號>/.local/share/Trash`，
+將先前使用JupyterNotebook刪除檔案的保留檔案刪除。  
+或是在刪除檔案時選擇使用FileZilla或terminal等工具進行，即可立即釋放空間。
+
+:::

@@ -124,6 +124,12 @@ GA: UA-155999456-1
 :::
 
 
+:::spoiler Q2. 使用台灣杉二號提交Job後，在`NODELIST(REASON)`出現此錯誤訊息`QOSMaxGRESPerUser`？
+:::info
+此錯誤訊息顯示您在台灣杉二號的計算工作加總GPUs已達上限(系統基本設定為40張GPUs)。
+
+Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-queue-zh)。
+:::
 
 
 

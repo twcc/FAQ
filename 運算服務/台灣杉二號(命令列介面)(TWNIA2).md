@@ -123,6 +123,13 @@ GA: UA-155999456-1
 若遇此情況，建議您先使用 `squeue` 指令查看任務狀態，再使用 `scancel` 取消狀態為等待中或運行中的任務，減少提交的任務數量。Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-queue-zh)。
 :::
 
+:::spoiler Q2. 使用台灣杉二號提交Job後，在NODELIST(REASON)出現此錯誤訊息QOSMaxGRESPerUser？ 
+:::info 
+此錯誤訊息顯示您在台灣杉二號的計算工作加總GPUs已達上限(系統基本設定為40張GPUs)。
+
+Queue 與計算資源使用說明可參考此文件。 
+    
+:::
 
 
 

@@ -92,7 +92,7 @@ Link to our FAQ page:
 - Q2. 計畫到期後儲存在台灣杉二號的檔案會刪除嗎？
 - Q1. 請問台灣杉二號的登入節點 IP 位置為何？
 - Q1. 使用台灣杉二號時出現此錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
-- Q2. 使用台灣杉二號提交Job後，在NODELIST(REASON)出現此錯誤訊息QOSMaxGRESPerUser？
+- Q2. 使用台灣杉二號提交Job後，在`NODELIST(REASON)`出現此錯誤訊息`QOSMaxGRESPerUser`？
 ### [容器運算服務(CCS)](運算服務/容器運算服務(CCS).md) (49) 
 - Q1. 怎麼使用超級電腦？
 - Q2. 如何開始使用容器？

@@ -329,6 +329,12 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 2. 再參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-cos-zh)，使用 TWCC CLI 進行容器與雲端物件儲存的檔案傳輸。
 :::
 
+:::spoiler Q11. 請問如何將雲端物件的儲存體掛載到容器上使用？ 
+
+:::info
+容器所使用的儲存系統為高速檔案系統(HFS)。TWCC不支援將雲端物件的儲存體掛載到容器上進行使用。
+:::
+
 ## 網路安全
 
 :::spoiler Q1. 容器的 Port 範圍是什麼？

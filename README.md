@@ -93,7 +93,7 @@ Link to our FAQ page:
 - Q1. 請問台灣杉二號的登入節點 IP 位置為何？
 - Q1. 使用台灣杉二號時出現此錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
 - Q2. 使用台灣杉二號提交Job後，在`NODELIST(REASON)`出現此錯誤訊息`QOSMaxGRESPerUser`？
-### [容器運算服務(CCS)](運算服務/容器運算服務(CCS).md) (49) 
+### [容器運算服務(CCS)](運算服務/容器運算服務(CCS).md) (50) 
 - Q1. 怎麼使用超級電腦？
 - Q2. 如何開始使用容器？
 - Q3. 容器與高速運算該如何選擇？
@@ -128,6 +128,7 @@ Link to our FAQ page:
 - Q8. 為何 Jupyter Notebook 儲存檔案失敗？
 - Q9. 如何上傳檔案到 Jupyter Notebook？
 - Q10. 如何於容器內與雲端物件儲存間傳輸檔案？
+- Q11. 請問如何將雲端物件的儲存體掛載到容器上使用？
 - Q1. 容器的 Port 範圍是什麼？
 - Q1. 容器複本如何下載？
 - Q1. 執行程式時發現 I/O 緩慢？

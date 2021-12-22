@@ -494,3 +494,11 @@ $ sudo -i
 目前容器上無法支援vpn的使用。例如:Openvpn，原因為開設的預設對外埠與TWCC容器所使用的對外埠不同。
 :::
 
+:::spoiler Q6. 如何在容器中安裝docker使用?
+
+:::info
+
+TWCC所有容器皆無法安裝與使用docker。
+
+:::
+

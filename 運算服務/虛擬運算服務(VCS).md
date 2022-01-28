@@ -98,6 +98,19 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
+:::spoiler Q8. 請問可以將虛擬運算個體狀態在stopped前的公用IP找回來嗎?
+
+:::info
+浮動IP(floating ip)再歸還給平台後便無法再取回。如果您要固定公用IP，請訂閱靜態IP(static IP)。
+
+:::
+
+:::spoiler Q9.請問計畫預設可使用IP數量用完後，是不是就無法建立虛擬運算個體?
+
+:::info
+可以持續建立虛擬運算個體，但是無法配發公用IP。若需要額外的IP，就需要訂閱靜態IP(static IP)提高計畫IP限制額度。
+
+:::
 
 ## 管理個體
 :::spoiler Q1. 建立虛擬運算個體失敗該怎麼處理？
@@ -151,6 +164,15 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 虛擬運算個體僅在```Queueing```、```Stopped```與```Error```的狀態下不會收費，其他狀態皆會收費。
 
 ```Starting```則需是使用情境來決定是否納入用量計費，詳細解說請參考Q4。
+:::
+
+:::spoiler Q6. 建立虛擬運算個體出現錯誤訊息```440301: The request exceeded the quotas of ['floating_ip']```該如何解決?
+
+:::info
+
+出現此錯誤訊息的原因為浮動IP(floating ip)數量已經達到該計畫的上限，你有以下做法 :
+</br>1.	將自己或其他計畫成員的虛擬運算個體暫時不需要使用的浮動IP釋放，而要釋放該浮動IP釋放，需要開啟虛擬運算個體。</br>
+     2.	使用靜態IP(static IP)建立虛擬運算個體，要有靜態IP需要計畫的管理者先訂閱靜態IP，且計畫的靜態IP尚未使用完畢。
 :::
 
 ## 資源配置與監控
@@ -279,6 +301,26 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
   如需開啟額外的埠，請在安全性群組處進行設定，設定方法與步驟請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-sg-zh)。
 
 :::
+
+:::spoiler Q3. 請問為什麼不能夠訂閱靜態IP(static IP)?
+
+:::info
+您在專案內的身分必須要是管理員才可進行訂閱的行為。
+:::
+
+:::spoiler Q4. 請問有無DNS轉換期過渡方式?
+
+:::info
+若是僅使用單一對外port服務，可以將預定使用的靜態IP(static IP)掛載至LoadBalance，並將流量從LoadBalance轉發至服務伺服器，待DNS IP轉換完畢後，再將靜態IP掛載至伺服器上。
+:::
+
+:::spoiler Q5. 建立虛擬網路時出現錯誤訊息440301: The request exceeded the quotas of ['floating_ip']該如何解決?
+
+:::info
+出現此訊息的原因為該計畫內的浮動IP(floating IP)數量已經達到上限，建議您刪除配置浮動IP(floating IP)的虛擬運算個體，或是申請增加專案浮動IP(floating IP)的上限數量。
+:::
+
+
 ### Auto Scaling
 
 :::spoiler Q1. 如何讓 Auto scaling 擴展出的個體，符合我需求的環境？

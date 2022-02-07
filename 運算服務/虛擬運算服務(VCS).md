@@ -98,20 +98,6 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
-:::spoiler Q8. 請問可以將虛擬運算個體狀態在stopped前的公用IP找回來嗎?
-
-:::info
-浮動IP(floating ip)再歸還給平台後便無法再取回。如果您要固定公用IP，請訂閱靜態IP(static IP)。
-
-:::
-
-:::spoiler Q9.請問計畫預設可使用IP數量用完後，是不是就無法建立虛擬運算個體?
-
-:::info
-可以持續建立虛擬運算個體，但是無法配發公用IP。若需要額外的IP，就需要訂閱靜態IP(static IP)提高計畫IP限制額度。
-
-:::
-
 ## 管理個體
 :::spoiler Q1. 建立虛擬運算個體失敗該怎麼處理？
 
@@ -138,7 +124,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 在建立虛擬運算個體時，請務必下載並妥善自行保存您的金鑰，如果遺失金鑰您可以刪除該個體並重新建立；如須保存原個體的資料與配置，可先對該個體建立映像檔，再利用該映像檔建立新的個體，即可使用新的金鑰。
 :::
 
-:::spoiler Q4. 想了解虛擬運算個體狀態與用量計費關係?
+:::spoiler Q4. 想了解虛擬運算個體狀態與用量計費關係？
 
 :::info
 
@@ -157,7 +143,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
-:::spoiler Q5. 虛擬運算個體在哪些狀態下不會收費?
+:::spoiler Q5. 虛擬運算個體在哪些狀態下不會收費？
 
 :::info
 
@@ -166,13 +152,15 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 ```Starting```則需是使用情境來決定是否納入用量計費，詳細解說請參考Q4。
 :::
 
-:::spoiler Q6. 建立虛擬運算個體出現錯誤訊息```440301: The request exceeded the quotas of ['floating_ip']```該如何解決?
+:::spoiler Q6. 建立虛擬運算個體出現錯誤訊息```440301: The request exceeded the quotas of ['floating_ip']```該如何解決？
 
 :::info
 
-出現此錯誤訊息的原因為浮動IP(floating ip)數量已經達到該計畫的上限，你有以下做法 :
-</br>1.	將自己或其他計畫成員的虛擬運算個體暫時不需要使用的浮動IP釋放，而要釋放該浮動IP釋放，需要開啟虛擬運算個體。</br>
-     2.	使用靜態IP(static IP)建立虛擬運算個體，要有靜態IP需要計畫的管理者先訂閱靜態IP，且計畫的靜態IP尚未使用完畢。
+出現此錯誤訊息的原因為浮動 IP (floating ip) 數量已經達到該計畫的上限，您可以參考以下做法：
+1. 移除虛擬運算個體暫不需使用的浮動 IP (個體狀態為 `Ready` 才可移除) 後，再次選取建立。
+2. 浮動 IP 在您停止或刪除個體後即釋放回資源池，無法循環使用。若您的使用情境適用固定 IP，建議您訂閱並使用靜態 IP (static IP)。
+3. 若有特殊需求，請洽客服人員。
+     
 :::
 
 ## 資源配置與監控
@@ -276,6 +264,24 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 :::
 
 ## 網路安全
+
+### 彈性 IP
+
+:::spoiler Q1. 可以取回虛擬運算個體在 `Stopped` 之前所使用的公用 IP 嗎？
+
+:::info
+停止虛擬運算個體後，浮動 IP (floating IP) 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。如果您需要固定的公用 IP，請您訂閱靜態 IP (static IP) 使用，
+
+:::
+
+:::spoiler Q2. 計畫預設可使用 IP 數量用完後，是否就無法建立虛擬運算個體？
+
+:::info
+浮動 IP 額度使用完後，您可以持續建立虛擬運算個體，但無法配置浮動 IP。若需要額外的 IP，請您訂閱靜態 IP (static IP) 使用。若有特殊需求，請洽客服人員。
+
+請參考 [彈性 IP 訂閱政策](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh#%E5%BD%88%E6%80%A7-IP-%E8%A8%82%E9%96%B1%E6%94%BF%E7%AD%96) 了解更多。
+
+:::
 
 
 ### 虛擬網路

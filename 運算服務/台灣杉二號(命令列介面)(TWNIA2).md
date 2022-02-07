@@ -116,18 +116,18 @@ GA: UA-155999456-1
 
 
 ## 執行錯誤
-:::spoiler Q1. 使用台灣杉二號時出現此錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
+:::spoiler Q1. 使用台灣杉二號時出現錯誤訊息`QOSMaxSubmitJobPerUserLimit Error`？
 :::info
 此錯誤訊息顯示您提交超過 20 個計算工作上限 (**gtest** 為測試用 Queue，僅能提交 5 個工作)。
 
 若遇此情況，建議您先使用 `squeue` 指令查看任務狀態，再使用 `scancel` 取消狀態為等待中或運行中的任務，減少提交的任務數量。Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/%2F%40twccdocs%2Fguide-twnia2-queue-zh)。
 :::
 
-:::spoiler Q2. 使用台灣杉二號提交Job後，在`NODELIST(REASON)`出現此錯誤訊息`QOSMaxGRESPerUser`？ 
+:::spoiler Q2. 提交 Job 後，在`NODELIST(REASON)`出現錯誤訊息`QOSMaxGRESPerUser`？ 
 :::info 
-此錯誤訊息顯示您在台灣杉二號的計算工作加總GPUs已達上限(系統基本設定為40張GPUs)。
+此錯誤訊息顯示您在台灣杉二號的計算工作加總 GPUs 已達上限 (系統基本設定為 40 張 GPUs)。
 
-Queue 與計算資源使用說明可參考此文件。 
+Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-twnia2-queue-zh)。 
     
 :::
 

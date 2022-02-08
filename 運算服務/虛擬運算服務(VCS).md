@@ -270,7 +270,9 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 :::spoiler Q1. 可以取回虛擬運算個體在 `Stopped` 之前所使用的公用 IP 嗎？
 
 :::info
-停止虛擬運算個體後，浮動 IP (floating IP) 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。如果您需要固定的公用 IP，請您訂閱靜態 IP (static IP) 使用，
+停止虛擬運算個體後，浮動 IP (floating IP) 將會釋放回資源池，個體啟動後，將取得新的浮動 IP。
+
+若您的使用情境適用固定 IP，建議您訂閱並使用靜態 IP (static IP)。請參考 [<ins>彈性 IP </ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh) 了解更多。
 
 :::
 
@@ -279,8 +281,21 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 :::info
 浮動 IP 額度使用完後，您可以持續建立虛擬運算個體，但無法配置浮動 IP。若需要額外的 IP，請您訂閱靜態 IP (static IP) 使用。若有特殊需求，請洽客服人員。
 
-請參考 [彈性 IP 訂閱政策](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh#%E5%BD%88%E6%80%A7-IP-%E8%A8%82%E9%96%B1%E6%94%BF%E7%AD%96) 了解更多。
+請參考 [<ins>彈性 IP 訂閱政策</ins>](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-eip-zh#%E5%BD%88%E6%80%A7-IP-%E8%A8%82%E9%96%B1%E6%94%BF%E7%AD%96) 了解更多。
 
+:::
+
+:::spoiler Q3. 請問為什麼不能訂閱靜態 IP (static IP)？
+
+:::info
+請先檢視您的使用身分，專案內僅「租戶管理員」可執行訂閱靜態 IP、停止訂閱。
+若身分確認為管理員仍無法訂閱，請您聯繫客服人員處理。
+:::
+
+:::spoiler Q4. 請問有無 DNS 轉換期過渡方式？
+
+:::info
+若是僅使用單一對外 port 服務，可以將預定使用的靜態 IP (static IP) 先掛載至負載平衡器，並將流量從負載平衡器轉發至後端服務伺服器。待 DNS IP 轉換完畢後，再將靜態 IP 掛載至伺服器上。
 :::
 
 
@@ -308,22 +323,14 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
-:::spoiler Q3. 請問為什麼不能夠訂閱靜態IP(static IP)?
+:::spoiler Q3. 建立虛擬網路時出現錯誤訊息 `440301: The request exceeded the quotas of ['floating_ip']` 該如何解決？
 
 :::info
-您在專案內的身分必須要是管理員才可進行訂閱的行為。
-:::
 
-:::spoiler Q4. 請問有無DNS轉換期過渡方式?
+出現此錯誤訊息的原因為浮動 IP (floating IP) 數量已經達到該計畫的上限，您可以參考以下做法：
+1. 移除虛擬運算個體暫不需使用的浮動 IP (個體狀態為 `Ready` 才可移除) 後，再次建立虛擬網路。
+2. 若有特殊需求，請洽客服人員。
 
-:::info
-若是僅使用單一對外port服務，可以將預定使用的靜態IP(static IP)掛載至LoadBalance，並將流量從LoadBalance轉發至服務伺服器，待DNS IP轉換完畢後，再將靜態IP掛載至伺服器上。
-:::
-
-:::spoiler Q5. 建立虛擬網路時出現錯誤訊息440301: The request exceeded the quotas of ['floating_ip']該如何解決?
-
-:::info
-出現此訊息的原因為該計畫內的浮動IP(floating IP)數量已經達到上限，建議您刪除配置浮動IP(floating IP)的虛擬運算個體，或是申請增加專案浮動IP(floating IP)的上限數量。
 :::
 
 
@@ -373,3 +380,4 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 - `crontab -e` 請參考 [<ins>crontab guru</ins>](https://crontab.guru/) 或 [<ins>crontab(5) - Linux man page</ins>](https://linux.die.net/man/5/crontab)。
 
 :::
+

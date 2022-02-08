@@ -173,7 +173,7 @@ Link to our FAQ page:
 - Q1. 可以取回虛擬運算個體在 `Stopped` 之前所使用的公用 IP 嗎？
 - Q2. 計畫預設可使用 IP 數量用完後，是否就無法建立虛擬運算個體？
 - Q3. 請問為什麼不能訂閱靜態 IP (static IP)？
-- Q4. 請問有無 DNS 轉換期過渡方式？
+- Q4. 我想將 DNS 綁定的浮動 IP 轉換為 靜態 IP，是否有轉換期的過渡方式？
 - Q1. 虛擬運算個體建立後為何無法連線網路？
 - Q2. 如何開啟虛擬運算個體非預設埠進行服務？
 - Q3. 建立虛擬網路時出現錯誤訊息 `440301: The request exceeded the quotas of ['floating_ip']` 該如何解決？

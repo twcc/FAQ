@@ -127,7 +127,7 @@ GA: UA-155999456-1
 :::info 
 此錯誤訊息顯示您在台灣杉二號的計算工作加總 GPUs 已達上限 (系統基本設定為 40 張 GPUs)。
 
-Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-twnia2-queue-zh)。 
+Queue 與計算資源使用說明可參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-twnia2-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-twnia2-queue-zh)，如達到上限將不能提交工作，請減少索取 GPU 資源。
     
 :::
 

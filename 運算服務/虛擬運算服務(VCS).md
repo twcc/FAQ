@@ -269,7 +269,7 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 TWCC並沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸速度緩慢，建議您可以進行以下操作:
 1. 使用網路測速工具(例如: [Speedtest](https://www.speedtest.net/))，將測試結果寄發到技術支援信箱(isupport@twcc.ai)，我們會根據您提供的資料判斷是否出現異常。
-2. 確認來源端的網路速度是否受到限制
+2. 確認來源端的網路速度是否受到限制。
 
 :::
 

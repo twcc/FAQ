@@ -354,7 +354,7 @@ TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援
 
 :::
 
-:::spoiler Q. 容器是否可以使用 VPN？
+:::spoiler Q2. 容器是否可以使用 VPN？
 
 :::info
 目前 TWCC 容器不支援部署 VPN 服務 (例如：OpenVPN)。VPN 服務預設開啟的對外埠與 TWCC 容器所支援的對外埠不同，且 TWCC 容器採用 Port-Forwarding 的技術，對外埠為隨機配發，無法指定對應的埠號。

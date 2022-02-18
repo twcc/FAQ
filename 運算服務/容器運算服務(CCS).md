@@ -248,6 +248,14 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 :::
 
 
+:::spoiler Q8. 如何在容器中安裝 docker 使用?
+
+:::info
+
+TWCC 容器不提供 OS 層權限，因此無法安裝與使用 docker 服務。
+
+:::
+
 
 ## 儲存與資料傳輸
 
@@ -329,6 +337,14 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 2. 再參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-cli-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-cli-cos-zh)，使用 TWCC CLI 進行容器與雲端物件儲存的檔案傳輸。
 :::
 
+:::spoiler Q11. 請問如何將雲端物件的儲存體掛載到容器上使用？ 
+
+:::info
+TWCC 容器所使用的儲存系統為高速檔案系統 (HFS)，目前不支援直接將雲端物件的儲存體掛載到容器上進行使用。
+
+若僅需與雲端物件儲存進行檔案傳輸，請您參考 Q1 的操作步驟。
+:::
+
 ## 網路安全
 
 :::spoiler Q1. 容器的 Port 範圍是什麼？
@@ -336,6 +352,12 @@ Jupyter Notebook 所使用的儲存空間即為高速檔案系統 (HFS)，請透
 :::info
 容器 Port 的範圍為：50000 ~ 60000。
 
+:::
+
+:::spoiler Q2. 容器是否可以使用 VPN？
+
+:::info
+目前 TWCC 容器不支援部署 VPN 服務 (例如：OpenVPN)。VPN 服務預設開啟的對外埠與 TWCC 容器所支援的對外埠不同，且 TWCC 容器採用 Port-Forwarding 的技術，對外埠為隨機配發，無法指定對應的埠號。
 :::
 
 
@@ -481,3 +503,4 @@ $ sudo -i
 :::info
 容器一建立即開始佔用計算資源，因此建立後、在您刪除容器之前，將會持續計費。
 :::
+

@@ -263,6 +263,16 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 3. [<ins>使用 MobaXterm 連線虛擬運算個體</ins>](https://www.twcc.ai/doc?page=vm#%E9%80%A3%E7%B7%9A%E8%99%9B%E6%93%AC%E9%81%8B%E7%AE%97%E5%80%8B%E9%AB%94)，於頁面左側處選取 「**Sftp**」 圖示，即可檢視、上傳與下載檔案。
 :::
 
+:::spoiler Q6. 虛擬運算個體的網路有沒有限制網路速度？
+
+:::info
+
+TWCC並沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸速度緩慢，建議您可以進行以下操作:
+1. 使用網路測速工具(例如: [Speedtest](https://www.speedtest.net/))，將測試結果寄發到技術支援信箱(isupport@twcc.ai)，我們會根據您提供的資料判斷是否出現異常。
+2. 確認來源端的網路速度是否受到限制。
+
+:::
+
 ## 網路安全
 
 ### 彈性 IP

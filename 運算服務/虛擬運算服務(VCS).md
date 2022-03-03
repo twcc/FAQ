@@ -98,6 +98,17 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
+:::spoiler Q8. 使用macOS連線虛擬運算個體時，出現無法連線的情況？
+
+:::info
+
+請先使用chmod的指令更改鑰匙對檔案(.pem)到700。
+
+:::
+
+
+
+
 ## 管理個體
 :::spoiler Q1. 建立虛擬運算個體失敗該怎麼處理？
 

@@ -40,7 +40,14 @@ GA: UA-155999456-1
 請先利用容器環境取得金鑰，再利用 SFTP 軟體 (例：Filezilla) 連線到資料傳輸節點(xdata1.twcc.ai)，請參考[<ins>此文件</ins>](https://www.twcc.ai/doc?page=hfs)。
 :::
 
-:::spoiler Q4. 如何增購高速檔案系統空間？
+:::spoiler Q4. 如何將檔案分享給其他用戶？
+
+:::info
+
+請參考[<ins>此文件</ins>](https://man.twcc.ai/@twccdocs/doc-hfs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fhowto-hfs-share-files-between-user-accounts-zh)，透過上傳至 TWCC COS 或開放 HFS 檔案權限的方式分享。
+:::
+
+:::spoiler Q5. 如何增購高速檔案系統空間？
 
 :::info
 
@@ -48,14 +55,14 @@ GA: UA-155999456-1
 
 :::
 
-:::spoiler Q5. 請問高速檔案系統的 IP 位置為何？
+:::spoiler Q6. 請問高速檔案系統的 IP 位置為何？
 
 :::info
 203.145.219.101
 
 :::
 
-:::spoiler Q6. 高速檔案系統畫面顯示快用滿，要如何知道是哪些檔案佔據儲存空間？
+:::spoiler Q7. 高速檔案系統畫面顯示快用滿，要如何知道是哪些檔案佔據儲存空間？
 
 :::info
 - 在容器或台灣杉二號環境中，執行以下指令，即可檢視是哪些檔案佔據了空間：
@@ -73,13 +80,13 @@ GA: UA-155999456-1
     ```  
 :::
 
-:::spoiler Q7. 增購高速檔案系統空間後多久生效？
+:::spoiler Q8. 增購高速檔案系統空間後多久生效？
 
 :::info
-- 在 [<ins>Service 會員服務系統 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 完成增購空間步驟後，稍等 15 分鐘後即可使用。
+- 在[<ins>會員中心 <i class="fa fa-question-circle fa-question-circle-for-service" aria-hidden="true"></i></ins>](https://man.twcc.ai/@twsdocs/howto-service-access-service-zh) 完成增購空間步驟後，稍等 15 分鐘後即可使用。
 :::
 
-:::spoiler Q8. 已刪除高速檔案系統內資料，為何在儲存與資源用量頁面中的已使用容量並未減少？
+:::spoiler Q9. 已刪除高速檔案系統內資料，為何在儲存與資源用量頁面中的已使用容量並未減少？
 
 :::info
 
@@ -87,8 +94,7 @@ GA: UA-155999456-1
 
 :::
 
-
-:::spoiler Q9. Jupyter Notebook 刪除檔案後沒有立即釋放空間？
+:::spoiler 10. Jupyter Notebook 刪除檔案後沒有立即釋放空間？
 
 :::info
 

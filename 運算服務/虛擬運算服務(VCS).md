@@ -106,6 +106,14 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
+:::spoiler Q9. 使用Console連線虛擬運算個體的預設密碼是多少？
+
+:::info
+
+Linux跟Windows的虛擬運算個體連線情況不同，請您參考文件[快速除錯與維護工具：TWCC VCS Console](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-debug-tool-console-zh#Step-3-%E8%BC%B8%E5%85%A5%E9%80%A3%E7%B7%9A%E8%B3%87%E8%A8%8A%EF%BC%8C%E5%AE%8C%E6%88%90%E9%80%A3%E7%B7%9A)。
+
+:::
+
 
 
 

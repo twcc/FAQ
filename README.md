@@ -153,8 +153,8 @@ Link to our FAQ page:
 - Q5. SSH 連線個體速度有點慢該如何解決？
 - Q6. 如何使用帳號密碼連線 Linux 個體？
 - Q7. SSH 連線虛擬運算個體時，出現錯誤訊息```WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!```該如何排除？
-- Q8. 使用macOS連線虛擬運算個體時，出現無法連線的情況？
-- Q9. 使用Console連線虛擬運算個體的預設密碼是多少？
+- Q8. 使用 macOS 電腦連線 Linux 個體，出現無法連線的情況？
+- Q9. 使用 Console 連線虛擬運算個體，是否有預設的密碼？
 - Q1. 建立虛擬運算個體失敗該怎麼處理？
 - Q2. 忘記 Windows 虛擬運算個體登入密碼該怎麼處理？
 - Q3. 遺失 Linux 虛擬運算個體的金鑰該怎麼處理？

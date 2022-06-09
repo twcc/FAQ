@@ -98,6 +98,25 @@ $ ssh-keygen  -f  "/Your_Path/.ssh/known_hosts"  -R  "公用IP"
 
 :::
 
+:::spoiler Q8. 使用 macOS 電腦連線 Linux 個體，出現無法連線的情況？
+
+:::info
+
+請於入口網站進入「虛擬運算個體詳細資料」頁，點選「**連線**」按鈕，並按照視窗提供的指令設定鑰匙對存取權限、SSH 連線個體。
+
+:::
+
+:::spoiler Q9. 使用 Console 連線虛擬運算個體，是否有預設的密碼？
+
+:::info
+
+無預設密碼，使用 Console 連線 Linux 個體前需先另外建立密碼，Windows 個體則輸入您建立個體時設定的密碼即可，請參考[快速除錯與維護工具：TWCC VCS Console](https://man.twcc.ai/@twccdocs/doc-vcs-main-zh/https%3A%2F%2Fman.twcc.ai%2F%40twccdocs%2Fguide-vcs-debug-tool-console-zh#Step-3-%E8%BC%B8%E5%85%A5%E9%80%A3%E7%B7%9A%E8%B3%87%E8%A8%8A%EF%BC%8C%E5%AE%8C%E6%88%90%E9%80%A3%E7%B7%9A)。
+
+:::
+
+
+
+
 ## 管理個體
 :::spoiler Q1. 建立虛擬運算個體失敗該怎麼處理？
 
@@ -392,3 +411,19 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 
 :::
 
+:::spoiler Q4. 為什麼無法將映像檔分享至另一個計畫？ 
+
+:::info
+
+1. 僅租戶管理員能分享映像檔至其他目標計畫，且需同時為來源與目標計畫的租戶管理員。
+2. 不支援跨計畫分享含授權的映像檔 (例：含授權之 Windows Server)。
+
+:::
+
+:::spoiler Q5. GPU VM的映像檔使用映像檔分享後，為何無法在目標計畫中選擇GPU規格建立虛擬運算個體？
+
+:::info
+
+映像檔分享功能，在目的計畫中只支援建立CPU虛擬運算個體，暫不支援建立GPU擬運算個體
+
+:::

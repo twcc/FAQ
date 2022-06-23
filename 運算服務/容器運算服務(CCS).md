@@ -187,7 +187,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 * TensorFlow
 * PyTorch
 * CUDA
-* MATLAB (目前為公開預覽版，如有特殊需求請透過客服人員提出需求)
+* MATLAB (BYOL)
 * Caffe
 * CNTK
 * MXNet

@@ -50,7 +50,7 @@ Link to our FAQ page:
 - Q3. 登入密碼連續輸入錯誤會有甚麼情況？
 - Q4. 租戶管理員與一般租戶使用者身分，在使用 TWCC 各服務上有什麼區別？
 - Q5. 如何查詢計畫的 GPU 使用上限？
-- Q6. 為什麼創建資源時出現錯誤訊息:`[i-service] no quota to request resource.user`？
+- Q6. 為什麼創建資源時出現錯誤訊息：`[i-service] no quota to request resource.user`？
 ### [會員、計畫與帳務](產品與平台/會員、計畫與帳務.md) (16) 
 - Q1. 如何進入 Service 會員服務系統?
 - Q2. 手機收不到簡訊驗證碼如何處理？

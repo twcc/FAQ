@@ -366,6 +366,7 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 
 ### Auto Scaling
 
+:::spoiler Q1. 如何讓 Auto scaling 擴展出的個體，符合我需求的環境？
 :::info
 
 請按照以下步驟進行：

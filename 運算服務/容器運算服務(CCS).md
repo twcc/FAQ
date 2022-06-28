@@ -196,7 +196,10 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 * Triton Inference Server
 * Theano
 * DIGITS
+* Nemo
 * RAPIDS
+* Merlin Training
+* Merlin Inference
 :::
 
 :::spoiler Q2. 如何確認容器映像檔中包了什麼套件及其版本？ 

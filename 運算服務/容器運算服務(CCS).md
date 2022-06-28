@@ -196,7 +196,7 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 * Triton Inference Server
 * Theano
 * DIGITS
-* Nemo
+* NeMo
 * RAPIDS
 * Merlin Training
 * Merlin Inference

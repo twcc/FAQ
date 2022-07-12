@@ -182,12 +182,12 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 :::spoiler Q1. 目前容器支援多少種計算環境？ 
 
 :::info
-在 TWCC 的容器服務中，提供了 14 種環境供使用者選擇，包含：
+在 TWCC 的容器服務中，提供了 18 種環境供使用者選擇，包含：
 
 * TensorFlow
 * PyTorch
 * CUDA
-* MATLAB (目前為公開預覽版，如有特殊需求請透過客服人員提出需求)
+* MATLAB (BYOL)
 * Caffe
 * CNTK
 * MXNet
@@ -195,8 +195,13 @@ TWCC 中有許多超級電腦的運算資源，您可以透過下列方式使用
 * TensorRT
 * Triton Inference Server
 * Theano
+* Torch
 * DIGITS
+* NeMo
 * RAPIDS
+* Clara Train SDK
+* Merlin Training
+* Merlin Inference
 :::
 
 :::spoiler Q2. 如何確認容器映像檔中包了什麼套件及其版本？ 

@@ -1,6 +1,6 @@
 ---
 title : FAQ-TWNIA2 | zh
-tags: FAQ, ZH
+tags: [FAQ, ZH]
 GA: UA-155999456-1
 ---
 

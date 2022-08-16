@@ -438,3 +438,14 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 若是分享由 2021/3/27 前建立之虛擬運算個體所產生的映像檔，此類映像檔因效能尚未優化，將會導致分享的時間過長而失敗。
 有分享需求請洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
 :::
+
+:::spoiler Q7. 為何客製化映像檔所建立之VM，無法進行連線？
+
+:::info
+
+請注意您客製化映像檔時，原系統中的 cloud-init 是否被刪除，可用下面指令確認有無錯誤訊息。
+```
+$ python3 -c "from cloudinit import log"
+```
+若 cloud-init 正常的情況下無法連線，請洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
+:::

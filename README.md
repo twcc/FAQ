@@ -18,26 +18,25 @@ Link to our FAQ page:
 ### [雲端物件儲存](TWCC%20CLI/雲端物件儲存.md) (1) 
 - Q1. 為何我使用 TWCC-CLI 上傳、下載大量檔案時無法成功？
 ## [人工智慧](人工智慧)
-### [OneAI](人工智慧/OneAI.md) (20) 
-- Q1. 使用 OneAI 的費用為何？
-- Q2. OneAI 各項服務如何收費？
-- Q3. OneAI 為何無法訂閱？
-- Q4. 如何查看 OneAI 服務的分項費用？
+### [OneAI](人工智慧/OneAI.md) (19) 
+- Q1. 使用 OneAI 會產生哪些費用，以及如何收費？
+- Q2. OneAI 為何無法訂閱？
+- Q3. 如何查看 OneAI 服務的分項費用？
 - Q1. 什麼是筆記本服務？
 - Q2. OneAI AI Maker 已預先建置哪些解決方案？
-- Q3. OneAI AI Maker 與 AI Maker(搶鮮版) 有何不同 ？
+- Q3. OneAI AI Maker 與 AI Maker (搶鮮版) 有何不同？
 - Q4. 是否可讓非專案成員進行標註作業？
 - Q1. OneAI 容器服務 port 範圍？
-- Q2. OneAI容器映像檔該如何產生？
-- Q3.  OneAI容器服務是否可以使用ssh連線？
+- Q2. OneAI 容器映像檔該如何產生？
+- Q3. OneAI 容器服務是否可以使用 SSH 連線？
 - Q4. 為何從本地環境上傳的容器映像檔容量會變小？
 - Q1. OneAI 適用何種資料儲存服務 ？
 - Q2. OneAI 容器服務掛載的儲存空間有多少 ？
 - Q3. OneAI 儲存服務可存放哪種資料？
-- Q4. OneAI 儲存服務存放空間和檔案數量上限是多少 ？
+- Q4. OneAI 儲存服務存放空間和檔案數量上限是多少？
 - Q1. OneAI 是否支援多 GPU 訓練？
-- Q2. 透過 OneAI AI Maker SmartML訓練任務 可調整哪些模型？
-- Q3. OneAI AI Maker模型 可匯入哪些模型種類？
+- Q2. 透過 OneAI AI Maker SmartML 訓練任務 可調整哪些模型？
+- Q3. OneAI AI Maker 模型可匯入哪些模型種類？
 - Q4. 如何確認有使用到 GPU 資源？
 ## [儲存服務](儲存服務)
 ### [虛擬磁碟服務(VDS)](儲存服務/虛擬磁碟服務(VDS).md) (7) 

@@ -439,13 +439,15 @@ TWCC 沒有對虛擬運算個體內的網速進行限制，如果您發現傳輸
 有分享需求請洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
 :::
 
-:::spoiler Q7. 為何客製化映像檔所建立之VM，無法進行連線？
-
+:::spoiler Q7. 為何使用映像檔所建立之 Linux 個體，無法進行連線？
 :::info
 
-請注意您客製化映像檔時，原系統中的 cloud-init 是否被刪除，可用下面指令確認有無錯誤訊息。
-```
+請您使用以下指令確認映像檔來源個體中預載的 cloud-init 套件是否已被刪除：
+
+```bash
 $ python3 -c "from cloudinit import log"
 ```
-若 cloud-init 正常的情況下無法連線，請洽詢技術支援：[isupport@twcc.ai](isupport@twcc.ai)。
+
+- 若回傳 `ModuleNotFoundError: No module named 'cloudinit'` 錯誤訊息表示套件已刪除，導致以此個體製作的映像檔所建立的個體無法連線，請您於 TWCC 重建立一個體，重新安裝設定所需套件，再製作映像檔使用，**並請留意勿刪除 cloud-init 套件**。
+- 若確認無刪除 cloud-init，但仍無法連線，請洽詢技術支援：<a href = "mailto: isupport@twcc.ai">isupport@twcc.ai</a>。
 :::
